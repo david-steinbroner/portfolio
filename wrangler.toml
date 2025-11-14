@@ -1,0 +1,8 @@
+# Cloudflare Pages configuration
+# This file is optional - Cloudflare Pages can auto-detect Next.js projects
+
+name = "portfolio"
+compatibility_date = "2025-01-13"
+
+[env.production]
+name = "portfolio"

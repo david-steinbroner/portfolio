@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# David Steinbroner - Portfolio
 
-## Getting Started
+A modern portfolio website showcasing product management work and full-stack development projects.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Content**: Markdown with gray-matter
+- **Deployment**: Cloudflare Pages
+
+## Features
+
+- 🚀 Fast, static-first rendering
+- 📝 Markdown-based content management
+- 🎨 Clean, professional design
+- 📱 Fully responsive
+- ⚡ Optimized for performance
+- 🔍 SEO-friendly
+
+## Project Structure
+
+```
+portfolio/
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Homepage
+│   ├── work/              # Work experience section
+│   └── projects/          # Projects section
+├── components/            # React components
+├── content/               # Markdown content
+│   ├── projects/         # Solo project write-ups
+│   └── work-experience/  # Fold features
+├── lib/                  # Utilities
+│   └── markdown.ts       # Content parsing
+└── public/               # Static assets
+    └── images/           # Project images
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Adding New Content
 
-## Learn More
+### Add a New Project
 
-To learn more about Next.js, take a look at the following resources:
+1. Create a new markdown file in `content/projects/`:
+   ```bash
+   touch content/projects/my-new-project.md
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Add frontmatter and content:
+   ```markdown
+   ---
+   title: "My New Project"
+   status: "Live"
+   tags: ["React", "TypeScript"]
+   date: "2025-01"
+   link: "https://example.com"
+   github: "https://github.com/..."
+   image: "/images/my-project.png"
+   category: "project"
+   description: "A brief description"
+   impact:
+     - "Key metric 1"
+     - "Key metric 2"
+   ---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ## Overview
+   Project details here...
+   ```
 
-## Deploy on Vercel
+3. Add an image to `public/images/`
+4. Commit and push - Cloudflare Pages will auto-deploy!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Add a New Work Feature
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Same process, but create the file in `content/work-experience/fold-features/`
+
+## Deployment to Cloudflare Pages
+
+### First-Time Setup
+
+1. Push your code to GitHub
+2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com)
+3. Go to Workers & Pages → Create Application → Pages → Connect to Git
+4. Select your repository
+5. Configure build settings:
+   - **Framework preset**: Next.js
+   - **Build command**: `npm run build`
+   - **Build output directory**: `.next`
+   - **Node version**: 20
+6. Click "Save and Deploy"
+
+### Continuous Deployment
+
+After initial setup, every push to your main branch automatically deploys to Cloudflare Pages.
+
+## Updating Content
+
+Simply edit markdown files and push to GitHub. The site will rebuild automatically in 2-3 minutes.
+
+## Environment Variables
+
+No environment variables are required for basic functionality.
+
+## License
+
+All rights reserved © 2025 David Steinbroner
