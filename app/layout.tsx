@@ -11,6 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "David Steinbroner - Product Manager & Full-Stack Developer",
   description: "Product Manager with 5+ years experience in fintech, specializing in bitcoin, payments, and user engagement. Building full-stack projects and prototypes.",
+  icons: { icon: [] },
 };
 
 export default function RootLayout({
