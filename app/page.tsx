@@ -17,23 +17,27 @@ export default async function Home() {
                 David Steinbroner
               </h1>
               <p className="text-2xl text-gray-600 mb-6">
-                Product Manager Who Ships
+                Full-Stack PM & Builder
               </p>
               <p className="text-xl text-gray-800 mb-6 leading-relaxed">
-                I make complex things deeply accessible through user understanding,
-                rapid prototyping, and clear communication that gets smart people
-                aligned around a vision.
+                I don't just manage products—I build them. From civic tech platforms tracking local government
+                to cloud infrastructure managing multi-provider OAuth, I ship complete full-stack applications
+                that solve real user problems.
+              </p>
+              <p className="text-lg text-gray-700 mb-4">
+                <span className="font-semibold">Recent work includes:</span> Civic engagement platforms (Local Gov Watch),
+                gaming accessibility tools (MTG Deck Match), geospatial data visualization (American Music History Map),
+                and cloud storage infrastructure (Storage Optimizer with Dropbox/OneDrive/Google Drive integration).
               </p>
               <p className="text-lg text-gray-700 mb-4">
                 Most recently at <a href="https://foldapp.com" className="text-blue-600 hover:text-blue-800 font-medium">Fold</a>,
-                I helped scale the first Bitcoin-only public company from startup to 500K+ users
-                and Nasdaq listing—shipping 11+ features across debit, credit, and rewards.
+                I led product development from startup to 500K+ users and Nasdaq listing—shipping 11+ features
+                across Bitcoin debit, credit, and rewards programs.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                <span className="font-semibold">My specialty:</span> Taking 0→1 products from concept
-                to launch by bridging technical complexity with user delight. Whether it's Bitcoin finance,
-                community analytics, or CAD modeling, I combine deep technical understanding with
-                accessibility-first thinking.
+                <span className="font-semibold">My approach:</span> Deep technical understanding (React, TypeScript, PostgreSQL, OAuth, WebSockets)
+                combined with accessibility-first product thinking. I make complex things deeply accessible through rapid prototyping,
+                user research, and clear communication that aligns teams around a shared vision.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -61,53 +65,16 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Product Work at Fold */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-end mb-8">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Product Work @ Fold
-              </h2>
-              <p className="text-gray-600">
-                Leading cross-functional teams to ship roadmap-critical features
-              </p>
-            </div>
-            <Link
-              href="/work"
-              className="text-blue-600 hover:text-blue-800 font-medium"
-            >
-              View all →
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredFeatures.length > 0 ? (
-              featuredFeatures.map((feature) => (
-                <ProjectCard
-                  key={feature.slug}
-                  project={feature}
-                  linkPrefix="/work"
-                />
-              ))
-            ) : (
-              <p className="text-gray-500 col-span-4 text-center py-8">
-                Work experience features coming soon...
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Recent Projects & Prototypes */}
+      {/* Featured Projects - LEAD WITH THIS */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-8">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Recent Projects & Prototypes
+                Featured Projects
               </h2>
               <p className="text-gray-600">
-                Solo full-stack PM and development work
+                Full-stack applications built from 0→1
               </p>
             </div>
             <Link
@@ -129,6 +96,43 @@ export default async function Home() {
             ) : (
               <p className="text-gray-500 col-span-3 text-center py-8">
                 Projects coming soon...
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Product Work at Fold */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-8">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                Product Work @ Fold
+              </h2>
+              <p className="text-gray-600">
+                Leading cross-functional teams to ship Bitcoin fintech features
+              </p>
+            </div>
+            <Link
+              href="/work"
+              className="text-blue-600 hover:text-blue-800 font-medium"
+            >
+              View all →
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredFeatures.length > 0 ? (
+              featuredFeatures.map((feature) => (
+                <ProjectCard
+                  key={feature.slug}
+                  project={feature}
+                  linkPrefix="/work"
+                />
+              ))
+            ) : (
+              <p className="text-gray-500 col-span-4 text-center py-8">
+                Work experience features coming soon...
               </p>
             )}
           </div>
@@ -178,32 +182,40 @@ export default async function Home() {
             {/* Technical Skills */}
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Technical Skills
+                Technical Stack
               </h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Next.js, React, TypeScript</span>
+                  <span>React 18/19, Next.js 16, TypeScript</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>SQL, Database Design</span>
+                  <span>Express.js, Node.js, WebSockets</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>API Integration & Development</span>
+                  <span>PostgreSQL, Supabase, Drizzle ORM</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>CAD Modeling (OpenSCAD)</span>
+                  <span>OAuth 2.0 (Dropbox, Microsoft, Google)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>AI Tools (Claude, ChatGPT, Figma AI)</span>
+                  <span>Mapbox, Geospatial Data (Turf.js)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="mr-2">•</span>
-                  <span>Rapid Prototyping</span>
+                  <span>Tailwind CSS, shadcn/ui, Framer Motion</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Cloudflare Pages, Vercel, Static Hosting</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>AI Tools (Claude Code, ChatGPT)</span>
                 </li>
               </ul>
             </div>
