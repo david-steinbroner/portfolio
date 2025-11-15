@@ -33,9 +33,9 @@ git push -u origin main
 5. Configure the build settings:
 
 **Build Configuration:**
-- **Framework preset**: Next.js (SSG)
+- **Framework preset**: Next.js (Static HTML Export)
 - **Build command**: `npm run build`
-- **Build output directory**: `.next`
+- **Build output directory**: `out`
 - **Environment variables**: None required
 
 **Advanced Settings:**

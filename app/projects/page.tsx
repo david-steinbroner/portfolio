@@ -10,13 +10,31 @@ export default async function ProjectsPage() {
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Recent Projects & Prototypes
+            Side Projects & Technical Exploration
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl">
-            Solo full-stack PM and development work. I build prototypes and MVPs
-            to explore ideas, learn new technologies, and demonstrate end-to-end
-            product thinking.
+          <p className="text-xl text-gray-600 max-w-3xl mb-6">
+            I build things to solve real problems and explore new domains. From full-stack web apps
+            to CAD engineering, these projects demonstrate my technical versatility and product thinking.
           </p>
+          <div className="bg-white rounded-lg shadow-sm p-6 max-w-4xl">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
+              What These Projects Show
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div>
+                <p className="font-medium text-gray-900 mb-1">Technical Range</p>
+                <p className="text-gray-600">Next.js, SQL databases, Directus CMS, OpenSCAD CAD modeling, data migration pipelines</p>
+              </div>
+              <div>
+                <p className="font-medium text-gray-900 mb-1">Product Thinking</p>
+                <p className="text-gray-600">User research, accessibility-first design, iterative development, go-to-market strategy</p>
+              </div>
+              <div>
+                <p className="font-medium text-gray-900 mb-1">Domain Versatility</p>
+                <p className="text-gray-600">Gaming, community analytics, e-commerce operations, mechanical engineering</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Projects Grid */}
