@@ -20,7 +20,7 @@ export default async function Home() {
                 Full-Stack PM & Builder
               </p>
               <p className="text-xl text-gray-800 mb-6 leading-relaxed">
-                I don't just manage products—I build them. From civic tech platforms tracking local government
+                I don't just manage products - I build them. From civic tech platforms tracking local government
                 to cloud infrastructure managing multi-provider OAuth, I ship complete full-stack applications
                 that solve real user problems.
               </p>
@@ -32,7 +32,7 @@ export default async function Home() {
               <p className="text-lg text-gray-700 mb-4">
                 Most recently at <a href="https://foldapp.com" className="text-blue-600 hover:text-blue-800 font-medium">Fold</a>,
                 I led product development from startup to 500K+ users and Nasdaq listing—shipping 11+ features
-                across Bitcoin debit, credit, and rewards programs.
+                across Bitcoin debit, rewards, user engagement, and sponsorship programs.
               </p>
               <p className="text-lg text-gray-700 mb-8">
                 <span className="font-semibold">My approach:</span> Deep technical understanding (React, TypeScript, PostgreSQL, OAuth, WebSockets)
