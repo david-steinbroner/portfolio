@@ -26,7 +26,7 @@ export default async function Home() {
               </p>
               <p className="text-lg text-gray-700 mb-4">
                 <span className="font-semibold">Recent work includes:</span> Civic engagement platforms (Local Gov Watch),
-                gaming accessibility tools (MTG Deck Match), geospatial data visualization (American Music History Map),
+                gaming accessibility tools (<Link href="/projects/mtg-deck-match" className="text-blue-600 hover:text-blue-800 font-medium">MTG Deck Match</Link>), geospatial data visualization (American Music History Map),
                 and cloud storage infrastructure (Storage Optimizer with Dropbox/OneDrive/Google Drive integration).
               </p>
               <p className="text-lg text-gray-700 mb-4">
