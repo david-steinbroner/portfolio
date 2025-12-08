@@ -2,7 +2,7 @@
 title: "Storage Optimizer - Cloud Storage Management"
 status: "Live Demo"
 tags: ["Full-stack", "OAuth", "Express.js", "Cloud APIs", "Real-time"]
-date: "2025-01"
+date: "2024-08"
 link: "https://0a70be20-9fcf-42ba-ab7b-7e2a976a013a-00-3bnz21tyej0r.picard.replit.dev/"
 github: ""
 image: "/images/storage-optimizer.png"

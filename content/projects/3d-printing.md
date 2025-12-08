@@ -2,7 +2,7 @@
 title: "3D Printing Engineering & Design"
 status: "In Progress"
 tags: ["CAD", "OpenSCAD", "Engineering", "Prototyping", "Problem Solving"]
-date: "2025-11"
+date: "2024-05"
 link: ""
 github: ""
 image: "/images/3d-printing.png"

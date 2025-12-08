@@ -2,7 +2,7 @@
 title: "Fairytale Project (童话项目)"
 status: "Shipped"
 tags: ["Static Site", "Multilingual", "Vanilla JS", "i18n"]
-date: "2024-10"
+date: "2024-12"
 link: ""
 github: ""
 image: "/images/fairytale-rebuild.png"

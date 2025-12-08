@@ -2,7 +2,7 @@
 title: "American Music History Map"
 status: "In Progress"
 tags: ["Data Visualization", "Mapbox", "Geospatial", "React", "Music History"]
-date: "2025-01"
+date: "2024-07"
 link: ""
 github: ""
 image: "/images/music-map.png"

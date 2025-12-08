@@ -2,7 +2,7 @@
 title: "Old Greg's Tavern - Discord Community Analytics"
 status: "Shipped"
 tags: ["Community Management", "Data Analytics", "Discord", "Consulting"]
-date: "2025-09"
+date: "2024-06"
 link: ""
 github: ""
 image: "/images/old-gregs-tavern.png"

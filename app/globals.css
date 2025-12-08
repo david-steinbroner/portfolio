@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Theme Colors */
+  --text-primary: #171717;
+  --text-secondary: #374151;
+  --bg-primary: #ffffff;
+  --bg-card: #ffffff;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+
+  /* Typography */
+  --font-family: var(--font-inter);
+
+  /* Legacy variables for backward compatibility */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
 }
 
 @theme inline {
@@ -18,7 +30,7 @@ body {
 
 /* Prose styles for markdown content */
 .prose {
-  color: #374151;
+  color: var(--text-secondary);
   max-width: 65ch;
 }
 
@@ -27,7 +39,7 @@ body {
   margin-top: 2em;
   margin-bottom: 1em;
   font-weight: 700;
-  color: #111827;
+  color: var(--text-primary);
 }
 
 .prose h3 {
@@ -35,7 +47,7 @@ body {
   margin-top: 1.6em;
   margin-bottom: 0.6em;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-primary);
 }
 
 .prose p {
@@ -58,17 +70,18 @@ body {
 
 .prose strong {
   font-weight: 600;
-  color: #111827;
+  color: var(--text-primary);
 }
 
 .prose a {
-  color: #2563eb;
+  color: var(--accent);
   text-decoration: underline;
   font-weight: 500;
 }
 
 .prose a:hover {
-  color: #1d4ed8;
+  color: var(--accent);
+  opacity: 0.8;
 }
 
 .prose code {
@@ -77,11 +90,11 @@ body {
   border-radius: 0.25rem;
   font-size: 0.875em;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-primary);
 }
 
 .prose hr {
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--border);
   margin-top: 3em;
   margin-bottom: 3em;
 }

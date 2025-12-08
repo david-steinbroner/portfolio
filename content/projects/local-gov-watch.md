@@ -2,7 +2,7 @@
 title: "Local Government Watch"
 status: "In Progress"
 tags: ["Civic Tech", "Next.js", "Database", "Full-stack"]
-date: "2025-01"
+date: "2024-10"
 link: ""
 github: ""
 image: "/images/local-gov-watch.png"

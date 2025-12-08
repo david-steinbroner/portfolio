@@ -1,8 +1,8 @@
 ---
-title: "MTG Deck Match - No Gatekeeping Deck Finder"
+title: "Discovering Magic"
 status: "In Progress"
 tags: ["Product Design", "Gaming", "UX", "Accessibility"]
-date: "2024-12"
+date: "2024-11"
 link: ""
 github: ""
 image: "/images/mtg-deck-match.png"

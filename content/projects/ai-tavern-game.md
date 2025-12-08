@@ -1,9 +1,9 @@
 ---
-title: "AI Tavern Game"
+title: "Story Mode"
 status: "In Progress"
 tags: ["AI", "Game Design", "React", "Full-stack"]
-date: "2025-01"
-link: "https://7fcf8435-600f-4db0-aecf-28645479db92-00-dyjxl655a436.janeway.replit.dev/"
+date: "2024-09"
+link: "https://aitavern.onrender.com"
 github: ""
 image: "/images/ai-tavern.png"
 category: "project"
