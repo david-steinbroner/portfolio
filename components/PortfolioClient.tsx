@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
+import { useState } from 'react';
 import { Project } from '@/lib/markdown';
 import Carousel from '@/components/Carousel';
 import Card from '@/components/Card';
@@ -16,13 +15,6 @@ interface PortfolioClientProps {
 export default function PortfolioClient({ projects, workFeatures }: PortfolioClientProps) {
   const [activeTab, setActiveTab] = useState<'work' | 'projects'>('work');
   const [selectedItem, setSelectedItem] = useState<Project | null>(null);
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  // Avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // Get items based on active tab
   const items = activeTab === 'work' ? workFeatures : projects;
