@@ -6,6 +6,7 @@ import Carousel from '@/components/Carousel';
 import Card from '@/components/Card';
 import Modal from '@/components/Modal';
 import Section from '@/components/Section';
+import BuildingCard from '@/components/BuildingCard';
 
 interface PortfolioClientProps {
   projects: Project[];
@@ -132,9 +133,24 @@ export default function PortfolioClient({ projects, workFeatures }: PortfolioCli
             {/* Building Section */}
             <Section title="Building" href="/building">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
-                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
-                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <BuildingCard
+                  name="Discovering Magic"
+                  tagline="MTG deck discovery for people who've never played"
+                  status="active"
+                  href="https://discoveringmagic.com"
+                />
+                <BuildingCard
+                  name="Local Gov Watch"
+                  tagline="Civic tech tracking local government transparency"
+                  status="active"
+                  href="https://local-gov-watch.pages.dev"
+                />
+                <BuildingCard
+                  name="Portfolio Site"
+                  tagline="This site (actively building in public)"
+                  status="active"
+                  href="https://davidsteinbroner.com"
+                />
               </div>
             </Section>
 
