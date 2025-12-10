@@ -3,11 +3,10 @@ import Link from 'next/link';
 interface CaseStudyCardProps {
   title: string;
   hook: string;
-  project: string;
   href: string;
 }
 
-export default function CaseStudyCard({ title, hook, project, href }: CaseStudyCardProps) {
+export default function CaseStudyCard({ title, hook, href }: CaseStudyCardProps) {
   return (
     <Link
       href={href}
@@ -28,18 +27,10 @@ export default function CaseStudyCard({ title, hook, project, href }: CaseStudyC
 
       {/* Hook */}
       <p
-        className="text-sm md:text-base mb-4"
+        className="text-sm md:text-base"
         style={{ color: 'var(--text-secondary)' }}
       >
         {hook}
-      </p>
-
-      {/* Project Attribution */}
-      <p
-        className="text-xs"
-        style={{ color: 'var(--text-secondary)', opacity: 0.6 }}
-      >
-        Project: {project}
       </p>
 
       <style jsx>{`

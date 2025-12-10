@@ -131,7 +131,28 @@ export default function PortfolioClient({ projects, workFeatures }: PortfolioCli
 
         {/* Main Content */}
         <main className="flex-1 px-4 md:px-8 max-w-7xl mx-auto w-full">
-          <div className="space-y-12">
+          <div className="space-y-8">
+            {/* Case Studies Section */}
+            <Section title="Case Studies" href="/case-studies">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <CaseStudyCard
+                  title="TaxBit Integration"
+                  hook="Integrating tax compliance into a crypto app without breaking the user experience"
+                  href="/case-studies/taxbit"
+                />
+                <CaseStudyCard
+                  title="Bitcoin Flows"
+                  hook="Designing send and receive flows for users who'd never touched crypto"
+                  href="/case-studies/bitcoin-flows"
+                />
+                <CaseStudyCard
+                  title="Spin Wheel"
+                  hook="An engagement feature that required product, project management, marketing, and vendor coordination"
+                  href="/case-studies/spin-wheel"
+                />
+              </div>
+            </Section>
+
             {/* Building Section */}
             <Section title="Building" href="/building">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -194,24 +215,6 @@ export default function PortfolioClient({ projects, workFeatures }: PortfolioCli
                   year="2024"
                   description="Trilingual cultural archive (1,001 entries)"
                   href="/built/fairytale"
-                />
-              </div>
-            </Section>
-
-            {/* Case Studies Section */}
-            <Section title="Case Studies" href="/case-studies">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <CaseStudyCard
-                  title="Local Gov Watch: Building for Real Users"
-                  hook="How conversations with one government employee shaped an entire product"
-                  project="Local Gov Watch"
-                  href="/case-studies/local-gov-watch"
-                />
-                <CaseStudyCard
-                  title="Story Mode: Three Pivots to Find the Right Brand"
-                  hook="From AI Tavern to Skunk Tales to Story Mode—why I kept killing my darlings"
-                  project="Story Mode"
-                  href="/case-studies/story-mode-brand"
                 />
               </div>
             </Section>
