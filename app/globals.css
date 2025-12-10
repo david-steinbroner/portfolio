@@ -18,19 +18,17 @@
   --geist-code-border: #eaeaea;
 }
 
-/* Dark Mode - Auto-detects from system preference */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --geist-background: #000000;
-    --geist-background-secondary: #111111;
-    --geist-foreground: #ededed;
-    --geist-foreground-secondary: #a1a1a1;
-    --geist-foreground-muted: #666666;
-    --geist-border: #333333;
-    --geist-border-hover: #555555;
-    --geist-code-background: #1a1a1a;
-    --geist-code-border: #333333;
-  }
+/* Dark Mode - Controlled by next-themes */
+.dark {
+  --geist-background: #000000;
+  --geist-background-secondary: #111111;
+  --geist-foreground: #ededed;
+  --geist-foreground-secondary: #a1a1a1;
+  --geist-foreground-muted: #666666;
+  --geist-border: #333333;
+  --geist-border-hover: #555555;
+  --geist-code-background: #1a1a1a;
+  --geist-code-border: #333333;
 }
 
 @theme inline {

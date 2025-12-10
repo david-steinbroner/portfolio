@@ -1,6 +1,7 @@
 'use client';
 
 import { Mail, Linkedin, Github, ArrowUpRight } from 'lucide-react';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function PortfolioClient() {
   return (
@@ -8,9 +9,12 @@ export default function PortfolioClient() {
 
       {/* Header */}
       <header className="mb-16">
-        <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-3 text-foreground">
-          David Steinbroner
-        </h1>
+        <div className="flex justify-between items-start mb-3">
+          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+            David Steinbroner
+          </h1>
+          <ThemeToggle />
+        </div>
         <p className="text-lg text-foreground-secondary leading-relaxed">
           Product manager and builder. I make complex things accessible.
         </p>
