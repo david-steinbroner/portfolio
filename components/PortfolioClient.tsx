@@ -8,6 +8,7 @@ import Modal from '@/components/Modal';
 import Section from '@/components/Section';
 import BuildingCard from '@/components/BuildingCard';
 import BuiltItem from '@/components/BuiltItem';
+import CaseStudyCard from '@/components/CaseStudyCard';
 
 interface PortfolioClientProps {
   projects: Project[];
@@ -200,8 +201,18 @@ export default function PortfolioClient({ projects, workFeatures }: PortfolioCli
             {/* Case Studies Section */}
             <Section title="Case Studies" href="/case-studies">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
-                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <CaseStudyCard
+                  title="Local Gov Watch: Building for Real Users"
+                  hook="How conversations with one government employee shaped an entire product"
+                  project="Local Gov Watch"
+                  href="/case-studies/local-gov-watch"
+                />
+                <CaseStudyCard
+                  title="Story Mode: Three Pivots to Find the Right Brand"
+                  hook="From AI Tavern to Skunk Tales to Story Mode—why I kept killing my darlings"
+                  project="Story Mode"
+                  href="/case-studies/story-mode-brand"
+                />
               </div>
             </Section>
           </div>
