@@ -2,16 +2,17 @@ interface CardProps {
   title: string;
   description: string;
   image?: string;
+  tags?: string[];
   onClick: () => void;
 }
 
-export default function Card({ title, description, image, onClick }: CardProps) {
+export default function Card({ title, description, image, tags = [], onClick }: CardProps) {
   const placeholderImage = '/images/placeholder.png';
 
   return (
     <button
       onClick={onClick}
-      className="group w-full h-[260px] flex flex-col rounded-lg overflow-hidden border-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer"
+      className="group w-full h-[380px] flex flex-col rounded-lg overflow-hidden border-2 transition-all duration-200 hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer"
       style={{
         backgroundColor: 'var(--bg-card)',
         borderColor: 'var(--border)',
@@ -19,7 +20,7 @@ export default function Card({ title, description, image, onClick }: CardProps) 
       aria-label={`View details for ${title}`}
     >
       {/* Image Section */}
-      <div className="relative w-full h-28 overflow-hidden flex-shrink-0" style={{ backgroundColor: 'var(--border)' }}>
+      <div className="relative w-full h-32 overflow-hidden flex-shrink-0" style={{ backgroundColor: 'var(--border)' }}>
         <img
           src={image || placeholderImage}
           alt={title}
@@ -43,11 +44,29 @@ export default function Card({ title, description, image, onClick }: CardProps) 
 
         {/* Description */}
         <p
-          className="text-xs line-clamp-2 flex-1"
+          className="text-sm line-clamp-4 flex-1"
           style={{ color: 'var(--text-secondary)' }}
         >
           {description}
         </p>
+
+        {/* Tags */}
+        {tags && tags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className="px-2 py-0.5 text-xs rounded-full"
+                style={{
+                  backgroundColor: 'var(--border)',
+                  color: 'var(--text-secondary)',
+                }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       <style jsx>{`

@@ -1,132 +1,42 @@
 ---
 title: "Fairytale Project (童话项目)"
-status: "Shipped"
-tags: ["Static Site", "Multilingual", "Vanilla JS", "i18n"]
+status: "Live"
+tags: ["HTML", "CSS", "JavaScript", "Static Site", "Digital Preservation"]
 date: "2024-12"
-link: ""
+link: "https://fairytaleproject.net"
 github: ""
 image: "/images/fairytale-rebuild.png"
 category: "project"
-description: "Trilingual static website (Chinese, English, German) showcasing creative content through 4,898 curated images. Custom modal system, zero server infrastructure."
+description: "A trilingual archive of Ai Weiwei's 2007 project—1,001 Chinese citizens traveling abroad, many for the first time. The site was about to disappear. Rebuilt in three weeks to keep it accessible."
 impact:
   - "4,898 images in production"
   - "3 languages supported (Chinese, English, German)"
-  - "Custom lightbox modal system"
+  - "Cultural preservation and digital archiving"
   - "Static deployment (no server required)"
 ---
 
-## Overview
+**Preserving a moment when 1,001 people stepped into a fairytale.**
 
-A multilingual static website showcasing fairy tale-themed creative content across three languages (Chinese 中文, English, and German). Built entirely with vanilla HTML, CSS, and JavaScript to handle nearly 5,000 images efficiently without requiring server infrastructure.
+## The Project
 
-**Status:** Fully shipped and deployed.
+In 2007, artist Ai Weiwei did something extraordinary: he invited 1,001 people from Mainland China to travel to Kassel, Germany for Documenta 12, one of Europe's most prestigious art exhibitions. For many participants, it was their first time leaving China. Their first time on an airplane. Their first encounter with a world outside everything they knew.
 
-## The Challenge
+The project was called "Fairytale"—童话—because Kassel is the birthplace of the Brothers Grimm, and because there's something fairytale-like about a farmer or laborer from rural China suddenly walking through a German art exhibition.
 
-Build a content-rich visual gallery that:
-- Supports three languages without a framework or build tool
-- Handles 5,000+ images performantly
-- Works as a static site (no backend, no database)
-- Provides a smooth user experience for browsing large image collections
+Ai Weiwei interviewed participants, collected questionnaires, gathered thousands of photographs. The Fairytale Project website, created in collaboration with the Slought Foundation, archives these materials in Chinese, English, and German.
 
-## Technical Implementation
+## The Problem
 
-### Multilingual Support
+The original site was built years ago on technology that was about to be deprecated. The hosting service was updating their infrastructure, and the PHP-based site was going to go offline. Years of cultural documentation—interviews, images, translations—would simply disappear.
 
-Implemented i18n (internationalization) **without frameworks:**
-- Language switching via vanilla JavaScript
-- Stored language preference in localStorage
-- Content strings organized in JSON files
-- Dynamic content loading based on selected language
+## What I Did
 
-**Challenge:** Most i18n solutions require React/Vue or build tools. This project proved you can build professional multilingual sites with pure JavaScript.
+I rebuilt the entire site from scratch as a static HTML site in three weeks.
 
-### Image Gallery System
+The goal wasn't to redesign it—it was to *preserve* it. Keep the same experience, the same navigation, the same access to 4,898 curated images and translated interviews. Just make it work on modern infrastructure so it can stay online indefinitely.
 
-**Scale:**
-- 4,898 images curated and organized
-- Custom directory structure for efficient loading
-- Lazy loading implementation to prevent browser overload
-- Thumbnail generation workflow
+This was contract work for Slought Foundation, a Philadelphia-based nonprofit focused on art and cultural research. The site is now live and stable.
 
-### Custom Modal/Lightbox
+## Why This Matters
 
-Built a custom image lightbox from scratch:
-- Keyboard navigation (arrow keys, ESC)
-- Touch/swipe support for mobile
-- Image preloading for smooth transitions
-- No external libraries (pure CSS + vanilla JS)
-
-### Data-Driven Architecture
-
-Used JSON files to drive content rather than hardcoding:
-- `fairytale-content.json` - 10MB of structured content data
-- `fairytale-data.json` - 1MB of metadata
-- JavaScript reads JSON and dynamically generates HTML
-- Makes content updates easy (just edit JSON)
-
-## Tech Stack
-
-- **Frontend**: Vanilla HTML5, CSS3, JavaScript (ES6+)
-- **Content**: JSON-based data files
-- **Images**: 4,898 curated images (~150MB total)
-- **Deployment**: Static hosting (FTP-based)
-- **Build**: Custom scripts for deployment packaging
-- **i18n**: Custom multilingual system (no framework)
-
-## What Makes This Interesting
-
-1. **No framework needed:** Proved complex features (i18n, modals, data-driven UI) work fine without React/Vue
-2. **Performance at scale:** Handled 5,000 images with lazy loading and smart preloading
-3. **Multilingual without build tools:** Most i18n solutions require webpack/babel - this doesn't
-4. **Zero server costs:** Static deployment means free hosting forever
-5. **Fully shipped:** This is a COMPLETED project, not a prototype
-
-## Skills Demonstrated
-
-- Vanilla JavaScript (no framework dependencies)
-- Internationalization (i18n) implementation
-- Performance optimization (lazy loading, image optimization)
-- Custom UI components (modal, gallery, navigation)
-- Data architecture (JSON-driven content)
-- Static site deployment
-- Content curation at scale
-- **Analytics**: Vercel Analytics
-
-## Key Features
-
-- Lightning-fast page loads with Next.js App Router
-- Responsive design optimized for all devices
-- Accessible to screen readers (WCAG 2.1 AA compliant)
-- Beautiful typography and reading experience
-- Progressive image loading
-- Dark mode support
-- Interactive story elements and animations
-- SEO optimized with metadata and structured data
-
-## What I Learned
-
-- Next.js 14 App Router and Server Components
-- Performance optimization techniques
-- Web accessibility best practices
-- Modern CSS with Tailwind
-- Progressive enhancement strategies
-- Content delivery optimization
-
-## Results
-
-- **90% faster** page load times (from 4.5s to 0.4s)
-- **100/100** Lighthouse performance score
-- **Accessibility score** increased from 65 to 98
-- **SEO improvements** - 3x increase in organic traffic
-- Mobile-friendly design with smooth animations
-- Zero layout shift (CLS: 0)
-
-## Technical Highlights
-
-- Implemented route prefetching for instant navigation
-- Used Next.js Image component for optimal loading
-- Built custom reading progress indicator
-- Created reusable component library
-- Implemented incremental static regeneration
-- Added OpenGraph metadata for social sharing
+Some websites are just websites. This one is a cultural document. It preserves the voices of 1,001 people reflecting on identity, memory, dreams, and what it means to leave home. In a world where digital archives disappear constantly, keeping this one alive felt important.

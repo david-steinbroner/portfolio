@@ -1,63 +1,54 @@
 ---
 title: "Local Government Watch"
-status: "In Progress"
-tags: ["Civic Tech", "Next.js", "Database", "Full-stack"]
+status: "Live Demo"
+tags: ["React", "TypeScript", "Supabase", "PostgreSQL", "Playwright", "Tailwind CSS"]
 date: "2024-10"
 link: ""
 github: ""
 image: "/images/local-gov-watch.png"
 category: "project"
-description: "Platform for tracking local government meetings, votes, and decisions. Making local politics more transparent and accessible to citizens."
+description: "Local politics affects your daily life more than national news—and it's the level where you can actually make an impact. But staying informed is nearly impossible. A platform that aggregates meetings, votes, and legislation so citizens can participate."
 impact:
   - "Increasing civic engagement through transparency"
   - "Automated tracking of government meetings and votes"
 ---
 
-## Overview
+**Making local politics more transparent and accessible to citizens.**
 
-A civic technology platform that aggregates and tracks local government meetings, votes, and decisions. The goal is to make local politics more transparent and accessible to everyday citizens.
+## The Problem I Wanted to Solve
 
-## Problem
+Here's a weird fact: the government decisions that affect your daily life the most are the ones you're least likely to know about.
 
-Local government decisions directly impact daily life, but most citizens don't have the time or resources to track meetings, read agendas, and monitor votes. Information is scattered across different websites and formats.
+Zoning changes that determine what gets built on your block. Budget votes that decide whether your kid's school gets funding. Public safety policies that shape how your neighborhood is policed. These all happen at city council meetings and county board sessions—and almost nobody's watching.
 
-## Tech Stack
+It's not because people don't care. It's because the information is scattered across a dozen different websites, buried in PDFs, and announced in ways that assume you're already paying attention. If you wanted to follow local government like you follow the news, you'd basically need a part-time job.
 
-- **Frontend**: Next.js, React, Tailwind CSS
-- **Backend**: Next.js API routes, PostgreSQL
-- **Data Collection**: Web scraping, automated calendar monitoring
-- **Notifications**: Email digests, push notifications
-- **Search**: Full-text search with PostgreSQL
+## What I Built
 
-## Key Features
+Local Government Watch aggregates local government activity—meetings, votes, legislation, decisions—into one place. You can search across jurisdictions, track topics you care about, and get notified when something relevant happens.
 
-- Automated meeting tracking and agenda scraping
-- Vote history and representative accountability tracking
-- Email alerts for topics users care about
-- Search across all meetings and documents
-- Calendar integration for upcoming meetings
-- Simple, accessible design for all ages
+Right now it covers California's North Bay: Marin, Sonoma, and Napa counties, plus their major cities. That's intentional—I'm working directly with people in local government there, which means real users and real feedback as I build.
 
-## What I'm Learning
+**Unified search** across state, county, and city government activity.
 
-- Web scraping and data normalization from government websites
-- Building accessible, user-friendly civic tech
-- Database design for government data
-- Automated notification systems
-- Content moderation and fact-checking
+**Topic tracking** — set keywords like "housing" or "climate" and see everything related.
 
-## Technical Challenges
+**Meeting calendar** — upcoming sessions across all jurisdictions in one view.
 
-- Inconsistent data formats across municipalities
-- Ensuring accuracy and neutrality
-- Scaling to multiple cities/regions
-- Making complex政治 information digestible
+**Legislation history** — see how bills and proposals evolve over time.
 
-## Next Steps
+**Email digests** — weekly summaries so you don't have to check constantly.
 
-- Launch beta for my local city
-- Add bill tracking and legislative analysis
-- Create mobile app for on-the-go access
-- Build API for journalists and researchers
-- Add community discussion features
-- Implement AI summaries of long meetings
+## Who It's For
+
+**Government workers** who need to track what's happening across jurisdictions—not just their own.
+
+**Regular citizens** who want to participate in local democracy but don't have hours to spend hunting down information. Local government is where change actually happens. School boards, city councils, county supervisors—these are the people making decisions about your neighborhood, and they're accessible in ways that federal politicians aren't.
+
+But you can't engage with decisions you don't know are being made.
+
+## Why This Matters to Me
+
+I believe transparency is a prerequisite for participation. Right now, the information asymmetry favors lobbyists, developers, and anyone with resources to hire someone to watch government for them.
+
+This is an attempt to level that playing field a little.

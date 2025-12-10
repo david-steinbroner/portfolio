@@ -1,36 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  /* Theme Colors */
-  --text-primary: #171717;
-  --text-secondary: #374151;
-  --bg-primary: #ffffff;
-  --bg-card: #ffffff;
-  --accent: #2563eb;
-  --border: #e5e7eb;
+  /* Geist Color System - Light Mode */
+  --geist-background: #ffffff;
+  --geist-background-secondary: #fafafa;
+  --geist-foreground: #171717;
+  --geist-foreground-secondary: #666666;
+  --geist-foreground-muted: #999999;
+  --geist-border: #eaeaea;
+  --geist-border-hover: #999999;
+  --geist-link: #0070f3;
+  --geist-link-hover: #0060d3;
+  --geist-success: #0070f3;
+  --geist-error: #ee0000;
+  --geist-warning: #f5a623;
+  --geist-code-background: #f6f6f6;
+  --geist-code-border: #eaeaea;
+}
 
-  /* Typography */
-  --font-family: var(--font-inter);
-
-  /* Legacy variables for backward compatibility */
-  --background: var(--bg-primary);
-  --foreground: var(--text-primary);
+/* Dark Mode - Auto-detects from system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --geist-background: #000000;
+    --geist-background-secondary: #111111;
+    --geist-foreground: #ededed;
+    --geist-foreground-secondary: #a1a1a1;
+    --geist-foreground-muted: #666666;
+    --geist-border: #333333;
+    --geist-border-hover: #555555;
+    --geist-code-background: #1a1a1a;
+    --geist-code-border: #333333;
+  }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
+  /* Geist Font Family */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), Consolas, monospace;
+
+  /* Geist Colors for Tailwind */
+  --color-background: var(--geist-background);
+  --color-background-secondary: var(--geist-background-secondary);
+  --color-foreground: var(--geist-foreground);
+  --color-foreground-secondary: var(--geist-foreground-secondary);
+  --color-foreground-muted: var(--geist-foreground-muted);
+  --color-border: var(--geist-border);
+  --color-border-hover: var(--geist-border-hover);
+  --color-link: var(--geist-link);
+  --color-link-hover: var(--geist-link-hover);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--geist-background);
+  color: var(--geist-foreground);
 }
 
 /* Prose styles for markdown content */
 .prose {
-  color: var(--text-secondary);
+  color: var(--geist-foreground-secondary);
   max-width: 65ch;
 }
 
@@ -39,7 +66,7 @@ body {
   margin-top: 2em;
   margin-bottom: 1em;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--geist-foreground);
 }
 
 .prose h3 {
@@ -47,7 +74,7 @@ body {
   margin-top: 1.6em;
   margin-bottom: 0.6em;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--geist-foreground);
 }
 
 .prose p {
@@ -70,31 +97,31 @@ body {
 
 .prose strong {
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--geist-foreground);
 }
 
 .prose a {
-  color: var(--accent);
+  color: var(--geist-link);
   text-decoration: underline;
   font-weight: 500;
 }
 
 .prose a:hover {
-  color: var(--accent);
-  opacity: 0.8;
+  color: var(--geist-link-hover);
 }
 
 .prose code {
-  background-color: #f3f4f6;
+  background-color: var(--geist-code-background);
   padding: 0.2em 0.4em;
   border-radius: 0.25rem;
   font-size: 0.875em;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--geist-foreground);
+  font-family: var(--font-geist-mono);
 }
 
 .prose hr {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--geist-border);
   margin-top: 3em;
   margin-bottom: 3em;
 }
