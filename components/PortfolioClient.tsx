@@ -7,6 +7,7 @@ import Card from '@/components/Card';
 import Modal from '@/components/Modal';
 import Section from '@/components/Section';
 import BuildingCard from '@/components/BuildingCard';
+import BuiltItem from '@/components/BuiltItem';
 
 interface PortfolioClientProps {
   projects: Project[];
@@ -156,12 +157,43 @@ export default function PortfolioClient({ projects, workFeatures }: PortfolioCli
 
             {/* Built Section */}
             <Section title="Built" href="/built">
-              <div className="space-y-3">
-                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
-                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
-                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
-                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
-                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+              <div className="space-y-1">
+                <BuiltItem
+                  name="TaxBit Integration"
+                  year="2024"
+                  description="Tax reporting & cost basis tracking"
+                  href="/built/taxbit"
+                />
+                <BuiltItem
+                  name="Spin Wheel"
+                  year="2023"
+                  description="Gamified engagement lever"
+                  href="/built/spin-wheel"
+                />
+                <BuiltItem
+                  name="Bitcoin Receiving"
+                  year="2023"
+                  description="In-app BTC deposit flow"
+                  href="/built/bitcoin-receiving"
+                />
+                <BuiltItem
+                  name="Bitcoin Selling"
+                  year="2023"
+                  description="In-app BTC liquidation"
+                  href="/built/bitcoin-selling"
+                />
+                <BuiltItem
+                  name="Card Reissuance"
+                  year="2023"
+                  description="Replacement card program"
+                  href="/built/card-reissuance"
+                />
+                <BuiltItem
+                  name="Fairytale Project"
+                  year="2024"
+                  description="Trilingual cultural archive (1,001 entries)"
+                  href="/built/fairytale"
+                />
               </div>
             </Section>
 
