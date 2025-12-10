@@ -131,7 +131,7 @@ export default function PortfolioClient({ projects, workFeatures }: PortfolioCli
 
         {/* Main Content */}
         <main className="flex-1 px-4 md:px-8 max-w-7xl mx-auto w-full">
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Case Studies Section */}
             <Section title="Case Studies" href="/case-studies">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

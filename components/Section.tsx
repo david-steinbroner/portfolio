@@ -11,7 +11,6 @@ export default function Section({ title, href, children }: SectionProps) {
   return (
     <section
       id={title.toLowerCase()}
-      className="py-12"
     >
       {/* Section Header */}
       <div className="flex items-center justify-between mb-6">
