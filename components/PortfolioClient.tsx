@@ -6,6 +6,7 @@ import { Project } from '@/lib/markdown';
 import Carousel from '@/components/Carousel';
 import Card from '@/components/Card';
 import Modal from '@/components/Modal';
+import Section from '@/components/Section';
 
 interface PortfolioClientProps {
   projects: Project[];
@@ -133,24 +134,38 @@ export default function PortfolioClient({ projects, workFeatures }: PortfolioCli
           />
         </header>
 
-        {/* Content Section */}
-        <div className="flex-1 flex flex-col justify-center overflow-hidden">
-          {/* Carousel Area */}
-          <main className="overflow-hidden flex-shrink-0 px-12 md:px-16" style={{ height: '440px' }}>
-            <Carousel
-              items={items}
-              renderCard={(item) => (
-                <Card
-                  title={item.metadata.title}
-                  description={item.metadata.description}
-                  image={item.metadata.image}
-                  tags={item.metadata.tags}
-                  onClick={() => setSelectedItem(item)}
-                />
-              )}
-            />
-          </main>
-        </div>
+        {/* Main Content */}
+        <main className="flex-1 px-4 md:px-8 max-w-7xl mx-auto w-full">
+          <div className="space-y-12">
+            {/* Building Section */}
+            <Section title="Building" href="/building">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+              </div>
+            </Section>
+
+            {/* Built Section */}
+            <Section title="Built" href="/built">
+              <div className="space-y-3">
+                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <div className="h-4 rounded w-3/4" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+              </div>
+            </Section>
+
+            {/* Case Studies Section */}
+            <Section title="Case Studies" href="/case-studies">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+                <div className="bg-gray-100 rounded-lg aspect-video" style={{ backgroundColor: 'var(--code-bg)' }}></div>
+              </div>
+            </Section>
+          </div>
+        </main>
 
         {/* Footer */}
         <footer className="px-8 py-3 border-t" style={{ borderColor: 'var(--border)' }}>
