@@ -175,18 +175,28 @@ export default function PortfolioClient() {
       <footer className="pt-16 border-t border-border">
         <p className="text-sm text-foreground-muted">
           Built with{' '}
+          <a href="https://nextjs.org" className="hover:text-foreground transition-colors">Next.js</a>
+          {' · '}
+          <a href="https://typescriptlang.org" className="hover:text-foreground transition-colors">TypeScript</a>
+          {' · '}
+          <a href="https://tailwindcss.com" className="hover:text-foreground transition-colors">Tailwind</a>
+          {' · '}
           <a href="https://vercel.com/font" className="hover:text-foreground transition-colors">Geist</a>
           {' · '}
           <a href="https://vercel.com/geist/colors" className="hover:text-foreground transition-colors">Geist Colors</a>
           {' · '}
           <a href="https://lucide.dev" className="hover:text-foreground transition-colors">Lucide Icons</a>
+        </p>
+        <p className="text-sm text-foreground-muted mt-1">
+          Shipped with{' '}
+          <a href="https://pages.cloudflare.com" className="hover:text-foreground transition-colors">Cloudflare Pages</a>
           {' · '}
-          <a href="https://nextjs.org" className="hover:text-foreground transition-colors">Next.js</a>
+          <a href="https://linear.app" className="hover:text-foreground transition-colors">Linear</a>
           {' · '}
-          <a href="https://tailwindcss.com" className="hover:text-foreground transition-colors">Tailwind</a>
+          <a href="https://claude.ai" className="hover:text-foreground transition-colors">Claude</a>
         </p>
         <p className="text-sm text-foreground-muted mt-2">
-          <a href="https://github.com/david-steinbroner/portfolio" className="hover:text-foreground transition-colors">
+          <a href="https://github.com/david-steinbroner" className="hover:text-foreground transition-colors">
             View source on GitHub
           </a>
         </p>
