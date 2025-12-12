@@ -32,7 +32,7 @@ async function markdownToHtml(markdown: string) {
 }
 
 export async function getProjectBySlug(
-  category: 'projects' | 'work-experience/fold-features',
+  category: 'projects' | 'work-experience/fold-features' | 'case-studies',
   slug: string
 ): Promise<Project> {
   const fullPath = path.join(contentDirectory, category, `${slug}.md`);
@@ -48,7 +48,7 @@ export async function getProjectBySlug(
 }
 
 export async function getAllProjects(
-  category: 'projects' | 'work-experience/fold-features'
+  category: 'projects' | 'work-experience/fold-features' | 'case-studies'
 ): Promise<Project[]> {
   const fullPath = path.join(contentDirectory, category);
 
