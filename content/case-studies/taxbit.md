@@ -11,6 +11,9 @@ impact:
 status: "Shipped"
 tags: ["Product Management", "Tax Compliance", "API Integration", "Fintech"]
 category: "case-study"
+features:
+  - name: "Tax Documents"
+    slug: "tax-documents"
 ---
 
 **Fold is a fintech app that lets users earn and spend bitcoin.** I led the integration of TaxBit, a third-party tax document provider, to deliver 1099-B forms to users who sold bitcoin—a hard compliance requirement with an April 15th deadline.
@@ -59,16 +62,10 @@ This research led to three decisions: ship a simple default (1099-B PDF with FIF
 
 **Support article.** I wrote the documentation explaining bitcoin tax reporting to users.
 
-![Settings menu showing Taxes & Documents entry point](/case-studies/taxbit/settings-entry.png)
-
 <div class="screenshot-group">
   <img src="/case-studies/taxbit/tax-documents-landing.png" alt="Tax Documents landing page with TaxBit partnership banner" />
   <img src="/case-studies/taxbit/download-statement.png" alt="Download statement screen with Form 1099-B and Gain/Loss Summary options" />
 </div>
-
-![Support article explaining tax documents and deadline](/case-studies/taxbit/support-article.png)
-
-![iOS share sheet showing the 1099-B PDF document](/case-studies/taxbit/1099b-download.png)
 
 ---
 

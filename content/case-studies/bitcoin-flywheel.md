@@ -12,6 +12,13 @@ impact:
 status: "Shipped"
 tags: ["Product Strategy", "Bitcoin", "Fintech", "Feature Development"]
 category: "case-study"
+features:
+  - name: "Selling Bitcoin"
+    slug: "selling-bitcoin"
+  - name: "Receiving Bitcoin"
+    slug: "receiving-bitcoin"
+  - name: "Direct to Bitcoin"
+    slug: "direct-to-bitcoin"
 ---
 
 **Fold is a fintech app that lets users earn and spend bitcoin.** I led the product strategy to transform Fold from a rewards app into a complete bitcoin ecosystem—shipping three interconnected features over 6 months that enabled users to bring bitcoin in, convert it to spendable fiat, and auto-buy on every deposit.
@@ -47,22 +54,13 @@ I also leveraged the Discord community I'd helped build, including a "Friends of
 
 ![Bitcoin home screen showing Buy/Sell/Transfer buttons and Automations section](/case-studies/bitcoin-flywheel/bitcoin-home.png)
 
-![Send or receive modal with grouped options](/case-studies/bitcoin-flywheel/send-receive-modal.png)
-
 **Sell Bitcoin** — Convert bitcoin to USD and automatically fund the Fold Card. No intermediate account, no manual transfer. The money goes exactly where users need it to spend.
 
-<div class="screenshot-group">
-  <img src="/case-studies/bitcoin-flywheel/sell-bitcoin-entry.png" alt="Sell bitcoin entry state showing fee transparency" />
-  <img src="/case-studies/bitcoin-flywheel/sell-bitcoin-amount.png" alt="Real-time sat/dollar conversion showing $10 example" />
-  <img src="/case-studies/bitcoin-flywheel/sell-bitcoin-confirm.png" alt="Full breakdown modal before confirmation" />
-</div>
+![Full breakdown modal before confirmation](/case-studies/bitcoin-flywheel/sell-bitcoin-confirm.png)
 
 **Receive Bitcoin** — Bring bitcoin from any external wallet into Fold. QR code, truncated address display, one-tap copy. These were must-haves I fought for—table stakes for any bitcoin wallet.
 
-<div class="screenshot-group">
-  <img src="/case-studies/bitcoin-flywheel/receive-bitcoin.png" alt="QR code with truncated address and View details" />
-  <img src="/case-studies/bitcoin-flywheel/receive-bitcoin-expanded.png" alt="Full address revealed with Copy button" />
-</div>
+![QR code with truncated address and View details](/case-studies/bitcoin-flywheel/receive-bitcoin.png)
 
 **Direct to Bitcoin** — Auto-convert 1-100% of every deposit into bitcoin. 25%, 50%, 100%, or custom percentage. No fees for premium members. Removes the friction of timing and decision fatigue.
 

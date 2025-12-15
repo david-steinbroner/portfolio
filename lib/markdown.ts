@@ -7,6 +7,11 @@ import html from 'remark-html';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+export interface FeatureLink {
+  name: string;
+  slug: string;
+}
+
 export interface ProjectMetadata {
   title: string;
   status: 'Live' | 'In Progress' | 'Shipped';
@@ -19,6 +24,9 @@ export interface ProjectMetadata {
   company?: string;
   impact?: string[];
   description: string;
+  features?: FeatureLink[];
+  caseStudy?: { title: string; slug: string };
+  role?: string;
 }
 
 export interface Project {
@@ -36,7 +44,7 @@ async function markdownToHtml(markdown: string) {
 }
 
 export async function getProjectBySlug(
-  category: 'case-studies',
+  category: 'case-studies' | 'features',
   slug: string
 ): Promise<Project> {
   const fullPath = path.join(contentDirectory, category, `${slug}.md`);
@@ -52,7 +60,7 @@ export async function getProjectBySlug(
 }
 
 export async function getAllProjects(
-  category: 'case-studies'
+  category: 'case-studies' | 'features'
 ): Promise<Project[]> {
   const fullPath = path.join(contentDirectory, category);
 

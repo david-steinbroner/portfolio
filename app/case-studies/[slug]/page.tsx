@@ -1,4 +1,4 @@
-import { getProjectBySlug, getAllProjects } from '@/lib/markdown';
+import { getProjectBySlug, getAllProjects, FeatureLink } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
@@ -67,6 +67,18 @@ export default async function CaseStudyPage({
           <p className="text-xl text-foreground-secondary leading-relaxed">
             {metadata.description}
           </p>
+          {metadata.features && metadata.features.length > 0 && (
+            <p className="text-sm text-foreground-muted mt-3">
+              → {metadata.features.map((f: FeatureLink, i: number) => (
+                <span key={f.slug}>
+                  <Link href={`/features/${f.slug}`} className="hover:text-foreground transition-colors">
+                    {f.name}
+                  </Link>
+                  {i < (metadata.features?.length || 0) - 1 && ' · '}
+                </span>
+              ))}
+            </p>
+          )}
           {metadata.date && (
             <p className="text-sm text-foreground-muted mt-4">
               {new Date(metadata.date).toLocaleDateString('en-US', {
@@ -101,7 +113,7 @@ export default async function CaseStudyPage({
         />
 
         {/* Table of Contents - Desktop only */}
-        <TableOfContents content={content} />
+        <TableOfContents content={content} features={metadata.features} />
       </div>
     </div>
   );

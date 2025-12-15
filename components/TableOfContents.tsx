@@ -1,17 +1,24 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 interface TOCItem {
   id: string;
   text: string;
 }
 
-interface TableOfContentsProps {
-  content: string;
+interface FeatureLink {
+  name: string;
+  slug: string;
 }
 
-export default function TableOfContents({ content }: TableOfContentsProps) {
+interface TableOfContentsProps {
+  content: string;
+  features?: FeatureLink[];
+}
+
+export default function TableOfContents({ content, features }: TableOfContentsProps) {
   const [headings, setHeadings] = useState<TOCItem[]>([]);
   const [activeId, setActiveId] = useState<string>('');
   const [isVisible, setIsVisible] = useState(false);
@@ -95,6 +102,29 @@ export default function TableOfContents({ content }: TableOfContentsProps) {
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >
+      {/* Features Section */}
+      {features && features.length > 0 && (
+        <>
+          <p className="text-[10px] uppercase tracking-wider text-foreground-muted mb-2">
+            Features
+          </p>
+          <ul className="space-y-2 mb-4">
+            {features.map((feature) => (
+              <li key={feature.slug}>
+                <Link
+                  href={`/features/${feature.slug}`}
+                  className="text-xs leading-relaxed text-foreground-muted hover:text-foreground-secondary transition-colors"
+                >
+                  {feature.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <hr className="border-border mb-4" />
+        </>
+      )}
+
+      {/* Sections */}
       <ul className="space-y-2">
         {headings.map((heading) => (
           <li key={heading.id}>
