@@ -36,7 +36,7 @@ export default function PortfolioClient() {
             LinkedIn
           </a>
           <a
-            href="https://github.com/da6ds"
+            href="https://github.com/david-steinbroner"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 hover:text-foreground transition-colors"
@@ -54,6 +54,9 @@ export default function PortfolioClient() {
         </h2>
         <div className="space-y-10">
           <article>
+            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
+              Fold
+            </span>
             <h3 className="text-xl font-medium mb-2">
               <a
                 href="/case-studies/taxbit"
@@ -69,6 +72,9 @@ export default function PortfolioClient() {
           </article>
 
           <article>
+            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
+              Fold
+            </span>
             <h3 className="text-xl font-medium mb-2">
               <a
                 href="/case-studies/bitcoin-flows"
@@ -84,6 +90,9 @@ export default function PortfolioClient() {
           </article>
 
           <article>
+            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
+              Fold
+            </span>
             <h3 className="text-xl font-medium mb-2">
               <a
                 href="/case-studies/spin-wheel"
