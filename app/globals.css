@@ -171,3 +171,18 @@ body {
   max-width: 280px;
   margin: 0;
 }
+
+/* Table of Contents */
+.toc-container {
+  position: fixed;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 180px;
+}
+
+@media (max-width: 1280px) {
+  .toc-container {
+    display: none;
+  }
+}

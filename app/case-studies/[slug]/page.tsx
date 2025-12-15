@@ -2,6 +2,7 @@ import { getProjectBySlug, getAllProjects } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
+import TableOfContents from '@/components/TableOfContents';
 
 export async function generateStaticParams() {
   const caseStudies = await getAllProjects('case-studies');
@@ -98,6 +99,9 @@ export default async function CaseStudyPage({
           className="prose"
           dangerouslySetInnerHTML={{ __html: content }}
         />
+
+        {/* Table of Contents - Desktop only */}
+        <TableOfContents content={content} />
       </div>
     </div>
   );

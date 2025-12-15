@@ -66,6 +66,15 @@ I also leveraged the Discord community I'd helped build, including a "Friends of
 
 **Direct to Bitcoin** — Auto-convert 1-100% of every deposit into bitcoin. 25%, 50%, 100%, or custom percentage. No fees for premium members. Removes the friction of timing and decision fatigue.
 
+## Product Decisions
+
+| Decision | Why |
+|----------|-----|
+| Auto-fund Fold Card on sell | Only logical destination. Reinforces the spend loop. Solves the funding problem that plagues every fintech. |
+| 25/50/100/Other for Direct to Bitcoin | Encourage usage with clear options, but serve the full 1% to 100% user spectrum. |
+| QR + copy + truncated address | Must-haves for any bitcoin wallet. I pushed hard for these. |
+| Fee transparency component | Reusable across app. Shows "$0.00 processing fee" for Fold+ members, or "Upgrade for no fees" if not. Drives premium conversions. |
+
 ## The Complexity
 
 Every feature touched multiple external partners:
@@ -76,15 +85,6 @@ Every feature touched multiple external partners:
 - **Compliance & Legal** review on every screen showing bitcoin to fiat conversion
 
 I learned that you have to tell the product story to partners as clearly as you tell it to users. If they don't understand what you're building, they default to caution—and that slows everything down.
-
-## Product Decisions
-
-| Decision | Why |
-|----------|-----|
-| Auto-fund Fold Card on sell | Only logical destination. Reinforces the spend loop. Solves the funding problem that plagues every fintech. |
-| 25/50/100/Other for Direct to Bitcoin | Encourage usage with clear options, but serve the full 1% to 100% user spectrum. |
-| QR + copy + truncated address | Must-haves for any bitcoin wallet. I pushed hard for these. |
-| Fee transparency component | Reusable across app. Shows "$0.00 processing fee" for Fold+ members, or "Upgrade for no fees" if not. Drives premium conversions. |
 
 ## The Tradeoff
 
@@ -101,14 +101,3 @@ I would have launched with that structure if we'd had more time for upfront rese
 **Partners need the story too.** In regulated industries, compliance partners are stakeholders in your product story. Clarity builds trust and speeds things up.
 
 **Connected features need connected marketing.** The flywheel only works if users understand how the pieces fit together.
-
-## Results
-
-- **Trade volume:** 50% MoM increase
-- **Direct to Bitcoin adoption:** ~40% of users
-- **Sell Bitcoin adoption:** ~25% of users
-- **Receive Bitcoin adoption:** ~10% (but highest-value power users)
-- **Premium subscription churn:** 20% decrease
-- **Revenue:** ~10% increase from interchange
-
-Users who used Receive also used Sell and Direct to Bitcoin—our clearest signal for power users who were transacting heavily on Fold.

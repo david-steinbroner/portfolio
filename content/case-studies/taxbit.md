@@ -44,9 +44,3 @@ This led to three decisions: ship a simple default (1099-B PDF with FIFO disposi
 ![Support article explaining tax documents and deadline](/case-studies/taxbit/support-article.png)
 
 ![iOS share sheet showing the 1099-B PDF document](/case-studies/taxbit/1099b-download.png)
-
-## Results
-
-- Shipped end of January—**2.5 months early**
-- **90% adoption** among eligible users
-- **~30 support tickets** across ~5,000 users (0.6% rate)
