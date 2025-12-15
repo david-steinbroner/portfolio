@@ -130,7 +130,7 @@ export default function PortfolioClient() {
           </div>
           <div className="group">
             <a
-              href="www.localgovwatch.com"
+              href="https://localgovwatch.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:text-foreground-secondary transition-colors"
