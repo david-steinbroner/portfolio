@@ -73,28 +73,37 @@ export default async function FeaturePage({
           </div>
         </header>
 
-        {/* Content */}
-        <article
-          className="prose mb-12"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
-
-        {/* Screenshots Coming Soon */}
-        <div className="mb-12 p-8 rounded-lg border border-border bg-background-secondary text-center">
-          <p className="text-foreground-muted">Screenshots coming soon</p>
-        </div>
-
-        {/* Case Study Link */}
-        {metadata.caseStudy && (
-          <div className="pt-8 border-t border-border">
-            <Link
-              href={`/case-studies/${metadata.caseStudy.slug}`}
-              className="inline-flex items-center gap-2 text-foreground hover:text-foreground-secondary transition-colors"
-            >
-              Read the full case study: {metadata.caseStudy.title}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+        {metadata.status === 'Coming Soon' ? (
+          /* Coming Soon State */
+          <div className="py-16 text-center">
+            <p className="text-foreground-muted">Coming Soon</p>
           </div>
+        ) : (
+          <>
+            {/* Content */}
+            <article
+              className="prose mb-12"
+              dangerouslySetInnerHTML={{ __html: content }}
+            />
+
+            {/* Screenshots Coming Soon */}
+            <div className="mb-12 p-8 rounded-lg border border-border bg-background-secondary text-center">
+              <p className="text-foreground-muted">Screenshots coming soon</p>
+            </div>
+
+            {/* Case Study Link */}
+            {metadata.caseStudy && (
+              <div className="pt-8 border-t border-border">
+                <Link
+                  href={`/case-studies/${metadata.caseStudy.slug}`}
+                  className="inline-flex items-center gap-2 text-foreground hover:text-foreground-secondary transition-colors"
+                >
+                  Read the full case study: {metadata.caseStudy.title}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>

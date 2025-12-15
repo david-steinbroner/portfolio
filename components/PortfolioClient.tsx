@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Mail, Linkedin, Github, ArrowUpRight } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 
@@ -125,7 +126,7 @@ export default function PortfolioClient() {
               Discovering Magic
             </a>
             <span className="text-foreground-muted ml-2">
-              — MTG deck discovery for people who've never played
+              — A gateway to Magic: The Gathering through things you already love—Fallout, dinosaurs, anime art, Furby cards. Discovery over terminology.
             </span>
           </div>
           <div className="group">
@@ -138,7 +139,7 @@ export default function PortfolioClient() {
               Local Gov Watch
             </a>
             <span className="text-foreground-muted ml-2">
-              — Civic tech for local government transparency
+              — Track local government in real-time. Meeting schedules, legislation, and votes aggregated from scattered government websites into one feed.
             </span>
           </div>
           <div className="group">
@@ -162,20 +163,24 @@ export default function PortfolioClient() {
         </h2>
         <div className="divide-y divide-border">
           {[
-            { name: 'TaxBit Integration', desc: 'Tax reporting & cost basis tracking', year: '2024' },
-            { name: 'Spin Wheel', desc: 'Gamified engagement lever', year: '2023' },
-            { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2023' },
-            { name: 'Bitcoin Selling', desc: 'In-app BTC liquidation', year: '2023' },
-            { name: 'Card Reissuance', desc: 'Replacement card program', year: '2023' },
-            { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2024' },
+            { name: 'TaxBit Integration', desc: 'Tax reporting & cost basis tracking', year: '2024', href: '/features/tax-documents' },
+            { name: 'Spin Wheel', desc: 'Gamified engagement lever', year: '2023', href: '/features/spin-wheel' },
+            { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2023', href: '/features/receiving-bitcoin' },
+            { name: 'Bitcoin Selling', desc: 'In-app BTC liquidation', year: '2023', href: '/features/selling-bitcoin' },
+            { name: 'Card Reissuance', desc: 'Replacement card program', year: '2023', href: '/features/card-reissuance' },
+            { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2024', href: '/features/fairytale-project' },
           ].map((item) => (
-            <div key={item.name} className="flex justify-between items-baseline py-3">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="flex justify-between items-baseline py-3 hover:bg-background-secondary transition-colors -mx-3 px-3 rounded"
+            >
               <div>
                 <span className="font-medium">{item.name}</span>
                 <span className="text-foreground-muted ml-2 text-sm">{item.desc}</span>
               </div>
               <span className="text-foreground-muted text-sm tabular-nums">{item.year}</span>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

@@ -14,7 +14,7 @@ export interface FeatureLink {
 
 export interface ProjectMetadata {
   title: string;
-  status: 'Live' | 'In Progress' | 'Shipped';
+  status: 'Live' | 'In Progress' | 'Shipped' | 'Coming Soon';
   tags: string[];
   date: string;
   link?: string;

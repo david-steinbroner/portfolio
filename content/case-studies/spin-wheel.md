@@ -11,6 +11,9 @@ impact:
   - "2.7x increase in app opens per user per week"
   - "31% improvement in 30-day user retention"
   - "Generated $800K in partner sponsorship revenue"
+features:
+  - name: "Spin Wheel"
+    slug: "spin-wheel"
 ---
 
 ## The Challenge
