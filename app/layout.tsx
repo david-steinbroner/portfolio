@@ -14,8 +14,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "David Steinbroner - Product Manager & Full-Stack Developer",
-  description: "Product Manager with 5+ years experience in fintech, specializing in bitcoin, payments, and user engagement. Building full-stack projects and prototypes.",
+  title: "David Steinbroner — Full-Stack Product Manager and Builder",
+  description: "Full-stack product manager and builder. I build things for people, not users.",
+  openGraph: {
+    title: "David Steinbroner — Full-Stack Product Manager and Builder",
+  },
+  twitter: {
+    title: "David Steinbroner — Full-Stack Product Manager and Builder",
+  },
   icons: { icon: [] },
 };
 
