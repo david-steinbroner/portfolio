@@ -77,15 +77,15 @@ export default function PortfolioClient() {
             </span>
             <h3 className="text-xl font-medium mb-2">
               <a
-                href="/case-studies/bitcoin-flows"
+                href="/case-studies/bitcoin-flywheel"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
-                Bitcoin Flows
+                The Bitcoin Flywheel
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Designing send and receive flows for users who'd never touched crypto
+              Led the product strategy to transform Fold from a bitcoin rewards app into a complete bitcoin ecosystem. Shipped Sell Bitcoin, Receive Bitcoin, and Direct to Bitcoin over 6 months—enabling users to bring bitcoin in, convert it to spendable fiat, and auto-buy on every deposit.
             </p>
           </article>
 

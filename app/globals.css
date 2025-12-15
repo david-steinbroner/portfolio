@@ -123,3 +123,38 @@ body {
   margin-top: 3em;
   margin-bottom: 3em;
 }
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.875em;
+}
+
+.prose th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--geist-foreground);
+  padding: 0.75em 1em;
+  border-bottom: 2px solid var(--geist-border);
+}
+
+.prose td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid var(--geist-border);
+  vertical-align: top;
+}
+
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: 1px solid var(--geist-border);
+}
