@@ -151,10 +151,23 @@ body {
 }
 
 .prose img {
-  max-width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 0.5rem;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin: 1.5em auto;
+  display: block;
   border: 1px solid var(--geist-border);
+}
+
+.screenshot-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.screenshot-group img {
+  max-width: 280px;
+  margin: 0;
 }

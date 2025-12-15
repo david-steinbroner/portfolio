@@ -36,9 +36,10 @@ This led to three decisions: ship a simple default (1099-B PDF with FIFO disposi
 
 ![Settings menu showing Taxes & Documents entry point](/case-studies/taxbit/settings-entry.png)
 
-![Tax Documents landing page with TaxBit partnership banner](/case-studies/taxbit/tax-documents-landing.png)
-
-![Download statement screen with Form 1099-B and Gain/Loss Summary options](/case-studies/taxbit/download-statement.png)
+<div class="screenshot-group">
+  <img src="/case-studies/taxbit/tax-documents-landing.png" alt="Tax Documents landing page with TaxBit partnership banner" />
+  <img src="/case-studies/taxbit/download-statement.png" alt="Download statement screen with Form 1099-B and Gain/Loss Summary options" />
+</div>
 
 ![Support article explaining tax documents and deadline](/case-studies/taxbit/support-article.png)
 
