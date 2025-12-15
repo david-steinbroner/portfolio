@@ -32,7 +32,7 @@ async function markdownToHtml(markdown: string) {
 }
 
 export async function getProjectBySlug(
-  category: 'projects' | 'work-experience/fold-features' | 'case-studies',
+  category: 'case-studies',
   slug: string
 ): Promise<Project> {
   const fullPath = path.join(contentDirectory, category, `${slug}.md`);
@@ -48,7 +48,7 @@ export async function getProjectBySlug(
 }
 
 export async function getAllProjects(
-  category: 'projects' | 'work-experience/fold-features' | 'case-studies'
+  category: 'case-studies'
 ): Promise<Project[]> {
   const fullPath = path.join(contentDirectory, category);
 
@@ -70,14 +70,4 @@ export async function getAllProjects(
   return projects.sort((a, b) => {
     return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
   });
-}
-
-export async function getFeaturedProjects(limit: number = 3): Promise<Project[]> {
-  const allProjects = await getAllProjects('projects');
-  return allProjects.slice(0, limit);
-}
-
-export async function getFeaturedFeatures(limit: number = 4): Promise<Project[]> {
-  const allFeatures = await getAllProjects('work-experience/fold-features');
-  return allFeatures.slice(0, limit);
 }

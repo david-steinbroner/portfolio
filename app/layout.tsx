@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import ComingSoon from "@/components/ComingSoon";
-
-// Toggle this to show/hide "Coming Soon" page
-const COMING_SOON_MODE = false;
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -32,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {COMING_SOON_MODE ? <ComingSoon /> : children}
+          {children}
         </ThemeProvider>
       </body>
     </html>
