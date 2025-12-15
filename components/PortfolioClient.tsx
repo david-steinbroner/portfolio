@@ -59,12 +59,12 @@ export default function PortfolioClient() {
                 href="/case-studies/taxbit"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
-                TaxBit Integration
+                6 Stakeholder Groups. 10 Weeks. 2 Engineers.
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Integrating tax compliance into a crypto app without breaking the user experience
+              Led the end-to-end integration of a third-party tax document provider to deliver 1099-B forms to ~5,000 users who sold bitcoin through Fold. Coordinated six stakeholder groups (Legal, Compliance, Finance, Engineering, Support, plus external counsel, banking partner, and TaxBit), became the internal crypto tax expert, and shipped 2.5 months early with a 0.6% support ticket rate.
             </p>
           </article>
 
