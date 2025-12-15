@@ -62,12 +62,12 @@ export default function PortfolioClient() {
                 href="/case-studies/taxbit"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
-                6 Stakeholder Groups. 10 Weeks. 2 Engineers.
+                Shipping Tax Season at a Startup
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Led the end-to-end integration of a third-party tax document provider to deliver 1099-B forms to ~5,000 users who sold bitcoin through Fold. Coordinated six stakeholder groups (Legal, Compliance, Finance, Engineering, Support, plus external counsel, banking partner, and TaxBit), became the internal crypto tax expert, and shipped 2.5 months early with a 0.6% support ticket rate.
+              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents. They were expecting them by year-end—just like from every other crypto platform they use. I got bandwidth in November, found the vendor, learned crypto tax law, and wrangled six stakeholder groups. Shipped by mid-January.
             </p>
           </article>
 

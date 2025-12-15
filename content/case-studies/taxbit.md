@@ -1,5 +1,5 @@
 ---
-title: "6 Stakeholder Groups. 10 Weeks. 2 Engineers."
+title: "Shipping Tax Season at a Startup"
 company: "Fold"
 date: "2024"
 description: "Integrating TaxBit to ship crypto tax compliance at Fold"
@@ -22,6 +22,8 @@ No one at Fold had built crypto tax reporting before. I became the subject matte
 
 This led to three decisions: ship a simple default (1099-B PDF with FIFO disposition), provide an escape hatch (Gain/Loss CSV), and communicate early (December "coming soon" state).
 
+**Buying time with a "coming soon" state:** Support tickets started coming in December—users wondering where their tax docs were. I fast-tracked a "coming soon" card for impacted users to set expectations while we finished the integration.
+
 **Tradeoffs under constraints:** TaxBit's W-9 SDK didn't support editable fields. Building custom fields would blow the timeline. I researched historical support data—only ~0.2% of users update name/address annually—and designed a support-assisted workaround instead. Outcome: 5-10 tickets, exactly as predicted.
 
 ## What shipped
@@ -31,6 +33,16 @@ This led to three decisions: ship a simple default (1099-B PDF with FIFO disposi
 - W-9 collection flow via TaxBit SDK
 - Conditional entry points based on eligibility and W-9 status
 - Support tooling and training
+
+![Settings menu showing Taxes & Documents entry point](/case-studies/taxbit/settings-entry.png)
+
+![Tax Documents landing page with TaxBit partnership banner](/case-studies/taxbit/tax-documents-landing.png)
+
+![Download statement screen with Form 1099-B and Gain/Loss Summary options](/case-studies/taxbit/download-statement.png)
+
+![Support article explaining tax documents and deadline](/case-studies/taxbit/support-article.png)
+
+![iOS share sheet showing the 1099-B PDF document](/case-studies/taxbit/1099b-download.png)
 
 ## Results
 
