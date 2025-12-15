@@ -104,7 +104,7 @@ export default function PortfolioClient() {
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              An engagement feature that required product, project management, marketing, and vendor coordination
+              Fold's bitcoin rewards were compelling but passive—users earned on purchases but rarely opened the app in between. I designed and shipped the Spin Wheel, a daily gamification feature that increased DAU by 23% and generated $800K in sponsor revenue while coordinating five teams and an external prize vendor.
             </p>
           </article>
         </div>
@@ -150,7 +150,15 @@ export default function PortfolioClient() {
               This Site
             </a>
             <span className="text-foreground-muted ml-2">
-              — Building in public
+              — Building my portfolio in public with Next.js and Linear.{' '}
+              <a
+                href="https://github.com/david-steinbroner/portfolio-site"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                View on GitHub →
+              </a>
             </span>
           </div>
         </div>
