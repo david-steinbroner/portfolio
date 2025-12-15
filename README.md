@@ -1,118 +1,70 @@
 # David Steinbroner - Portfolio
 
-A modern portfolio website showcasing product management work and full-stack development projects.
+Personal portfolio site showcasing product management work and technical projects.
+
+Live at [davidsteinbroner.com](https://davidsteinbroner.com)
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 with App Router
+- **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS v4
+- **Typography**: Geist Sans + Geist Mono
 - **Content**: Markdown with gray-matter
 - **Deployment**: Cloudflare Pages
-
-## Features
-
-- 🚀 Fast, static-first rendering
-- 📝 Markdown-based content management
-- 🎨 Clean, professional design
-- 📱 Fully responsive
-- ⚡ Optimized for performance
-- 🔍 SEO-friendly
 
 ## Project Structure
 
 ```
 portfolio/
-├── app/                    # Next.js App Router pages
-│   ├── page.tsx           # Homepage
-│   ├── work/              # Work experience section
-│   └── projects/          # Projects section
-├── components/            # React components
-├── content/               # Markdown content
-│   ├── projects/         # Solo project write-ups
-│   └── work-experience/  # Fold features
-├── lib/                  # Utilities
-│   └── markdown.ts       # Content parsing
-└── public/               # Static assets
-    └── images/           # Project images
+├── app/
+│   ├── page.tsx                    # Homepage
+│   └── case-studies/[slug]/        # Case study detail pages
+├── components/
+│   └── PortfolioClient.tsx         # Main portfolio component
+├── content/
+│   └── case-studies/               # Markdown case study files
+├── lib/
+│   └── markdown.ts                 # Content parsing utilities
+└── public/
+    └── images/                     # Static assets
 ```
 
 ## Local Development
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000)
+```bash
+# Install dependencies
+npm install
 
-## Adding New Content
+# Run dev server
+npm run dev
 
-### Add a New Project
+# Build for production
+npm run build
+```
 
-1. Create a new markdown file in `content/projects/`:
-   ```bash
-   touch content/projects/my-new-project.md
-   ```
+Open [http://localhost:3000](http://localhost:3000)
 
-2. Add frontmatter and content:
-   ```markdown
-   ---
-   title: "My New Project"
-   status: "Live"
-   tags: ["React", "TypeScript"]
-   date: "2025-01"
-   link: "https://example.com"
-   github: "https://github.com/..."
-   image: "/images/my-project.png"
-   category: "project"
-   description: "A brief description"
-   impact:
-     - "Key metric 1"
-     - "Key metric 2"
-   ---
+## Adding Content
 
-   ## Overview
-   Project details here...
-   ```
+### Case Studies
 
-3. Add an image to `public/images/`
-4. Commit and push - Cloudflare Pages will auto-deploy!
+Create a new markdown file in `content/case-studies/`:
 
-### Add a New Work Feature
+```markdown
+---
+title: "Case Study Title"
+date: "2025-01"
+company: "Company Name"
+role: "Your Role"
+---
 
-Same process, but create the file in `content/work-experience/fold-features/`
+Content goes here...
+```
 
-## Deployment to Cloudflare Pages
+## Deployment
 
-### First-Time Setup
-
-1. Push your code to GitHub
-2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com)
-3. Go to Workers & Pages → Create Application → Pages → Connect to Git
-4. Select your repository
-5. Configure build settings:
-   - **Framework preset**: Next.js
-   - **Build command**: `npm run build`
-   - **Build output directory**: `.next`
-   - **Node version**: 20
-6. Click "Save and Deploy"
-
-### Continuous Deployment
-
-After initial setup, every push to your main branch automatically deploys to Cloudflare Pages.
-
-## Updating Content
-
-Simply edit markdown files and push to GitHub. The site will rebuild automatically in 2-3 minutes.
-
-## Environment Variables
-
-No environment variables are required for basic functionality.
+Cloudflare Pages auto-deploys on push to `main`. Build typically completes in 2-3 minutes.
 
 ## License
 
