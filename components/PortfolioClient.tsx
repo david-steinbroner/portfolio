@@ -99,12 +99,12 @@ export default function PortfolioClient() {
                 href="/case-studies/spin-wheel"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
-                Spin Wheel
+                Spin Wheel Evolution
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold's bitcoin rewards were compelling but passive—users earned on purchases but rarely opened the app in between. I designed and shipped the Spin Wheel, a daily gamification feature that increased DAU by 23% and generated $800K in sponsor revenue while coordinating five teams and an external prize vendor.
+              Fold's most beloved feature was also its biggest financial liability. I inherited the Spin Wheel and evolved it through four strategic iterations—balancing user love against business sustainability while working with minimal engineering bandwidth. Built self-service tooling, created a sponsorship program, and landed on a model that works at any Bitcoin price.
             </p>
           </article>
         </div>

@@ -1,85 +1,69 @@
 ---
-title: "Spin Wheel"
-status: "Shipped"
-tags: ["Product Management", "Gamification", "Engagement", "Cross-functional Leadership"]
-date: "2023-11"
+title: "Spin Wheel Evolution"
 company: "Fold"
-category: "case-study"
-description: "Fold's bitcoin rewards were compelling but passive—users earned on purchases but rarely opened the app in between. I designed and shipped the Spin Wheel, a daily gamification feature that increased DAU by 23% and generated $800K in sponsor revenue while coordinating five teams and an external prize vendor."
+date: "2024"
+description: "Transforming a beloved but unsustainable feature into a future-proof engagement engine through four strategic iterations"
 impact:
-  - "23% increase in daily active users"
-  - "2.7x increase in app opens per user per week"
-  - "31% improvement in 30-day user retention"
-  - "Generated $800K in partner sponsorship revenue"
-features:
-  - name: "Spin Wheel"
-    slug: "spin-wheel"
+  - "Redesigned prize economics to be sustainable at any Bitcoin price up to $120K"
+  - "Built self-service admin tooling eliminating engineering dependency"
+  - "Created sponsorship program generating six-figure revenue"
+  - "Shipped winner notifications driving meaningful DAU increases"
+status: "Shipped"
+tags: ["Product Strategy", "Engagement", "Iteration"]
+category: "case-study"
 ---
 
-**Fold's bitcoin rewards were compelling but passive.** Users earned on card purchases, but engagement between purchases was low. I led the design and launch of the Spin Wheel—a daily gamification feature that transformed how users interacted with the app.
-
----
-
-## Impact
-
-The Spin Wheel exceeded every goal:
-
-**Engagement**
-- **23% increase** in daily active users
-- **2.7x more** app opens per user per week
-- **31% improvement** in 30-day retention
-- **4.8/5 user satisfaction** ("The spin is the best part of my morning")
-
-**Revenue**
-- **$800K in sponsorship revenue** (first 6 months)
-- **3 major brand partnerships** (Square, Swan, River)
-- **Positive ROI** within first quarter
-
-**Brand Differentiation**
-- Featured in TechCrunch and Bitcoin Magazine
-- "Most fun crypto app" reputation in user reviews
-- Copied by 5+ competitor apps within a year
+**Fold's bitcoin rewards were compelling but financially unsustainable.** I inherited the Spin Wheel—the app's most beloved feature—and evolved it through four major iterations over 18+ months, balancing user love against business economics while working with minimal engineering bandwidth.
 
 ---
 
 ## The Gap
 
-Fold needed a daily engagement hook that would:
-1. Bring users back to the app consistently
-2. Feel fun and rewarding (not like a chore)
-3. Educate users about Bitcoin's price movements
-4. Create sponsorship opportunities to fund rewards
+When I inherited Spin Wheel, it was the app's most beloved feature—and its biggest financial liability.
 
-The metric we optimized for: **Daily Active Users (DAU) and session frequency.**
+The original mechanic tied spins to purchases: buy something with your Fold Card, get a spin, win sats (bitcoin). Users loved it. The problem? As Bitcoin's price rose, our reward costs scaled with it. A prize structure that worked at $20K Bitcoin became unsustainable at $60K Bitcoin. We were on track to price ourselves out of existence.
 
-Users were happy with their card rewards, but they only opened the app to check balances. We needed something that created a reason to come back every day—something that felt like a treat, not an obligation.
+I needed to redesign the economics without killing the thing users loved most about the app.
 
 ---
 
 ## Understanding the Users
 
-I talked to users and analyzed behavioral data to understand what engagement patterns looked like. The picture was clear:
+I had a unique advantage: I'd built the community these users lived in.
 
-**Users wanted a reason to open the app.** Card rewards were great, but they're passive. Users told us they wanted something to *do* in the app—not just something to check.
+As Community Manager, I'd grown Fold's Discord to 40,000+ members. From that community, I created "Friends of Fold"—a group of 40+ power users who became our most direct feedback channel. But I didn't rely on them alone.
 
-**Variable rewards create habit loops.** Users who'd used other apps with gamification features (Starbucks, Duolingo) mentioned the "surprise" factor as what kept them coming back. Predictable rewards were boring; surprise made it fun.
+For every major iteration, I gathered feedback through multiple channels: Discord discussions with the broader community, Twitter polls to gauge sentiment from users who weren't in Discord, email surveys sent to our full user base, in-app notifications prompting feedback, and historical survey data from years of community engagement.
 
-**Timing mattered.** Morning routines were the most common app usage pattern. A feature that fit into someone's morning coffee ritual would stick better than one that competed for attention later in the day.
-
-This research led to three decisions: make rewards variable (not fixed), reset daily at midnight local time, and make the wheel itself visually satisfying to spin.
+This multi-channel approach meant I heard from casual users and power users, from fans and critics. The insight that mattered most: users didn't care about the specific mechanic as much as they cared about feeling like they could win something meaningful.
 
 ---
 
 ## What We Built
 
-A daily gamification feature that let users spin a prize wheel for Bitcoin rewards:
+### Four Iterations
 
-- **Daily ritual** — Users could spin once per day for free
-- **Variable rewards** — Prizes ranged from small satoshi amounts to full Bitcoin
-- **Sponsored spins** — Partner brands could sponsor additional spins
-- **Social proof** — Real-time feed showing other users' wins
-- **Streak mechanics** — Bonus multipliers for consecutive daily spins
-- **Bitcoin price education** — Rewards displayed in both sats and USD
+**Iteration 1: Purchase-Tied Spins (Inherited)**
+The original: every Fold Card purchase earned a spin. Simple, beloved, unsustainable. Prize costs scaled directly with Bitcoin price.
+
+**Iteration 2: Spend-Based Spins**
+We shifted from "every purchase = spin" to "spend thresholds = spins." Spend $50, get a spin. This gave us more control over cost per spin, but added complexity users had to understand.
+
+**Iteration 3: Action-Based Spins**
+I led strategy and implementation for a system where specific in-app actions earned spins—deposits, card purchases, referrals. The idea was to drive specific behaviors and build infrastructure for future engagement features. On paper, elegant. In practice, too complicated to explain, display, and execute with the bandwidth we had.
+
+**Iteration 4: Daily Free Spins (Final)**
+We landed on the simplest model: everyone gets a set number of free spins daily, capped. No complicated triggers, no spend thresholds, no action tracking. I built a financial model that made this sustainable at any Bitcoin price up to $120K.
+
+### Supporting Features
+
+**Self-service admin tooling:** I spec'd and shipped an internal tool to update the wheel—design, odds, prizes, copy, campaign duration—without engineering. Every seasonal theme, every sponsored campaign, every prize adjustment could happen without pulling engineers off roadmap work.
+
+**Winner notifications:** I identified that FOMO drives engagement. When someone won a big prize, other users should know. Push notifications on major wins drove significant increases in DAU and daily spins.
+
+**Sponsorship program:** I turned a cost center into a revenue stream. Designed tiered packages, created the sales playbook, ran GTM. Partners sponsored themed wheels with their branding. Generated six-figure revenue.
+
+**Seasonal campaigns:** Quarterly themed refreshes with custom designs, adjusted prize pools, and coordinated GTM—like "Hot Sat Summer" with escalating prizes to drive engagement during slow periods.
 
 ---
 
@@ -87,78 +71,56 @@ A daily gamification feature that let users spin a prize wheel for Bitcoin rewar
 
 | Decision | Why |
 |----------|-----|
-| Everyone wins something | No "try again" results. Users can smell when you're being stingy. 100% win rate made it feel generous. |
-| Daily beats weekly | We almost shipped weekly spins to reduce costs. Testing proved daily was 2.7x better for engagement. Sometimes the bolder choice is the right choice. |
-| Sponsored spins feel like bonuses | Partner brands fund bigger prizes while creating value for users. Structured as "bonus spins," not ads. |
-| Real-time winner feed | "Sarah just won 500 sats!" creates FOMO and proves the wheel is fair. Winner feed increased spin-through rate by 40%. |
-| Midnight local reset | Creates a consistent ritual. Users know exactly when their spin is available. |
-
-**Probability Design:**
-- Small wins frequent (1-10 sats: 70% probability)
-- Medium wins exciting (100-1000 sats: 25%)
-- Big wins rare but possible (0.01 BTC: 5%)
-- Jackpot legendary (1 BTC: 0.01%)
+| Simplify to daily free spins | Action-based system was too complex for our bandwidth. Simpler model we could actually execute well. |
+| Build admin tooling first | A few engineering tickets gave me autonomy for every future update. Multiplied my impact without ongoing eng cost. |
+| Cap spins per day | Created sustainable economics at any Bitcoin price. Model tested up to $120K BTC. |
+| Add winner notifications | FOMO drives engagement. Seeing others win motivates spinning. |
+| Create sponsorship tiers | Transformed cost center into revenue stream. Partners got themed exposure, we got paid. |
 
 ---
 
 ## The Complexity
 
-This project required orchestrating five internal teams and an external vendor across a 5-month timeline.
+The hardest part wasn't the product work—it was the constraint management.
 
-**Internal coordination:**
-- **Engineering** (8 weeks): Wheel animation, prize distribution logic, fraud detection, analytics
-- **Design** (4 weeks): Visual design, animations, celebration screens, error states
-- **Legal** (6 weeks): Gambling compliance review, prize terms, sponsorship contracts, tax reporting
-- **Marketing** (3 weeks): Launch campaign, sponsor acquisition, push notification strategy
-- **Finance** (2 weeks): Reward budget modeling, sponsorship projections, ROI calculations
+At a lean startup, I didn't have dedicated engineering capacity. I'd get engineers for a ticket or two, not sprints. Whatever I built in that window needed to either solve the problem completely or give me tools to solve it myself going forward.
 
-**External coordination:**
-- Evaluated 4 gamification platform vendors
-- Negotiated contract with prize fulfillment provider (Wheel.io)
-- Managed API integration and testing
-- Established SLAs for prize delivery
+**The action-based system (Iteration 3) failed because I scoped it for a team I didn't have.** I wanted to build infrastructure for future engagement features. What I should have built was the simplest thing that worked with the bandwidth available.
 
-**Challenge 1: Fraud Prevention**
-Some users created multiple accounts to get multiple spins. Solution: Device fingerprinting, IP rate limiting, behavior pattern detection, manual review queue. Reduced fraud to <2% of spins.
-
-**Challenge 2: Prize Economics**
-Early models showed we'd run out of budget in 3 months. Solution: Refined probability distribution using Monte Carlo simulations, secured sponsor funding for bigger prizes, implemented dynamic prize pools based on Bitcoin price. Result: sustainable economics with room for growth.
-
-**Challenge 3: Gambling Compliance**
-Legal team initially worried about gambling regulations. Solution: Confirmed free daily spin = not gambling, added "no purchase necessary" language, structured bonus spins to avoid pay-to-play perception, got written legal opinion confirming compliance. Launched without regulatory issues.
+This is why the self-service tooling mattered so much. A few engineering tickets gave me autonomy for every future update.
 
 ---
 
 ## The Tradeoff
 
-The biggest product decision was daily vs. weekly spins.
+Every iteration risked two things pulling in opposite directions:
 
-**Weekly spins would have:**
-- Reduced prize pool costs by 7x
-- Made each spin feel "bigger" (more accumulated value)
-- Been safer from a budget perspective
+**Alienating legacy users:** Our highest-value customers who loved the original mechanic and had strong opinions about changes.
 
-**Daily spins would have:**
-- Higher ongoing costs
-- More engagement touchpoints
-- Stronger habit formation
+**Inaccessibility to new users:** Every layer of complexity made it harder for new users to understand what we were offering.
 
-I pushed for daily, but the finance team was concerned about sustainability. We agreed to A/B test both approaches for two weeks.
+These iterations happened over 18+ months, but from the outside—to someone not paying close attention—it looked like we were constantly changing. That's the tradeoff of iteration: it can look like indecision if you're not transparent about it.
 
-**The result was decisive:** Daily spins drove 2.7x more app opens per user per week. Weekly users often forgot about their spin entirely. Daily users built it into their morning routine.
+We leaned into transparency. Every change came with honest communication: "This isn't sustainable. We're bummed too. Here's why we have to change it, here's what we're trying, and here's what's coming next."
 
-We shipped daily. The higher cost was offset by the engagement gains and the sponsorship revenue that came from having more eyeballs on the feature.
+And because we'd built genuine community trust over years—through direct CEO communication, through honest marketing, through actually listening to feedback—something remarkable happened: **our users defended us.**
+
+When someone complained about the wheel getting "nuked," we didn't have to respond. Other community members would jump in: "They had to do this. Stick around. Remember Crypto Winter when every other company in this space died? Fold stayed."
+
+That wasn't luck. That was years of transparent community building paying off when we needed it most.
 
 ---
 
 ## What I Learned
 
-**Gamification works when it's generous.** Users can smell when you're being stingy. Our "everyone wins" approach made the wheel feel fun, not frustrating.
+**Simpler is better.** Not as a platitude—as a survival strategy. When you don't have bandwidth to build something well, don't build it at all. Build the simpler thing you can actually execute.
 
-**Cross-functional projects need a quarterback.** With 5 teams and external vendors, someone needed to own the whole picture. I learned to balance delegation with accountability.
+**Build tools, not just features.** A few engineering tickets on admin tooling gave me more long-term value than a complex feature I couldn't maintain or iterate on.
 
-**Sponsorships are product, not just revenue.** By integrating sponsors thoughtfully (bonus spins, not interruption), we created value for users, brands, and Fold.
+**Iteration has a perception cost.** Too many changes too close together makes you look like you don't know what you're doing. Transparency helps, but it doesn't eliminate the cost.
 
-**Daily beats weekly.** We almost shipped weekly spins to reduce costs. Testing proved daily was 2.7x better for engagement. Sometimes the bolder choice is the right choice.
+**Community trust is a strategic asset.** The years I spent building Discord, being transparent, creating direct lines between leadership and users—all of that converted into users defending us during our hardest product changes. You can't manufacture that in a crisis. You have to build it before you need it.
 
-**Ship fast, iterate faster.** Launched with minimal viable feature, then added streaks, social feed, and sponsored spins based on user feedback. V1 shipped in 3 months; V4 (with all features) took 8 months total.
+**Cost structures need to survive success.** The original Spin Wheel failed because Bitcoin succeeded. Any reward system tied to an appreciating asset needs a model that works at 3x the current price.
+
+**Accessibility matters in both directions.** Legacy users and new users have opposite needs. Every decision has to account for both, even when they conflict.
