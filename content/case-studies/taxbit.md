@@ -46,6 +46,32 @@ This research led to three decisions: ship a simple default (1099-B PDF with FIF
 
 ---
 
+## The Communication Strategy
+
+Before building anything, I shipped communication.
+
+By mid-December, users were already getting tax emails from Coinbase, Robinhood, and Uphold. I knew this because I stayed close with Support, and we'd started receiving tickets: "When am I getting my tax documents?" Users were getting anxious, and we hadn't written a single line of code yet.
+
+I made a deliberate call: handle what we could handle first. The feature would get built—but I could assuage anxiety immediately with zero engineering effort.
+
+**I shipped three things in mid-December:**
+
+**1. Email to impacted users.** Marketing copy explaining that tax documents were coming in early 2025, well ahead of the April deadline. Only sent to users who had sold bitcoin in 2024—broadcasting to everyone would cause panic from users who didn't need documents.
+
+**2. Support article.** I wrote documentation explaining bitcoin tax reporting: what forms they'd receive, what they meant, and when to expect them. This became the canonical answer for all tax questions. I worked with TaxBit to answer the specific questions Support was already fielding.
+
+**3. In-app persistent component.** This is where it gets interesting. I'd helped build a configurable in-app messaging component earlier that year—we could target specific user segments, control the text and image from the backend, and link to any URL. For this launch, I targeted users who had sold bitcoin in 2024, set the copy to "Tax documents coming soon," and linked to the support article.
+
+The link took users out of the app—not ideal UX—but it was a deliberate tradeoff. Building an in-app page would require front-end engineering time I didn't have. The support article gave users everything they needed, and a back button got them back into the app.
+
+**The impact was immediate.** Support let me know that tickets asking about tax documents dropped dramatically after we shipped the email and in-app component. We'd bought ourselves time and trust while the feature was still being built.
+
+**The FAQ became a living document.** I gathered questions from Support as they came in and worked with TaxBit to craft answers. The support article grew with the questions users were actually asking. By the time documents shipped, users had already been educated on what to expect.
+
+This was the first thing I completed—before any screens, before any API integration, before any W-9 flows. High impact, low effort, immediate value.
+
+---
+
 ## What We Built
 
 **New "Taxes & Documents" section.** I architected this to house future documents—past statements, card transaction history, credit card statements—not just a one-off for tax docs. Building for extensibility when you can.
@@ -60,7 +86,7 @@ This research led to three decisions: ship a simple default (1099-B PDF with FIF
 
 **Support tooling and training.** Quick link from internal tools to each user's TaxBit page. Trained CS team on TaxBit portal. Created Zendesk workflows.
 
-**Support article.** I wrote the documentation explaining bitcoin tax reporting to users.
+**Support article and proactive communication.** I wrote documentation explaining bitcoin tax reporting, sent targeted emails to impacted users, and deployed an in-app "coming soon" component—all in mid-December before the feature was built. This reduced support tickets dramatically while we built the actual implementation.
 
 <div class="screenshot-group">
   <img src="/case-studies/taxbit/tax-documents-landing.png" alt="Tax Documents landing page with TaxBit partnership banner" />
@@ -78,6 +104,7 @@ This research led to three decisions: ship a simple default (1099-B PDF with FIF
 | Educational framing in UI | Users shouldn't need to Google tax terminology. Explain what documents mean and when they're needed. |
 | Architected for future docs | Built "Taxes & Documents" section, not "Tax Documents" screen. Future-proofed for statements and other financial documents. |
 | Targeted communication only | Marketing copy only went to impacted users. Broadcasting to everyone would cause panic from users who didn't sell bitcoin. |
+| Ship communication before building | High impact, low effort. Users were already anxious from seeing tax emails from other platforms. Proactive communication bought time and trust while the feature was in development. |
 
 ---
 
@@ -120,3 +147,5 @@ Most PMs would either push back hard on the vendor or scope creep into custom de
 **Build for extensibility when you can.** The "Taxes & Documents" section took marginally more effort than a one-off "Tax Documents" screen, but now it's ready for statements, credit card docs, and anything else users need.
 
 **Partners need the story too.** In regulated industries, your compliance partners are product stakeholders. Clarity builds trust and speeds approvals.
+
+**Sequence by impact, not by dependency.** The communication could ship independently of the feature. By prioritizing the highest-impact, lowest-effort work first, I reduced user anxiety and support load while the technical implementation was still in progress.
