@@ -86,7 +86,7 @@ export default function PortfolioClient() {
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Led the product strategy to transform Fold from a bitcoin rewards app into a complete bitcoin ecosystem. Shipped Sell Bitcoin, Receive Bitcoin, and Direct to Bitcoin over 6 months—enabling users to bring bitcoin in, convert it to spendable fiat, and auto-buy on every deposit.
+              Fold started with a simple thesis: let people use bitcoin in the real world. After pivoting from gift cards to a rewards debit card, we added Buy Bitcoin—and suddenly we were competing with Coinbase and Robinhood. We'd started building a flywheel without realizing it. I build the three features that completed it.
             </p>
           </article>
 
