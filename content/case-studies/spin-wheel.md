@@ -1,5 +1,5 @@
 ---
-title: "When Your Best Feature Becomes Your Biggest Liability"
+title: "Users Loved It. The Business Couldn't Afford It."
 company: "Fold"
 date: "2024"
 description: "Transforming a beloved but unsustainable feature into a future-proof engagement engine through four strategic iterations"
