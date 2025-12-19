@@ -176,6 +176,9 @@ export default function PortfolioClient() {
             { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2023', href: '/features/receiving-bitcoin' },
             { name: 'Bitcoin Selling', desc: 'In-app BTC liquidation', year: '2023', href: '/features/selling-bitcoin' },
             { name: 'Card Reissuance', desc: 'Replacement card program', year: '2023', href: '/features/card-reissuance' },
+            { name: 'Notification Preferences', desc: 'Self-service communication controls', year: '2024', href: '/features/notification-preference-center' },
+            { name: 'Credit Card Waitlist', desc: '70K+ signups in 2 months', year: '2025', href: '/features/credit-card-waitlist' },
+            { name: 'Banking Partner Process', desc: 'Reduced approval time by 75%', year: '2024', href: '/features/banking-partner-approval' },
             { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2024', href: '/features/fairytale-project' },
           ].map((item) => (
             <Link
