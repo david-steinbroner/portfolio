@@ -1,7 +1,7 @@
 ---
 title: "Fairytale Project"
 company: "Slought Foundation"
-date: "2024"
+date: "2025"
 description: "Rebuilding Ai Weiwei's trilingual cultural archive before it disappeared"
 impact:
   - "Preserved 1,001 participant profiles and 4,898 images"
