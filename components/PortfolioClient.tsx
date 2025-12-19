@@ -171,14 +171,15 @@ export default function PortfolioClient() {
         </h2>
         <div className="divide-y divide-border">
           {[
-            { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2025', href: '/features/fairytale-project' },
             { name: 'Credit Card Waitlist', desc: '70K+ signups in 2 months', year: '2025', href: '/features/credit-card-waitlist' },
             { name: 'TaxBit Integration', desc: 'Tax reporting & cost basis tracking', year: '2024', href: '/features/tax-documents' },
             { name: 'Notification Preferences', desc: 'Self-service communication controls', year: '2024', href: '/features/notification-preference-center' },
             { name: 'Banking Partner Process', desc: 'Reduced approval time by 75%', year: '2024', href: '/features/banking-partner-approval' },
+            { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2024', href: '/features/fairytale-project' },
+            { name: 'Direct to Bitcoin', desc: 'Auto-convert deposits to BTC', year: '2024', href: '/features/direct-to-bitcoin' },
+            { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2024', href: '/features/receiving-bitcoin' },
+            { name: 'Bitcoin Selling', desc: 'In-app BTC liquidation', year: '2024', href: '/features/selling-bitcoin' },
             { name: 'Spin Wheel', desc: 'Gamified engagement lever', year: '2023', href: '/features/spin-wheel' },
-            { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2023', href: '/features/receiving-bitcoin' },
-            { name: 'Bitcoin Selling', desc: 'In-app BTC liquidation', year: '2023', href: '/features/selling-bitcoin' },
             { name: 'Card Reissuance', desc: 'Replacement card program', year: '2023', href: '/features/card-reissuance' },
           ].map((item) => (
             <Link
