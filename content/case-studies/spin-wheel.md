@@ -4,7 +4,7 @@ company: "Fold"
 date: "2024"
 description: "Transforming a beloved but unsustainable feature into a future-proof engagement engine through four strategic iterations"
 impact:
-  - "Redesigned prize economics to be sustainable at any Bitcoin price up to $120K"
+  - "Redesigned prize economics to be sustainable at any Bitcoin price up to $1M"
   - "Built self-service admin tooling eliminating engineering dependency"
   - "Created sponsorship program generating six-figure revenue"
   - "Shipped winner notifications driving meaningful DAU increases"
@@ -53,7 +53,7 @@ We shifted from "every purchase = spin" to "spend thresholds = spins." Spend $50
 I led strategy and implementation for a system where specific in-app actions earned spins—deposits, card purchases, referrals. The idea was to drive specific behaviors and build infrastructure for future engagement features. On paper, elegant. In practice, too complicated to explain, display, and execute with the bandwidth we had.
 
 **Iteration 4: Daily Free Spins (Final)**
-We landed on the simplest model: everyone gets a set number of free spins daily, capped. No complicated triggers, no spend thresholds, no action tracking. I built a financial model that made this sustainable at any Bitcoin price up to $120K.
+We landed on the simplest model: everyone gets a set number of free spins daily, capped. No complicated triggers, no spend thresholds, no action tracking. I built a financial model that made this sustainable at any Bitcoin price up to $1M.
 
 ### Supporting Features
 
@@ -73,7 +73,7 @@ We landed on the simplest model: everyone gets a set number of free spins daily,
 |----------|-----|
 | Simplify to daily free spins | Action-based system was too complex for our bandwidth. Simpler model we could actually execute well. |
 | Build admin tooling first | A few engineering tickets gave me autonomy for every future update. Multiplied my impact without ongoing eng cost. |
-| Cap spins per day | Created sustainable economics at any Bitcoin price. Model tested up to $120K BTC. |
+| Cap spins per day | Created sustainable economics at any Bitcoin price. Model tested up to $1M BTC. |
 | Add winner notifications | FOMO drives engagement. Seeing others win motivates spinning. |
 | Create sponsorship tiers | Transformed cost center into revenue stream. Partners got themed exposure, we got paid. |
 

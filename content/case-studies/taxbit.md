@@ -6,7 +6,7 @@ description: "Integrating TaxBit to ship crypto tax compliance at Fold"
 impact:
   - "Shipped 2.5 months early (January for April deadline)"
   - "90% adoption among eligible users"
-  - "~30 support tickets across ~5,000 users (0.6% rate)"
+  - "~100 support tickets across ~5,000 users (2% rate)"
   - "80% downloaded PDF only, 20% downloaded both formats"
 status: "Shipped"
 tags: ["Product Management", "Tax Compliance", "API Integration", "Fintech"]
