@@ -68,7 +68,7 @@ export default function PortfolioClient() {
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents. They were expecting them by year-end—just like from every other crypto platform they use. I got bandwidth in November, found the vendor, learned crypto tax law, and wrangled six stakeholder groups. Shipped by mid-January.
+              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents by mid-February 2025. By December, they were seeing tax emails from Coinbase and other crypto platforms and wondering where Fold's was. I got bandwidth in November, built a prototype, became the crypto tax expert, coordinated 8+ stakeholder groups, and shipped in 10 weeks with 2 engineers and a junior designer. Mid-January; a month ahead of deadline.
             </p>
           </article>
 
