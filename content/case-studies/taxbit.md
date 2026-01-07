@@ -5,32 +5,16 @@ date: "January 2025"
 description: "Integrating TaxBit to ship crypto tax compliance at Fold"
 impact:
   - "Shipped in 10 weeks with a team of 2 engineers and 1 junior designer"
-  - "Coordinated 8+ stakeholder groups"
-  - "Met mid-February compliance deadline with a month to spare"
-  - "50 support tickets across 5,000 eligible users (1% rate)"
-  - "Delivered both 1099-Bs and Gain/Loss Summaries"
+  - "Coordinated 8+ stakeholder groups: Legal, Compliance, Finance, Engineering, Support, Design, Marketing, and Growth internally; plus external counsel, banking partner, card issuing partner, two Bitcoin custodians, and TaxBit"
+  - "Met mid-February compliance deadline with a month to spare; shipped mid-January so Fold launched alongside competitors, not behind them"
+  - "50 support tickets across 5,000 eligible users (1% rate); only ~10 were actual issues, the rest were general questions"
+  - "Delivered both 1099-Bs and Gain/Loss Summaries; served the full user spectrum, not just the majority"
 status: "Shipped"
 tags: ["Product Management", "Tax Compliance", "API Integration", "Fintech"]
 category: "case-study"
 features:
   - name: "Tax Documents"
     slug: "tax-documents"
----
-
-**Role:** Product Manager
-
-**January 2025**
-
----
-
-## Impact
-
-- Shipped in 10 weeks with a team of 2 engineers and 1 junior designer
-- Coordinated 8+ stakeholder groups: Legal, Compliance, Finance, Engineering, Support, Design, Marketing, and Growth internally; plus external counsel, banking partner, card issuing partner, two Bitcoin custodians, and TaxBit
-- Met mid-February compliance deadline with a month to spare; shipped mid-January so Fold launched alongside competitors, not behind them
-- 50 support tickets across 5,000 eligible users (1% rate); only ~10 were actual issues, the rest were general questions
-- Delivered both 1099-Bs and Gain/Loss Summaries; served the full user spectrum, not just the majority
-
 ---
 
 **Fold is a fintech app that lets users earn and spend bitcoin.** I led the integration of TaxBit, a third-party tax document provider, to deliver IRS forms to users who sold bitcoin; a hard compliance requirement with a mid-February deadline.
