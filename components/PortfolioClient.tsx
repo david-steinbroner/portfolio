@@ -86,7 +86,7 @@ export default function PortfolioClient() {
               </a>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold started with a simple thesis: let people use bitcoin in the real world. After pivoting from gift cards to a rewards debit card, we added Buy Bitcoin—and suddenly we were competing with Coinbase and Robinhood. We'd started building a flywheel without realizing it. I built the three features that completed it.
+              Fold already had Buy Bitcoin. Competing with Strike and Coinbase meant finishing the flywheel. I built the prototypes, navigated a complex stakeholder landscape, and embedded in the Bitcoin community to understand the full user spectrum. Then shipped Sell, Receive, and Direct to Bitcoin. Trade volume jumped 50%.
             </p>
           </article>
 
