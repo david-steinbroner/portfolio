@@ -46,6 +46,8 @@ This multi-channel approach meant I heard from casual users and power users, fro
 **Iteration 1: Purchase-Tied Spins (Inherited)**
 The original: every Fold Card purchase earned a spin. Simple, beloved, unsustainable. Prize costs scaled directly with Bitcoin price.
 
+![Purchase-tied spin wheel showing transaction rewards](/case-studies/spin-wheel/spin-wheel-purchase-tied.PNG)
+
 **Iteration 2: Spend-Based Spins**
 We shifted from "every purchase = spin" to "spend thresholds = spins." Spend $50, get a spin. This gave us more control over cost per spin, but added complexity users had to understand.
 
@@ -55,11 +57,15 @@ I led strategy and implementation for a system where specific in-app actions ear
 **Iteration 4: Daily Free Spins (Final)**
 We landed on the simplest model: everyone gets a set number of free spins daily, capped. No complicated triggers, no spend thresholds, no action tracking. I built a financial model that made this sustainable at any Bitcoin price up to $1M.
 
+![Daily free spins wheel - the final, simplified model](/case-studies/spin-wheel/spin-wheel-daily-spins.png)
+
 ### Supporting Features
 
 **Self-service admin tooling:** I spec'd and shipped an internal tool to update the wheel—design, odds, prizes, copy, campaign duration—without engineering. Every seasonal theme, every sponsored campaign, every prize adjustment could happen without pulling engineers off roadmap work.
 
 **Winner notifications:** I identified that FOMO drives engagement. When someone won a big prize, other users should know. Push notifications on major wins drove significant increases in DAU and daily spins.
+
+![Winner notification driving engagement through FOMO](/case-studies/spin-wheel/spin-wheel-winner-notification.png)
 
 **Sponsorship program:** I turned a cost center into a revenue stream. Designed tiered packages, created the sales playbook, ran GTM. Partners sponsored themed wheels with their branding. Generated six-figure revenue.
 
