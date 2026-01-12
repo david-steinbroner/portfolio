@@ -13,6 +13,9 @@ impact:
 status: "Shipped"
 tags: ["Product Strategy", "Pricing Models", "Community", "GTM", "Internal Tooling", "Rewards"]
 category: "case-study"
+features:
+  - name: "Spin Wheel"
+    slug: "spin-wheel"
 ---
 
 ## The Gap
