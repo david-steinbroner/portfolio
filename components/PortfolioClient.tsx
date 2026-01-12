@@ -3,12 +3,10 @@
 import Link from 'next/link';
 import { Mail, Linkedin, Github, ArrowUpRight } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
-import SectionNav from '@/components/SectionNav';
 
 export default function PortfolioClient() {
   return (
     <main className="max-w-2xl mx-auto px-6 py-16 md:py-24">
-      <SectionNav />
 
       {/* Header */}
       <header className="mb-16">

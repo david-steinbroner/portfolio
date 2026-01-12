@@ -68,9 +68,11 @@ export default async function CaseStudyPage({
             {metadata.description}
           </p>
           {metadata.features && metadata.features.length > 0 && (
-            <p className="text-sm text-foreground-muted mt-3 flex items-center gap-1.5">
-              <Wrench className="w-3.5 h-3.5" />
-              <span>→</span>
+            <p className="text-sm text-foreground-muted mt-3">
+              <span className="inline-flex items-center gap-1.5 mr-1.5">
+                <Wrench className="w-3.5 h-3.5" />
+                <span>→</span>
+              </span>
               {metadata.features.map((f: FeatureLink, i: number) => (
                 <span key={f.slug}>
                   <Link href={`/features/${f.slug}`} className="hover:text-foreground transition-colors">
