@@ -62,9 +62,9 @@ export default async function FeaturePage({
               {metadata.company}
             </p>
           )}
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4 flex items-center gap-3">
-            <Wrench className="w-8 h-8 md:w-10 md:h-10 text-foreground-muted flex-shrink-0" />
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4">
             {metadata.title}
+            <Wrench className="w-5 h-5 md:w-6 md:h-6 text-foreground-muted inline-block ml-2 align-middle" />
           </h1>
           <p className="text-xl text-foreground-secondary leading-relaxed">
             {metadata.description}
