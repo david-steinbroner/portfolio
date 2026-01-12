@@ -43,5 +43,3 @@ This was the final piece of Fold's Bitcoin ecosystem. Combined with Sell Bitcoin
 ## Skills
 
 Product ownership, user research, ecosystem thinking, fintech execution
-
-[Read the full case study: The Bitcoin Flywheel →](/case-studies/bitcoin-flywheel)

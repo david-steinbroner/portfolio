@@ -39,5 +39,3 @@ With Receiving Bitcoin in place, users could consolidate their bitcoin in Fold, 
 - Fitting features into a larger product ecosystem strategy
 
 *Screenshots available upon request*
-
-[Read the full case study: The Bitcoin Flywheel →](/case-studies/bitcoin-flywheel)

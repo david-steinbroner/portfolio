@@ -1,7 +1,7 @@
 import { getProjectBySlug, getAllProjects, FeatureLink } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Wrench } from 'lucide-react';
 import TableOfContents from '@/components/TableOfContents';
 
 export async function generateStaticParams() {
@@ -68,8 +68,10 @@ export default async function CaseStudyPage({
             {metadata.description}
           </p>
           {metadata.features && metadata.features.length > 0 && (
-            <p className="text-sm text-foreground-muted mt-3">
-              → {metadata.features.map((f: FeatureLink, i: number) => (
+            <p className="text-sm text-foreground-muted mt-3 flex items-center gap-1.5">
+              <Wrench className="w-3.5 h-3.5" />
+              <span>→</span>
+              {metadata.features.map((f: FeatureLink, i: number) => (
                 <span key={f.slug}>
                   <Link href={`/features/${f.slug}`} className="hover:text-foreground transition-colors">
                     {f.name}

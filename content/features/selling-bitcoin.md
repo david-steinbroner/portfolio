@@ -39,5 +39,3 @@ Combined with Receiving Bitcoin and Direct to Bitcoin, this completed the loop: 
 - Strategic product thinking (ecosystem lock-in through simplicity)
 
 *Screenshots available upon request*
-
-[Read the full case study: The Bitcoin Flywheel →](/case-studies/bitcoin-flywheel)

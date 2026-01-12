@@ -48,5 +48,3 @@ The final model is the simplest: one free spin per day, flat sat prizes, 24-hour
 - One wheel (retired the separate Purchase Wheel entirely)
 
 ![Daily free spins wheel - the final, simplified model](/case-studies/spin-wheel/spin-wheel-daily-spins.png)
-
-[Read the full case study →](/case-studies/spin-wheel)

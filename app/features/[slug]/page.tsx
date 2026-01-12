@@ -1,7 +1,7 @@
 import { getProjectBySlug, getAllProjects, getAdjacentFeatures } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, FileText } from 'lucide-react';
 import FeatureNavigation from '@/components/FeatureNavigation';
 
 export async function generateStaticParams() {
@@ -68,6 +68,18 @@ export default async function FeaturePage({
           <p className="text-xl text-foreground-secondary leading-relaxed">
             {metadata.description}
           </p>
+          {metadata.caseStudy && (
+            <p className="text-sm text-foreground-muted mt-3 flex items-center gap-1.5">
+              <FileText className="w-3.5 h-3.5" />
+              <span>→</span>
+              <Link
+                href={`/case-studies/${metadata.caseStudy.slug}`}
+                className="hover:text-foreground transition-colors"
+              >
+                {metadata.caseStudy.name || metadata.caseStudy.title}
+              </Link>
+            </p>
+          )}
           <div className="flex items-center gap-4 mt-4 text-sm text-foreground-muted">
             {metadata.role && <span>{metadata.role}</span>}
             {metadata.role && metadata.date && <span>·</span>}
@@ -90,19 +102,6 @@ export default async function FeaturePage({
 
             {/* Feature Navigation */}
             <FeatureNavigation prev={prev} next={next} />
-
-            {/* Case Study Link */}
-            {metadata.caseStudy && (
-              <div className="pt-8 border-t border-border">
-                <Link
-                  href={`/case-studies/${metadata.caseStudy.slug}`}
-                  className="inline-flex items-center gap-2 text-foreground hover:text-foreground-secondary transition-colors"
-                >
-                  Read the full case study: {metadata.caseStudy.title}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            )}
           </>
         )}
       </div>
