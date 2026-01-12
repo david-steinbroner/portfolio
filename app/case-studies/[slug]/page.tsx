@@ -94,6 +94,14 @@ export default async function CaseStudyPage({
           )}
         </header>
 
+        {/* TL;DR */}
+        {metadata.tldr && (
+          <div className="mb-8">
+            <span className="text-sm text-foreground-muted uppercase tracking-wider">TL;DR</span>
+            <p className="mt-1 text-lg text-foreground-secondary leading-relaxed">{metadata.tldr}</p>
+          </div>
+        )}
+
         {/* Impact Section */}
         {metadata.impact && metadata.impact.length > 0 && (
           <div className="mb-12 p-6 rounded-lg border border-border bg-background-secondary">

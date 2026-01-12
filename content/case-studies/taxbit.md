@@ -9,6 +9,7 @@ impact:
   - "Met mid-February compliance deadline with a month to spare; shipped mid-January so Fold launched alongside competitors, not behind them"
   - "50 support tickets across 5,000 eligible users (1% rate); only ~10 were actual issues, the rest were general questions"
   - "Delivered both 1099-Bs and Gain/Loss Summaries; served the full user spectrum, not just the majority"
+tldr: "We needed to provide tax documents for users by early 2025, but we had no bandwidth to build it ourselves. I coordinated 8+ stakeholder groups, integrated TaxBit into the app, and shipped in 10 weeks."
 status: "Shipped"
 tags: ["Product Management", "Tax Compliance", "API Integration", "Fintech"]
 category: "case-study"

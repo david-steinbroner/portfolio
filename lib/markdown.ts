@@ -24,6 +24,7 @@ export interface ProjectMetadata {
   company?: string;
   impact?: string[];
   description: string;
+  tldr?: string;
   features?: FeatureLink[];
   caseStudy?: { title?: string; name?: string; slug: string };
   role?: string;

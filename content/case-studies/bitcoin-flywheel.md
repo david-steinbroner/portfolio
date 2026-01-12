@@ -9,6 +9,7 @@ impact:
   - "25% adoption of Sell Bitcoin"
   - "20% decrease in premium subscription churn"
   - "~10% revenue increase from interchange"
+tldr: "Users could earn bitcoin on Fold but couldn't do anything with it except withdraw. I launched the features that turned Fold into a complete bitcoin financial ecosystem - and helped pave the way for our IPO."
 status: "Shipped"
 tags: ["Product Strategy", "Bitcoin", "Fintech", "Feature Development"]
 category: "case-study"

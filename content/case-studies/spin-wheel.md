@@ -10,6 +10,7 @@ impact:
   - "Designed and built a new pricing model (replacing a legacy VM-based system) that scales sustainably to any Bitcoin price up to $1M"
   - "Shipped winner notifications that drove increases in DAU and spin volume by leveraging FOMO"
   - "Navigated the transition from unsustainable 3.5% average rewards to a sustainable ~$0.01/spin model while maintaining ~50k daily spins"
+tldr: "Fold's flagship feature gave massive rewards users loved, but it was unsustainable. My job was to make it worse for users while keeping them engaged, and cheaper for the business while keeping it fun. Turns out simplicity solved both."
 status: "Shipped"
 tags: ["Product Strategy", "Pricing Models", "Community", "GTM", "Internal Tooling", "Rewards"]
 category: "case-study"
