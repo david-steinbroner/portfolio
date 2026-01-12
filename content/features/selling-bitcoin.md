@@ -16,4 +16,6 @@ Launched bitcoin selling functionality that automatically funds the Fold Card wi
 
 The feature includes real-time sat/dollar conversion, fee transparency showing "$0.00 processing fee" for premium members, and a confirmation flow that breaks down exactly what users will receive.
 
-*Screenshots coming soon*
+*Screenshots available upon request*
+
+[Read the full case study: The Bitcoin Flywheel →](/case-studies/bitcoin-flywheel)

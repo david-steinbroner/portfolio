@@ -17,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const features = [
     'banking-partner-approval',
     'card-reissuance',
-    'credit-card-waitlist',
     'direct-to-bitcoin',
     'fairytale-project',
     'notification-preference-center',

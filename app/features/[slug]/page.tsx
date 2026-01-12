@@ -1,7 +1,8 @@
-import { getProjectBySlug, getAllProjects } from '@/lib/markdown';
+import { getProjectBySlug, getAllProjects, getAdjacentFeatures } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import FeatureNavigation from '@/components/FeatureNavigation';
 
 export async function generateStaticParams() {
   const features = await getAllProjects('features');
@@ -40,6 +41,7 @@ export default async function FeaturePage({
   }
 
   const { metadata, content } = feature;
+  const { prev, next } = await getAdjacentFeatures(slug);
 
   return (
     <div className="min-h-screen bg-background">
@@ -86,10 +88,8 @@ export default async function FeaturePage({
               dangerouslySetInnerHTML={{ __html: content }}
             />
 
-            {/* Screenshots Coming Soon */}
-            <div className="mb-12 p-8 rounded-lg border border-border bg-background-secondary text-center">
-              <p className="text-foreground-muted">Screenshots coming soon</p>
-            </div>
+            {/* Feature Navigation */}
+            <FeatureNavigation prev={prev} next={next} />
 
             {/* Case Study Link */}
             {metadata.caseStudy && (

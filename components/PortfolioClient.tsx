@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { Mail, Linkedin, Github, ArrowUpRight } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
+import SectionNav from '@/components/SectionNav';
 
 export default function PortfolioClient() {
   return (
     <main className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+      <SectionNav />
 
       {/* Header */}
       <header className="mb-16">
@@ -49,7 +51,7 @@ export default function PortfolioClient() {
       </header>
 
       {/* Case Studies */}
-      <section className="mb-16">
+      <section id="case-studies" className="mb-16">
         <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
           Case Studies
         </h2>
@@ -111,7 +113,7 @@ export default function PortfolioClient() {
       </section>
 
       {/* Building */}
-      <section className="mb-16">
+      <section id="building" className="mb-16">
         <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
           Building
         </h2>
@@ -165,14 +167,13 @@ export default function PortfolioClient() {
       </section>
 
       {/* Built */}
-      <section className="mb-16">
+      <section id="built" className="mb-16">
         <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
           Built
         </h2>
         <div className="divide-y divide-border">
           {[
             { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2025', href: '/features/fairytale-project' },
-            { name: 'Credit Card Waitlist', desc: '70K+ signups in 2 months', year: '2025', href: '/features/credit-card-waitlist' },
             { name: 'TaxBit Integration', desc: 'Tax reporting & cost basis tracking', year: '2024', href: '/features/tax-documents' },
             { name: 'Notification Preferences', desc: 'Self-service communication controls', year: '2024', href: '/features/notification-preference-center' },
             { name: 'Banking Partner Process', desc: 'Reduced approval time by 75%', year: '2024', href: '/features/banking-partner-approval' },

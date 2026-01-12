@@ -83,3 +83,32 @@ export async function getAllProjects(
     return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
   });
 }
+
+export interface AdjacentFeatures {
+  prev: { slug: string; title: string } | null;
+  next: { slug: string; title: string } | null;
+}
+
+export async function getAdjacentFeatures(currentSlug: string): Promise<AdjacentFeatures> {
+  const features = await getAllProjects('features');
+  const currentIndex = features.findIndex((f) => f.slug === currentSlug);
+
+  if (currentIndex === -1) {
+    return { prev: null, next: null };
+  }
+
+  // Features are sorted newest first, so:
+  // - "previous" (older) is the NEXT item in array (higher index)
+  // - "next" (newer) is the PREVIOUS item in array (lower index)
+  const prev =
+    currentIndex < features.length - 1
+      ? { slug: features[currentIndex + 1].slug, title: features[currentIndex + 1].metadata.title }
+      : null;
+
+  const next =
+    currentIndex > 0
+      ? { slug: features[currentIndex - 1].slug, title: features[currentIndex - 1].metadata.title }
+      : null;
+
+  return { prev, next };
+}

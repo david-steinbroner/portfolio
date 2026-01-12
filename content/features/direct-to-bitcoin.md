@@ -10,6 +10,9 @@ impact:
 status: "Shipped"
 tags: ["Bitcoin", "Automation", "User Experience"]
 category: "feature"
+caseStudy:
+  name: "The Bitcoin Flywheel"
+  slug: "bitcoin-flywheel"
 ---
 
 **Most people want to stack Bitcoin but forget to do it.** They have good intentions, but manual buying requires opening the app, deciding how much, and executing—friction that kills follow-through.
@@ -40,3 +43,5 @@ This was the final piece of Fold's Bitcoin ecosystem. Combined with Sell Bitcoin
 ## Skills
 
 Product ownership, user research, ecosystem thinking, fintech execution
+
+[Read the full case study: The Bitcoin Flywheel →](/case-studies/bitcoin-flywheel)

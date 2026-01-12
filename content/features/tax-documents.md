@@ -16,4 +16,6 @@ Integrated TaxBit to deliver 1099-B forms and Gain/Loss summaries to users who s
 
 The feature includes educational framing so users understand what each document means, two download options (PDF for 80% who want simple, CSV for 20% who need raw data), and conditional entry points based on eligibility.
 
-*Screenshots coming soon*
+*Screenshots available upon request*
+
+[Read the full case study: Shipping Tax Season at a Startup →](/case-studies/taxbit)
