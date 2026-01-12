@@ -1,7 +1,7 @@
 import { getProjectBySlug, getAllProjects, getAdjacentFeatures } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, FileText } from 'lucide-react';
+import { ArrowLeft, FileText, Wrench } from 'lucide-react';
 import FeatureNavigation from '@/components/FeatureNavigation';
 
 export async function generateStaticParams() {
@@ -62,7 +62,8 @@ export default async function FeaturePage({
               {metadata.company}
             </p>
           )}
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4 flex items-center gap-3">
+            <Wrench className="w-8 h-8 md:w-10 md:h-10 text-foreground-muted flex-shrink-0" />
             {metadata.title}
           </h1>
           <p className="text-xl text-foreground-secondary leading-relaxed">

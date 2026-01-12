@@ -1,7 +1,7 @@
 import { getProjectBySlug, getAllProjects, FeatureLink } from '@/lib/markdown';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, Wrench } from 'lucide-react';
+import { ArrowLeft, Wrench, FileText } from 'lucide-react';
 import TableOfContents from '@/components/TableOfContents';
 
 export async function generateStaticParams() {
@@ -61,7 +61,8 @@ export default async function CaseStudyPage({
               {metadata.company}
             </p>
           )}
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4 flex items-center gap-3">
+            <FileText className="w-8 h-8 md:w-10 md:h-10 text-foreground-muted flex-shrink-0" />
             {metadata.title}
           </h1>
           <p className="text-xl text-foreground-secondary leading-relaxed">
