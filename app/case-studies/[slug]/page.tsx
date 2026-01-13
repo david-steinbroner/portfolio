@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, Wrench, FileText } from 'lucide-react';
 import TableOfContents from '@/components/TableOfContents';
+import CollapsibleImpact from '@/components/CollapsibleImpact';
 
 export async function generateStaticParams() {
   const caseStudies = await getAllProjects('case-studies');
@@ -104,19 +105,7 @@ export default async function CaseStudyPage({
 
         {/* Impact Section */}
         {metadata.impact && metadata.impact.length > 0 && (
-          <div className="mb-12 p-6 rounded-lg border border-border bg-background-secondary">
-            <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-4">
-              Impact
-            </h2>
-            <ul className="space-y-2">
-              {metadata.impact.map((item, index) => (
-                <li key={index} className="text-foreground-secondary leading-relaxed flex items-start">
-                  <span className="mr-2 text-foreground-muted">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <CollapsibleImpact impact={metadata.impact} />
         )}
 
         {/* Content */}
