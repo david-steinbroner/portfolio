@@ -8,7 +8,7 @@ status: "Shipped"
 tags: ["Tax Compliance", "Fintech", "Integration"]
 category: "feature"
 caseStudy:
-  title: "Shipping Tax Season at a Startup"
+  name: "Shipping Tax Season at a Startup"
   slug: "taxbit"
 ---
 

@@ -59,16 +59,16 @@ export default function PortfolioClient() {
               Fold
             </span>
             <h3 className="text-xl font-medium mb-2">
-              <a
+              <Link
                 href="/case-studies/taxbit"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
                 Shipping Tax Season at a Startup
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </a>
+              </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents by mid-February 2025. By December, they were seeing tax emails from Coinbase and other crypto platforms and wondering where Fold's was. I got bandwidth in November, built a prototype, became the crypto tax expert, coordinated 8+ stakeholder groups, and shipped in 10 weeks with 2 engineers and a junior designer. Mid-January; a month ahead of deadline.
+              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents by mid-February 2025. By December, they were seeing tax emails from Coinbase and other crypto platforms and wondering where Fold&apos;s was. I got bandwidth in November, built a prototype, became the crypto tax expert, coordinated 8+ stakeholder groups, and shipped in 10 weeks with 2 engineers and a junior designer. Mid-January; a month ahead of deadline.
             </p>
           </article>
 
@@ -77,13 +77,13 @@ export default function PortfolioClient() {
               Fold
             </span>
             <h3 className="text-xl font-medium mb-2">
-              <a
+              <Link
                 href="/case-studies/bitcoin-flywheel"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
                 The Bitcoin Flywheel
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </a>
+              </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
               Fold already had Buy Bitcoin. Competing with Strike and Coinbase meant finishing the flywheel. I built the prototypes, navigated a complex stakeholder landscape, and embedded in the Bitcoin community to understand the full user spectrum. Then shipped Sell, Receive, and Direct to Bitcoin. Trade volume jumped 50%.
@@ -95,16 +95,16 @@ export default function PortfolioClient() {
               Fold
             </span>
             <h3 className="text-xl font-medium mb-2">
-              <a
+              <Link
                 href="/case-studies/spin-wheel"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
                 The Most Public Feature at the Company, and I Had to Make It Worse
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </a>
+              </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold's Spin Wheel was the company's most beloved feature and its biggest financial liability. I inherited it and spent 18 months navigating the tension between what users loved (massive rewards) and what the business needed (sustainability), eventually landing on a model that works at any Bitcoin price up to $1M while still driving 50k daily spins.
+              Fold&apos;s Spin Wheel was the company&apos;s most beloved feature and its biggest financial liability. I inherited it and spent 18 months navigating the tension between what users loved (massive rewards) and what the business needed (sustainability), eventually landing on a model that works at any Bitcoin price up to $1M while still driving 50k daily spins.
             </p>
           </article>
         </div>
@@ -179,7 +179,6 @@ export default function PortfolioClient() {
             { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2024', href: '/features/receiving-bitcoin' },
             { name: 'Bitcoin Selling', desc: 'In-app BTC liquidation', year: '2024', href: '/features/selling-bitcoin' },
             { name: 'Spin Wheel', desc: 'Gamified engagement lever', year: '2023', href: '/features/spin-wheel' },
-            { name: 'Card Reissuance', desc: 'Replacement card program', year: '2023', href: '/features/card-reissuance' },
           ].map((item) => (
             <Link
               key={item.name}
