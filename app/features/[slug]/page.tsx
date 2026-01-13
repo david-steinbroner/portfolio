@@ -57,20 +57,28 @@ export default async function FeaturePage({
 
         {/* Hero Section */}
         <header className="mb-8">
-          {metadata.company && (
+          {(metadata.company || metadata.date) && (
             <p className="text-sm text-foreground-muted uppercase tracking-wider mb-3">
               {metadata.company}
+              {metadata.company && metadata.date && ' · '}
+              {metadata.date}
             </p>
           )}
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4">
             {metadata.title}
             <Wrench className="w-5 h-5 md:w-6 md:h-6 text-foreground-muted inline-block ml-2 align-middle" />
           </h1>
-          <p className="text-xl text-foreground-secondary leading-relaxed">
-            {metadata.description}
-          </p>
+          {metadata.tldr ? (
+            <p className="text-lg text-foreground-secondary leading-relaxed">
+              <strong className="text-foreground">TL;DR:</strong> {metadata.tldr}
+            </p>
+          ) : (
+            <p className="text-lg text-foreground-secondary leading-relaxed">
+              {metadata.description}
+            </p>
+          )}
           {metadata.caseStudy && (
-            <p className="text-sm text-foreground-muted mt-3">
+            <p className="text-sm text-foreground-muted mt-4">
               <span className="inline-flex items-center gap-1.5 mr-1.5">
                 <FileText className="w-3.5 h-3.5" />
                 <span>→</span>
@@ -83,11 +91,6 @@ export default async function FeaturePage({
               </Link>
             </p>
           )}
-          <div className="flex items-center gap-4 mt-4 text-sm text-foreground-muted">
-            {metadata.role && <span>{metadata.role}</span>}
-            {metadata.role && metadata.date && <span>·</span>}
-            {metadata.date && <span>{metadata.date}</span>}
-          </div>
         </header>
 
         {metadata.status === 'Coming Soon' ? (

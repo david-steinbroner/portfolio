@@ -57,20 +57,27 @@ export default async function CaseStudyPage({
 
         {/* Hero Section */}
         <header className="mb-12">
-          {metadata.company && (
+          {(metadata.company || metadata.date) && (
             <p className="text-sm text-foreground-muted uppercase tracking-wider mb-3">
               {metadata.company}
+              {metadata.company && metadata.date && ' · '}
+              {metadata.date && new Date(metadata.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+              })}
             </p>
           )}
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground mb-4">
             {metadata.title}
             <FileText className="w-5 h-5 md:w-6 md:h-6 text-foreground-muted inline-block ml-2 align-middle" />
           </h1>
-          <p className="text-xl text-foreground-secondary leading-relaxed">
-            {metadata.description}
-          </p>
+          {metadata.tldr && (
+            <p className="text-lg text-foreground-secondary leading-relaxed">
+              <strong className="text-foreground">TL;DR:</strong> {metadata.tldr}
+            </p>
+          )}
           {metadata.features && metadata.features.length > 0 && (
-            <p className="text-sm text-foreground-muted mt-3">
+            <p className="text-sm text-foreground-muted mt-4">
               <span className="inline-flex items-center gap-1.5 mr-1.5">
                 <Wrench className="w-3.5 h-3.5" />
                 <span>→</span>
@@ -85,23 +92,7 @@ export default async function CaseStudyPage({
               ))}
             </p>
           )}
-          {metadata.date && (
-            <p className="text-sm text-foreground-muted mt-4">
-              {new Date(metadata.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-              })}
-            </p>
-          )}
         </header>
-
-        {/* TL;DR */}
-        {metadata.tldr && (
-          <div className="mb-8">
-            <span className="text-sm text-foreground-muted uppercase tracking-wider">TL;DR</span>
-            <p className="mt-1 text-lg text-foreground-secondary leading-relaxed">{metadata.tldr}</p>
-          </div>
-        )}
 
         {/* Impact Section */}
         {metadata.impact && metadata.impact.length > 0 && (
