@@ -213,13 +213,14 @@ export default function PortfolioClient() {
             <Link
               key={item.name}
               href={item.href}
-              className="flex justify-between items-baseline py-3 hover:bg-background-secondary transition-colors -mx-3 px-3 rounded"
+              className="flex justify-between items-baseline gap-4 py-3 hover:bg-background-secondary transition-colors -mx-3 px-3 rounded"
             >
-              <div>
+              <div className="min-w-0">
                 <span className="font-medium">{item.name}</span>
-                <span className="text-foreground-muted ml-2 text-sm">{item.desc}</span>
+                <span className="text-foreground-muted ml-2 text-sm hidden sm:inline">{item.desc}</span>
+                <span className="text-foreground-muted text-sm block sm:hidden mt-0.5">{item.desc}</span>
               </div>
-              <span className="text-foreground-muted text-sm tabular-nums">{item.year}</span>
+              <span className="text-foreground-muted text-sm tabular-nums shrink-0">{item.year}</span>
             </Link>
           ))}
         </div>
