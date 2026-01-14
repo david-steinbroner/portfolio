@@ -7,6 +7,19 @@ import html from 'remark-html';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+// Canonical feature order - matches homepage display order (top to bottom)
+// This is the single source of truth for feature navigation
+export const FEATURE_ORDER = [
+  'fairytale-project',
+  'tax-documents',
+  'notification-preference-center',
+  'banking-partner-approval',
+  'direct-to-bitcoin',
+  'receiving-bitcoin',
+  'selling-bitcoin',
+  'spin-wheel',
+] as const;
+
 export interface FeatureLink {
   name: string;
   slug: string;
@@ -91,24 +104,31 @@ export interface AdjacentFeatures {
 }
 
 export async function getAdjacentFeatures(currentSlug: string): Promise<AdjacentFeatures> {
-  const features = await getAllProjects('features');
-  const currentIndex = features.findIndex((f) => f.slug === currentSlug);
+  const allFeatures = await getAllProjects('features');
+
+  // Use canonical FEATURE_ORDER for navigation (matches homepage)
+  // Filter to only features that exist, in case any are missing
+  const orderedFeatures = FEATURE_ORDER
+    .map(slug => allFeatures.find(f => f.slug === slug))
+    .filter((f): f is Project => f !== undefined);
+
+  const currentIndex = orderedFeatures.findIndex((f) => f.slug === currentSlug);
 
   if (currentIndex === -1) {
     return { prev: null, next: null };
   }
 
-  // Features are sorted newest first, so:
-  // - "previous" (older) is the NEXT item in array (higher index)
-  // - "next" (newer) is the PREVIOUS item in array (lower index)
+  // Navigation follows homepage order (top to bottom):
+  // - "Previous" goes UP the list (lower index, toward top of homepage)
+  // - "Next" goes DOWN the list (higher index, toward bottom of homepage)
   const prev =
-    currentIndex < features.length - 1
-      ? { slug: features[currentIndex + 1].slug, title: features[currentIndex + 1].metadata.title }
+    currentIndex > 0
+      ? { slug: orderedFeatures[currentIndex - 1].slug, title: orderedFeatures[currentIndex - 1].metadata.title }
       : null;
 
   const next =
-    currentIndex > 0
-      ? { slug: features[currentIndex - 1].slug, title: features[currentIndex - 1].metadata.title }
+    currentIndex < orderedFeatures.length - 1
+      ? { slug: orderedFeatures[currentIndex + 1].slug, title: orderedFeatures[currentIndex + 1].metadata.title }
       : null;
 
   return { prev, next };
