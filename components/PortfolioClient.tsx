@@ -203,6 +203,7 @@ export default function PortfolioClient() {
             { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2025', href: '/features/fairytale-project' },
             { name: 'TaxBit Integration', desc: 'Tax reporting & cost basis tracking', year: '2024', href: '/features/tax-documents' },
             { name: 'Notification Preferences', desc: 'Self-service communication controls', year: '2024', href: '/features/notification-preference-center' },
+            { name: 'Card Reissuance', desc: 'Proactive card replacement system', year: '2024', href: '/features/card-reissuance' },
             { name: 'Banking Partner Process', desc: 'Reduced approval time by 75%', year: '2024', href: '/features/banking-partner-approval' },
             { name: 'Direct to Bitcoin', desc: 'Auto-convert deposits to BTC', year: '2024', href: '/features/direct-to-bitcoin' },
             { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2024', href: '/features/receiving-bitcoin' },

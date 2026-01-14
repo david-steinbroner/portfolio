@@ -13,6 +13,7 @@ export const FEATURE_ORDER = [
   'fairytale-project',
   'tax-documents',
   'notification-preference-center',
+  'card-reissuance',
   'banking-partner-approval',
   'direct-to-bitcoin',
   'receiving-bitcoin',
