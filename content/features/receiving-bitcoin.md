@@ -2,7 +2,7 @@
 title: "Receiving Bitcoin"
 company: "Fold"
 date: "2024"
-description: "Bring bitcoin from any external wallet into Fold"
+description: "External Bitcoin deposits into Fold wallets"
 status: "Shipped"
 tags: ["Bitcoin", "Fintech", "Product Strategy"]
 category: "feature"
@@ -11,31 +11,26 @@ caseStudy:
   slug: "bitcoin-flywheel"
 ---
 
-The ability to receive bitcoin from external wallets was table stakes for any bitcoin wallet - and a feature I fought hard to prioritize. Without it, users who already owned bitcoin elsewhere couldn't fully participate in the Fold ecosystem.
+**Deposit bitcoin from anywhere.** Receiving Bitcoin let users move bitcoin from external wallets into Fold—turning Fold from a closed rewards system into a real bitcoin wallet.
 
-## What It Is
-
-A deposit flow that lets users send bitcoin from any external wallet (Coinbase, hardware wallets, other exchanges) into their Fold account. Features include QR code display, truncated address with one-tap copy, and full address reveal.
+---
 
 ## What I Built
 
-**QR code generation** - Standard for any crypto receive flow, but important to get right. The QR code needed to be scannable from other wallet apps and sized appropriately for mobile screens.
+**Deposit address generation flow** - Designed the UX for generating and displaying deposit addresses. Key decisions included showing QR codes for easy mobile-to-mobile transfers, copy-to-clipboard functionality, and clear confirmation messaging when deposits arrive.
 
-**Address display UX** - Bitcoin addresses are long and error-prone. I designed a truncated display (first and last characters visible) with one-tap copy to clipboard, plus an option to reveal the full address for users who want to verify manually.
+**Transaction status tracking** - Bitcoin transactions require network confirmations before they're final. Built the status UI showing pending, confirming, and completed states so users always knew where their deposit stood.
 
-**Confirmation flow** - Clear feedback when bitcoin is detected on the network, pending confirmations, and final deposit confirmation. Users needed to understand why deposits aren't instant (blockchain confirmation times) without us over-explaining.
+**Custodian coordination** - Worked with our bitcoin custodian partner to implement the deposit infrastructure. This involved API integration, security requirements, and transaction monitoring.
 
-## Why It Matters
+---
 
-This was a must-have I advocated for internally. The Fold Card was great for earning bitcoin on purchases, but we were excluding anyone who already held bitcoin elsewhere. They couldn't participate in the flywheel because they couldn't bring their existing holdings in.
+## Key Product Decision
 
-With Receiving Bitcoin in place, users could consolidate their bitcoin in Fold, then use Selling Bitcoin to liquidate when needed, or just hold and continue stacking through card rewards.
+The big question was whether to support Lightning Network deposits (instant, low-fee) or only on-chain deposits (slower, higher fees but more universal). We launched with on-chain only. Why? Our target users were moving bitcoin from exchanges like Coinbase and Kraken, which primarily support on-chain withdrawals. Lightning would have added complexity for a use case most of our users didn't have yet.
 
-## Skills Demonstrated
+---
 
-- Advocating for user needs against competing priorities
-- Designing crypto UX that balances security with usability
-- Understanding table-stakes features vs. differentiators
-- Fitting features into a larger product ecosystem strategy
+## Skills
 
-*Screenshots available upon request*
+Product ownership, technical coordination, UX design, fintech execution
