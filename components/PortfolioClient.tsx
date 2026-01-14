@@ -81,7 +81,7 @@ export default function PortfolioClient() {
                 href="/case-studies/bitcoin-flywheel"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
-                The Bitcoin Flywheel
+                Completing the Bitcoin Flywheel—And Paving the Way for IPO
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
               </Link>
             </h3>
