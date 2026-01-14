@@ -107,6 +107,24 @@ export default function PortfolioClient() {
               Fold&apos;s Spin Wheel was the company&apos;s most beloved feature and its biggest financial liability. I inherited it and spent 18 months navigating the tension between what users loved (massive rewards) and what the business needed (sustainability), eventually landing on a model that works at any Bitcoin price up to $1M while still driving 50k daily spins.
             </p>
           </article>
+
+          <article>
+            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
+              Fold
+            </span>
+            <h3 className="text-xl font-medium mb-2">
+              <Link
+                href="/case-studies/notification-preferences"
+                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
+              >
+                No Bandwidth? Ship It Anyway.
+                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+              </Link>
+            </h3>
+            <p className="text-foreground-secondary leading-relaxed">
+              The community had been asking for notification preferences for three years. At a startup, bandwidth is always the blocker. So I found a way to ship it without engineering.
+            </p>
+          </article>
         </div>
       </section>
 
