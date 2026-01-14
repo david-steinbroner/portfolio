@@ -144,7 +144,7 @@ export default function PortfolioClient() {
               Discovering Magic
             </a>
             <span className="text-foreground-muted ml-2">
-              — A gateway to Magic: The Gathering through things you already love—Fallout, dinosaurs, anime art, Furby cards. Discovery over terminology.
+              — A gateway to Magic: The Gathering through things you already love—Fallout, dinosaurs, anime art, Furby cards. Discovery over terminology. Currently under construction.
             </span>
           </div>
           <div className="group">
@@ -157,7 +157,7 @@ export default function PortfolioClient() {
               Local Gov Watch
             </a>
             <span className="text-foreground-muted ml-2">
-              — Track local government in real-time. Meeting schedules, legislation, and votes aggregated from scattered government websites into one feed.
+              — Track local government meetings and decisions. Making civic engagement accessible. Currently under construction.
             </span>
           </div>
           <div className="group">
@@ -177,6 +177,17 @@ export default function PortfolioClient() {
               >
                 View on GitHub →
               </a>
+            </span>
+          </div>
+          <div className="group">
+            <a
+              href="#"
+              className="font-medium hover:text-foreground-secondary transition-colors"
+            >
+              Pokémon Go Casual Tools
+            </a>
+            <span className="text-foreground-muted ml-2">
+              — Tools for casual Pokémon Go players. There&apos;s a billion tools for hardcore players; nothing for casuals. Live and constantly updating.
             </span>
           </div>
         </div>
