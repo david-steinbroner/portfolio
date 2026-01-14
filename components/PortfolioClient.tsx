@@ -136,6 +136,19 @@ export default function PortfolioClient() {
         <div className="space-y-4">
           <div className="group">
             <a
+              href="https://aitavern.onrender.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:text-foreground-secondary transition-colors"
+            >
+              Story Mode
+            </a>
+            <span className="text-foreground-muted ml-2">
+              — AI-powered TTRPG. Generative AI runs the game—narrative, NPCs, encounters. Exploring how to make AI useful for interactive storytelling.
+            </span>
+          </div>
+          <div className="group">
+            <a
               href="https://discoveringmagic.com"
               target="_blank"
               rel="noopener noreferrer"
