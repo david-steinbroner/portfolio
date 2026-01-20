@@ -149,6 +149,19 @@ export default function PortfolioClient() {
           </div>
           <div className="group">
             <a
+              href="https://pogo-pal.pages.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium hover:text-foreground-secondary transition-colors"
+            >
+              POGO PAL
+            </a>
+            <span className="text-foreground-muted ml-2">
+              — A free website for casual Pokemon GO players that provides more accessible assistance than other similar sites; fun UI exploration.
+            </span>
+          </div>
+          <div className="group">
+            <a
               href="https://discoveringmagic.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -190,17 +203,6 @@ export default function PortfolioClient() {
               >
                 View on GitHub →
               </a>
-            </span>
-          </div>
-          <div className="group">
-            <a
-              href="#"
-              className="font-medium hover:text-foreground-secondary transition-colors"
-            >
-              Pokémon Go Casual Tools
-            </a>
-            <span className="text-foreground-muted ml-2">
-              — Tools for casual Pokémon Go players. There&apos;s a billion tools for hardcore players; nothing for casuals. Live and constantly updating.
             </span>
           </div>
         </div>
