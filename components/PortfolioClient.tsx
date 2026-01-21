@@ -125,6 +125,24 @@ export default function PortfolioClient() {
               The community had been asking for notification preferences for three years. At a startup, bandwidth is always the blocker. So I found a way to ship it without engineering.
             </p>
           </article>
+
+          <article>
+            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
+              Personal Projects
+            </span>
+            <h3 className="text-xl font-medium mb-2">
+              <Link
+                href="/case-studies/story-mode"
+                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
+              >
+                An AI-Powered TTRPG That Removes the Human Barriers
+                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+              </Link>
+            </h3>
+            <p className="text-foreground-secondary leading-relaxed">
+              Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn&apos;t for everyone. I identified that GenAI uniquely solves both—private experience plus dynamic worldbuilding—and built Story Mode to prove it.
+            </p>
+          </article>
         </div>
       </section>
 
