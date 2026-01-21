@@ -31,7 +31,7 @@ AI removes the genre barrier because it can dynamically build any world based on
 
 Previous solutions could maybe solve one of these problems. A solo video game RPG is private, but locks you into the designers' world. A flexible human DM can build any genre, but requires you to find them and show up socially. GenAI is the first thing that can do both simultaneously: private *and* infinitely flexible.
 
-I built Story Mode to test that hypothesis. The fact that I used AI to build it—collaborating with Claude as my development partner—is secondary. The PM insight is recognizing where AI uniquely solves problems that previous solutions couldn't touch.
+I built Story Mode to test that hypothesis. The fact that I used AI to build it—collaborating with Claude as my development partner—is secondary. The PM insight is recognizing where AI uniquely solves problems that previous solutions couldn't touch—[try it here → Story Mode](https://aitavern.onrender.com).
 
 ---
 
