@@ -1,5 +1,5 @@
 ---
-title: "Completing the Bitcoin Flywheel—And Paving the Way for IPO"
+title: "Completing the Bitcoin Flywheel, and Paving the Way for IPO"
 company: "Fold"
 date: "January 2024"
 description: "Three features. One ecosystem. 50% more trade volume."

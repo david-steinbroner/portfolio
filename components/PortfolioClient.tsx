@@ -90,13 +90,12 @@ export default function PortfolioClient() {
                 href="/case-studies/bitcoin-flywheel"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
-                Completing the Bitcoin Flywheel—And Paving the Way for IPO
+                Completing the Bitcoin Flywheel, and Paving the Way for IPO
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
               </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold already had Buy Bitcoin. Competing with Strike and Coinbase meant finishing the flywheel. I built the prototypes, navigated a complex stakeholder landscape, and embedded in the Bitcoin community to understand the full user spectrum. Then shipped Sell, Receive, and Direct to Bitcoin. Trade volume jumped 50%.
-            </p>
+Fold users could already earn and buy bitcoin. Competing with Strike and Coinbase meant completing the loop. I built the prototypes, navigated a complex stakeholder landscape, and embedded in the Bitcoin community to understand the full user spectrum. Then shipped Sell, Receive, and Direct to Bitcoin, completing the Bitcoin Flywheel. Trade volume jumped 50%.            </p>
           </article>
 
           <article>
@@ -126,7 +125,7 @@ export default function PortfolioClient() {
                 href="/case-studies/notification-preferences"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
-                No Bandwidth? Ship It Anyway.
+                No Bandwidth? Ship It Anyway
                 <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
               </Link>
             </h3>
@@ -149,7 +148,7 @@ export default function PortfolioClient() {
               </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn&apos;t for everyone. I identified that GenAI uniquely solves both—private experience plus dynamic worldbuilding—and built Story Mode to prove it.
+              Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn&apos;t for everyone. I identified that GenAI uniquely solves both, private experience plus dynamic worldbuilding, and built Story Mode to prove it.
             </p>
           </article>
         </div>
