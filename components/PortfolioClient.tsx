@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Linkedin, Github, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, Github, ArrowUpRight, FileText } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 
 export default function PortfolioClient() {
@@ -44,6 +44,15 @@ export default function PortfolioClient() {
           >
             <Github className="w-4 h-4" />
             GitHub
+          </a>
+          <a
+            href="/david_steinbroner_resume_jan26.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 hover:text-foreground transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            Resume
           </a>
         </div>
       </header>
