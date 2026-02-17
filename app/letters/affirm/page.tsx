@@ -66,7 +66,7 @@ export default function AffirmLetter() {
             2.5 months ahead of deadline by becoming the subject matter expert on crypto tax law,
             coordinating six stakeholder groups with just two engineers. 90% user adoption, 2%
             support ticket rate. And I rebuilt Fold's{" "}
-            <Link href="/case-studies/banking-approval-process" className="text-link hover:underline">
+            <Link href="/features/banking-partner-approval" className="text-link hover:underline">
               banking partner approval process
             </Link>{" "}
             from a 4+ week bottleneck into a days-long checkpoint — by establishing direct
