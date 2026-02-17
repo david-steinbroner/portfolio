@@ -117,9 +117,14 @@ export default function AffirmLetter() {
 
         {/* Footer Links */}
         <footer className="flex flex-wrap gap-6 text-sm border-t border-border pt-8">
-          <Link href="/" className="text-foreground-secondary hover:text-foreground transition-colors">
+          <a
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground-secondary hover:text-foreground transition-colors"
+          >
             Portfolio
-          </Link>
+          </a>
           <a
             href="/david_steinbroner_resume_jan26.pdf"
             target="_blank"
