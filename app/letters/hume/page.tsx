@@ -25,16 +25,7 @@ export default function HumeLetter() {
           <h2 className="text-xl font-semibold text-foreground pt-4">I've Won This Market Before</h2>
 
           <p>
-            I know what{" "}
-            <a
-              href="https://hume.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-link hover:underline"
-            >
-              Hume
-            </a>{" "}
-            needs to do for growth because I've already done it. I took{" "}
+            I know what Hume needs to do for growth because I've already done it. I took{" "}
             <a
               href="https://foldapp.com"
               target="_blank"
@@ -47,16 +38,7 @@ export default function HumeLetter() {
           </p>
 
           <p>
-            I'm also one of your users. Not of Hume specifically, but of voice AI. I use speech-to-text AI daily as part of my core workflow; over 75,000 words in the past few months. I think about these products the way a product manager does while I'm using them: where's the friction, where's the delight, where would I drop off, what would make me tell someone about this. When I signed up for Hume and explored{" "}
-            <a
-              href="https://hume.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-link hover:underline"
-            >
-              Octave
-            </a>
-            , I wasn't just impressed by the technology. I was already running a growth audit in my head.
+            I'm also one of your users. Not of Hume specifically, but of voice AI. I use speech-to-text AI daily as part of my core workflow; over 75,000 words in the past few months. I think about these products the way a product manager does while I'm using them: where's the friction, where's the delight, where would I drop off, what would make me tell someone about this. When I signed up for Hume and explored Octave, I wasn't just impressed by the technology. I was already running a growth audit in my head.
           </p>
 
           <p>
@@ -68,7 +50,7 @@ export default function HumeLetter() {
           <h2 className="text-xl font-semibold text-foreground pt-4">The Growth Audit</h2>
 
           <p>
-            <strong>Start with the people.</strong> Before I touch any channel or run any experiment, I want to talk to users, especially first-time users. Offer credits in exchange for a 15-20 minute interview. How did they find Hume? What were they trying to do? Where did they get stuck? What made them stay or leave? This is the fastest way to understand the gap between what the team thinks the user experience is and what it actually is. At Fold, the feedback group I created (<Link href="/case-studies/spin-wheel" className="text-link hover:underline">Friends of Fold</Link>) was the single most valuable source of product insight we had. That kind of direct feedback loop needs to exist at Hume from day one.
+            <strong>Start with the people.</strong> Before I touch any channel or run any experiment, I want to talk to users, especially first-time users. Offer credits in exchange for a 15-20 minute interview. How did they find Hume? What were they trying to do? Where did they get stuck? What made them stay or leave? This is the fastest way to understand the gap between what the team thinks the user experience is and what it actually is. At Fold, the feedback group I created (Friends of Fold) was the single most valuable source of product insight we had. That kind of direct feedback loop needs to exist at Hume from day one.
           </p>
 
           <p>
@@ -229,11 +211,7 @@ export default function HumeLetter() {
           </p>
 
           <p>
-            I managed our app store presence and moved our rating from 3.6 to 4.3 across both stores. I led the rebrand of our website. I turned our biggest engagement lever (<Link href="/case-studies/spin-wheel" className="text-link hover:underline">the Spin Wheel</Link>, the darling of Fold) from a cost center into six-figure revenue. I created{" "}
-            <Link href="/case-studies/spin-wheel" className="text-link hover:underline">
-              Friends of Fold
-            </Link>
-            , a power user group that became our product feedback loop, our QA team, and our most vocal advocates.
+            I managed our app store presence and moved our rating from 3.6 to 4.3 across both stores. I led the rebrand of our website. I turned our biggest engagement lever (<Link href="/case-studies/spin-wheel" className="text-link hover:underline">the Spin Wheel</Link>, the darling of Fold) from a cost center into six-figure revenue. I created Friends of Fold, a power user group that became our product feedback loop, our QA team, and our most vocal advocates.
           </p>
 
           <p>
@@ -247,11 +225,7 @@ export default function HumeLetter() {
             <Link href="/case-studies/story-mode" className="text-link hover:underline">
               mobile-first AI tabletop RPG
             </Link>
-            . I use Claude Code as my primary development tool with proper engineering workflows: GitHub, feature branches, CI/CD, monitoring. I'm not a PM who hands off specs and waits. I{" "}
-            <Link href="/" className="text-link hover:underline">
-              build, ship, measure, and iterate
-            </Link>
-            .
+            . I use Claude Code as my primary development tool with proper engineering workflows: GitHub, feature branches, CI/CD, monitoring. I'm not a PM who hands off specs and waits. I build, ship, measure, and iterate.
           </p>
 
           <h2 className="text-xl font-semibold text-foreground pt-4">One Question</h2>
