@@ -15,13 +15,13 @@ export default function HumeLetter() {
             David Steinbroner · For Hume
           </p>
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-4">
-            I use voice AI every day. I'm not approaching Hume as someone who thinks it's interesting. I'm approaching it as someone who lives in it.
+            The growth playbook I built took my last startup to the Nasdaq. I'm here to run it again.
           </h1>
         </header>
 
         {/* Body */}
         <article className="space-y-6 text-foreground-secondary leading-relaxed mb-12">
-          <h2 className="text-xl font-semibold text-foreground pt-4">Why Hume</h2>
+          <h2 className="text-xl font-semibold text-foreground pt-4">I've won this market before.</h2>
 
           <p>
             Wispr is part of my daily workflow - over 75,000 words in the past few months. I've been building web and mobile apps with AI-assisted development for the past year, some with AI agents embedded in the UX.
