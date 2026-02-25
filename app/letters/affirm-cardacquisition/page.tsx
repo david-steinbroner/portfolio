@@ -26,11 +26,38 @@ export default function AffirmCardAcquisitionLetter() {
         {/* Body */}
         <article className="space-y-6 text-foreground-secondary leading-relaxed mb-12">
           <p>
-            I've applied to a couple of other roles on the Card team, but this is the one I am without a doubt confident in. It matches what I have accomplished. Let me explain.
+            I've applied to a couple of other roles on the Card team, but this is the one I am without a doubt confident in. It matches what I have accomplished.
           </p>
 
           <p>
-            Here's what I think is happening. The Affirm Card did $2.186 billion in GMV last quarter with active cardholders up 121% to 3.7 million, and your CEO has said you haven't even started marketing it beyond existing Affirm users yet. You're hiring across Card Foundations, Card Platform, and Card Acquisition at the same time because the Card is how Affirm goes from checkout button to top of wallet. If it works, Affirm doesn't need to build a credit card to undercut credit cards; you just need to prove that people want something else. And I think you can, because the "trust" people have in credit cards is really just familiarity. The Card Acquisition PM is the person who starts changing that: getting new people to try the Card, understand it, and reach for it first. That's the job I want because it's the job I've done.
+            Here's what I think is happening. The Affirm Card did{" "}
+            <a
+              href="https://www.emarketer.com/content/affirm-fiscal-q2-2026-earnings-affirm-card-zero-interest-promotion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link hover:underline"
+            >
+              $2.186 billion in GMV
+            </a>{" "}
+            last quarter with{" "}
+            <a
+              href="https://investors.affirm.com/static-files/9c3800a4-5f1d-4539-af8c-c9cb1fddc290"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link hover:underline"
+            >
+              active cardholders up 121% to 3.7 million
+            </a>
+            , and your CEO has said you{" "}
+            <a
+              href="https://www.pymnts.com/buy-now-pay-later/2025/levchin-touts-network-effects-as-affirm-card-volumes-surge-135"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-link hover:underline"
+            >
+              haven't even started marketing it beyond existing Affirm users yet
+            </a>
+            . You're hiring across Card Foundations, Card Platform, and Card Acquisition at the same time because the Card is how Affirm goes from checkout button to top of wallet. If it works, Affirm doesn't need to build a credit card to undercut credit cards; you just need to prove that people want something else. And I think you can, because the "trust" people have in credit cards is really just familiarity. The Card Acquisition PM is the person who starts changing that: getting new people to try the Card, understand it, and reach for it first. That's the job I want because it's the job I've done.
           </p>
 
           <p>
