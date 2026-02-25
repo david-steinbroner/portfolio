@@ -16,7 +16,7 @@ export default function AffirmCardAcquisitionLetter() {
             David Steinbroner · For the Affirm Card Team
           </p>
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-4">
-            The last card product I worked on, I helped build from zero. The one before that, I grew into the core of a financial ecosystem that took us to the Nasdaq.
+            To win top of wallet, you have to win top of mind first. The last time I solved this, I helped take a startup to the Nasdaq.
           </h1>
           <p className="text-lg text-foreground-secondary">
             Senior Product Manager, Card Acquisition (New Channels)
