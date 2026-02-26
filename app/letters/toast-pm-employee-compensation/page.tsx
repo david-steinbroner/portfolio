@@ -10,6 +10,42 @@ export default function ToastPMEmployeeCompensationLetter() {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+        {/* Top Nav */}
+        <nav className="flex flex-wrap items-center gap-4 mb-12">
+          <a
+            href="/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-4 py-2 bg-foreground text-background font-medium text-sm rounded-md hover:opacity-90 transition-opacity"
+          >
+            View Portfolio
+          </a>
+          <a
+            href="/david_steinbroner_resume_jan26.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-foreground-secondary hover:text-foreground transition-colors"
+          >
+            Resume
+          </a>
+          <a
+            href="https://linkedin.com/in/davidsteinbroner"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-foreground-secondary hover:text-foreground transition-colors"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/david-steinbroner"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-foreground-secondary hover:text-foreground transition-colors"
+          >
+            GitHub
+          </a>
+        </nav>
+
         {/* Header */}
         <header className="mb-12">
           <p className="text-sm text-foreground-muted uppercase tracking-wider mb-3">
@@ -78,41 +114,6 @@ export default function ToastPMEmployeeCompensationLetter() {
           </div>
         </div>
 
-        {/* Footer Links */}
-        <footer className="flex flex-wrap gap-6 text-sm border-t border-border pt-8">
-          <a
-            href="/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground-secondary hover:text-foreground transition-colors"
-          >
-            Portfolio
-          </a>
-          <a
-            href="/david_steinbroner_resume_jan26.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground-secondary hover:text-foreground transition-colors"
-          >
-            Resume
-          </a>
-          <a
-            href="https://linkedin.com/in/davidsteinbroner"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground-secondary hover:text-foreground transition-colors"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/david-steinbroner"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground-secondary hover:text-foreground transition-colors"
-          >
-            GitHub
-          </a>
-        </footer>
       </div>
     </div>
   );
