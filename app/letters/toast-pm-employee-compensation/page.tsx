@@ -16,7 +16,7 @@ export default function ToastPMEmployeeCompensationLetter() {
             David Steinbroner · For the Toast Payroll Team
           </p>
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-4">
-            I know the restaurant industry from the floor up. I know the payroll infrastructure from the inside out.
+            I started my career making sure food got to the table. Now I make sure products get to the people who need them.
           </h1>
           <p className="text-lg text-foreground-secondary">
             Product Manager, Employee Compensation
