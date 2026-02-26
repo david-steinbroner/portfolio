@@ -21,7 +21,7 @@ export default function PayPalSeniorProductManagerLetter() {
             View Portfolio
           </a>
           <a
-            href="/david_steinbroner_resume_jan26.pdf"
+            href="/david_steinbroner_resume_feb26.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-foreground-secondary hover:text-foreground transition-colors"

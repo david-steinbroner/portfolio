@@ -46,7 +46,7 @@ export default function PortfolioClient() {
             GitHub
           </a>
           <a
-            href="/david_steinbroner_resume_jan26.pdf"
+            href="/david_steinbroner_resume_feb26.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 hover:text-foreground transition-colors"
