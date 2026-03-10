@@ -76,11 +76,11 @@ export default function PayPalSeniorProductManagerLetter() {
 
           <p>
             Fold was the first Bitcoin-only company listed on the Nasdaq. Getting there meant competing directly with PayPal, Cash App, and Venmo, companies that had already figured out how to build ecosystems that kept users inside them. I studied all of them. PayPal in particular was the clearest model for how every product could reinforce every other product, creating real reasons for users to stay. We were building our own version of that with the{" "}
-            <Link href="/case-studies/bitcoin-flywheel" className="text-link hover:underline">
+            <Link href="/case-studies/fiat-bitcoin-ecosystem" className="text-link hover:underline">
               Bitcoin Flywheel
             </Link>
             ,{" "}
-            <Link href="/case-studies/bitcoin-flywheel" className="text-link hover:underline">
+            <Link href="/case-studies/fiat-bitcoin-ecosystem" className="text-link hover:underline">
               buy, sell, earn rewards, fund your card
             </Link>
             , keep it in the ecosystem, and understanding how you'd solved that problem shaped how I thought about ours.

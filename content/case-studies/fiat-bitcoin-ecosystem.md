@@ -1,5 +1,5 @@
 ---
-title: "Completing the Bitcoin Flywheel, and Paving the Way for IPO"
+title: "Bridging Fiat and Bitcoin: The Three Features That Completed Fold's Financial Ecosystem"
 company: "Fold"
 date: "January 2024"
 description: "Three features. One ecosystem. 50% more trade volume."
@@ -9,7 +9,7 @@ impact:
   - "25% adoption of Sell Bitcoin"
   - "20% decrease in premium subscription churn"
   - "~10% revenue increase from interchange"
-tldr: "Users could earn bitcoin on Fold but couldn't do anything with it except withdraw. I launched the features that turned Fold into a complete bitcoin financial ecosystem - and helped pave the way for our IPO."
+tldr: "Users could earn bitcoin on Fold but couldn't bring it in, sell it, or auto-accumulate on deposits. I shipped the three features that closed those gaps and completed the ecosystem."
 status: "Shipped"
 tags: ["Product Strategy", "Bitcoin", "Fintech", "Feature Development"]
 category: "case-study"

@@ -54,7 +54,7 @@ export default function AffirmLetter() {
 
           <p>
             I shipped the final three pieces of the{" "}
-            <Link href="/case-studies/bitcoin-flywheel" className="text-link hover:underline">
+            <Link href="/case-studies/fiat-bitcoin-ecosystem" className="text-link hover:underline">
               Bitcoin Flywheel
             </Link>{" "}
             (Sell, Receive, and Direct to Bitcoin); features that required coordination across six

@@ -12,7 +12,7 @@ tags: ["Bitcoin", "Automation", "User Experience"]
 category: "feature"
 caseStudy:
   name: "The Bitcoin Flywheel"
-  slug: "bitcoin-flywheel"
+  slug: "fiat-bitcoin-ecosystem"
 ---
 
 **Most people want to stack Bitcoin but forget to do it.** They have good intentions, but manual buying requires opening the app, deciding how much, and executing—friction that kills follow-through.

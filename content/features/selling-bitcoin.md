@@ -8,7 +8,7 @@ tags: ["Bitcoin", "Fintech", "Product Strategy"]
 category: "feature"
 caseStudy:
   name: "The Bitcoin Flywheel"
-  slug: "bitcoin-flywheel"
+  slug: "fiat-bitcoin-ecosystem"
 ---
 
 **Sell bitcoin, fund your card, spend dollars—all in one app.** No waiting for bank transfers, no external exchanges.

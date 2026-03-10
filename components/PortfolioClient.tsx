@@ -87,7 +87,7 @@ export default function PortfolioClient() {
             </span>
             <h3 className="text-xl font-medium mb-2">
               <Link
-                href="/case-studies/bitcoin-flywheel"
+                href="/case-studies/fiat-bitcoin-ecosystem"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
                 Completing the Bitcoin Flywheel, and Paving the Way for IPO

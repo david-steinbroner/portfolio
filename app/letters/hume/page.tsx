@@ -196,7 +196,7 @@ export default function HumeLetter() {
               Fold
             </a>{" "}
             as one of a team of 11 that{" "}
-            <Link href="/case-studies/bitcoin-flywheel" className="text-link hover:underline">
+            <Link href="/case-studies/fiat-bitcoin-ecosystem" className="text-link hover:underline">
               took it to the Nasdaq
             </Link>
             ; the first Bitcoin-only company to do so.

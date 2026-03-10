@@ -8,7 +8,7 @@ tags: ["Bitcoin", "Fintech", "Product Strategy"]
 category: "feature"
 caseStudy:
   name: "The Bitcoin Flywheel"
-  slug: "bitcoin-flywheel"
+  slug: "fiat-bitcoin-ecosystem"
 ---
 
 **Deposit bitcoin from anywhere.** Receiving Bitcoin let users move bitcoin from external wallets into Fold—turning Fold from a closed rewards system into a real bitcoin wallet.

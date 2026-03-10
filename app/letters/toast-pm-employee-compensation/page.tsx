@@ -79,7 +79,7 @@ export default function ToastPMEmployeeCompensationLetter() {
               crypto tax compliance
             </Link>{" "}
             with two engineers, delivered 2.5 months ahead of deadline with 90% user adoption. The final three features of the{" "}
-            <Link href="/case-studies/bitcoin-flywheel" className="text-link hover:underline">
+            <Link href="/case-studies/fiat-bitcoin-ecosystem" className="text-link hover:underline">
               Bitcoin Flywheel
             </Link>
             , Sell, Receive, and Direct to Bitcoin, were coordinated across custodians, Visa, and external banking partners simultaneously. The skill in all of it is the same: know who holds what, translate across groups that don't share a language, and keep the product moving anyway. Toast Payroll requires exactly that, and I've done it in crypto, where the regulatory environment was being written in real time and a wrong move with a banking partner had real consequences.
