@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   robots: "noindex, nofollow",
 };
 
-return function ModernHealthProductManagerLetter() {
+export default function ModernHealthProductManagerLetter() {
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-2xl mx-auto px-6 py-16 md:py-24">
