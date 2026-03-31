@@ -222,7 +222,7 @@ Fold users could already earn and buy bitcoin. Competing with Strike and Coinbas
             <span className="text-foreground-muted ml-2">
               — Building my portfolio in public with Next.js and Linear.{' '}
               <a
-                href="https://github.com/david-steinbroner/portfolio-site"
+                href="https://github.com/david-steinbroner"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-foreground transition-colors"

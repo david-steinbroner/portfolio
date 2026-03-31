@@ -9,7 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Case study slugs
   const caseStudies = [
     'fiat-bitcoin-ecosystem',
+    'notification-preferences',
     'spin-wheel',
+    'story-mode',
     'taxbit',
   ]
 

@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "David Steinbroner — Product Manager & Builder",
     description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
-    url: "https://davidsteinbroner.com",
+    url: "https://www.davidsteinbroner.com",
     type: "profile",
     images: [
       {
-        url: "https://davidsteinbroner.com/images/headshot.png",
+        url: "https://www.davidsteinbroner.com/images/headshot.png",
         width: 400,
         height: 400,
         alt: "David Steinbroner",
@@ -34,16 +34,22 @@ export const metadata: Metadata = {
     title: "David Steinbroner — Product Manager & Builder",
     description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
     card: "summary",
-    images: ["https://davidsteinbroner.com/images/headshot.png"],
+    images: ["https://www.davidsteinbroner.com/images/headshot.png"],
   },
-  icons: { icon: [] },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
 };
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "David Steinbroner",
-  "url": "https://davidsteinbroner.com",
+  "url": "https://www.davidsteinbroner.com",
   "jobTitle": "Product Manager",
   "description": "PM who ships. Took Fold from startup to Nasdaq listing by owning the messy middle.",
   "sameAs": [
@@ -51,7 +57,7 @@ const personSchema = {
     "https://github.com/david-steinbroner"
   ],
   "knowsAbout": ["Product Management", "Fintech", "Bitcoin", "AI-Assisted Development"],
-  "image": "https://davidsteinbroner.com/images/headshot.png"
+  "image": "https://www.davidsteinbroner.com/images/headshot.png"
 };
 
 export default function RootLayout({
