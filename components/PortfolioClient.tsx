@@ -151,6 +151,24 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
               Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn&apos;t for everyone. AI happens to solve both — you can play alone, and it can build any world you want. I built Story Mode to see if that actually works.
             </p>
           </article>
+
+          <article>
+            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
+              Personal Projects
+            </span>
+            <h3 className="text-xl font-medium mb-2">
+              <Link
+                href="/case-studies/poke-pal"
+                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
+              >
+                When the Integration Doesn&apos;t Exist, Build It
+                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+              </Link>
+            </h3>
+            <p className="text-foreground-secondary leading-relaxed">
+              Pokemon GO doesn&apos;t let you export your collection data. No API, no export button. I built an automated pipeline: Python drives screen mirroring, AI vision reads the screenshots, local math crunches the numbers, and a web UI makes it all usable. The kind of integration you build when the integration doesn&apos;t exist.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -183,7 +201,7 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
               POGO PAL
             </a>
             <span className="text-foreground-muted ml-2">
-              — Pokemon GO helper for casual players. Most Pokemon GO sites are built for hardcore players; this one isn&apos;t. Also a fun UI experiment.
+              — Pokemon GO helper for casual players. Most Pokemon GO sites are built for hardcore players; this one isn&apos;t. Also a fun UI experiment. The scanner and collection tools live in a <Link href="/case-studies/poke-pal" className="hover:text-foreground transition-colors">separate case study</Link>.
             </span>
           </div>
           <div className="group">

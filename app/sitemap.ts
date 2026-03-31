@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const caseStudies = [
     'fiat-bitcoin-ecosystem',
     'notification-preferences',
+    'poke-pal',
     'spin-wheel',
     'story-mode',
     'taxbit',
