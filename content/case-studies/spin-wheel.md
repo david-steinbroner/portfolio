@@ -23,19 +23,19 @@ features:
 
 When I joined Fold, the Spin Wheel wasn't just a feature. It was the feature.
 
-The Fold Card was the first bitcoin rewards debit card on the market, and the wheel was what made it exciting. Every purchase earned a spin. Every spin could win up to 100% back, or 5% back, or sometimes a whole bitcoin. The average rewards rate hovered around 3.5%, which was unheard of for a free debit card. And because Bitcoin's price was rising, users who earned rewards early watched their effective rewards rate double or triple as the asset appreciated.
+The Fold Card was the first bitcoin rewards debit card on the market, and the wheel was what made it exciting. Every purchase earned a spin. Every spin could win up to 100% back, or 5% back, or sometimes a whole bitcoin. The average rewards rate hovered around 3.5%, which was unheard of for a free debit card. And because Bitcoin's price was rising, users who earned rewards early watched their effective rate double or triple as the asset appreciated.
 
-This was why Fold was growing. This was why we had a loyal community. This was why people talked about us. The wheel wasn't a feature; it was the brand.
+This was why Fold was growing. This was why we had a loyal community. This was why people talked about us.
 
 The problem: it was completely unsustainable.
 
 A reward structure that worked at $25k Bitcoin became dangerous at $50k Bitcoin. Percentage-based rewards tied to an appreciating asset meant our costs scaled faster than our revenue. We were on track to reward ourselves out of existence.
 
-I inherited the wheel knowing that any changes would be felt by every user immediately. All eyes were on this feature. And my job was to make it less rewarding while somehow keeping it fun, while somehow keeping users from leaving, while somehow doing all of this with almost no engineering bandwidth.
+I inherited the wheel knowing my job was to make it less rewarding while keeping it fun, keep users from leaving, and do all of this with almost no engineering bandwidth. All eyes on the most visible feature at the company.
 
 ## What I Actually Inherited
 
-The wheel system I walked into had two components: a Daily Wheel (one free spin per day for flat sats) and a Purchase Wheel (spin after every card purchase for percentage-based rewards). Both ran on a pricing model so complex it lived on a virtual machine. Running a single simulation took 15 minutes. If I wanted to test different prize configurations, I'd adjust the inputs, run the simulation, wait, check if I hit the target rewards rate, and repeat. The model also kept breaking; simulated averages of 2.5% would result in actual averages closer to 3%.
+The wheel system had two components: a Daily Wheel (one free spin per day for flat sats) and a Purchase Wheel (spin after every card purchase for percentage-based rewards). Both ran on a pricing model so complex it lived on a virtual machine. Running a single simulation took 15 minutes. If I wanted to test different prize configurations, I'd adjust the inputs, run the simulation, wait, check if I hit the target rewards rate, and repeat. The model also kept breaking — simulated averages of 2.5% would result in actual averages closer to 3%.
 
 Beyond the model, I inherited a monthly cadence. Every month, we launched a new themed wheel: the Volcanic Wheel for El Salvador adopting Bitcoin, the Uncle Satoshi Wheel for July 4th, the Summer Games Wheel for the Olympics, the I'm Feeling Lucky Wheel for St. Patrick's Day. Each launch required a theme (sourced from community polls or Bitcoin culture), a design brief for our single designer, a prize structure I'd model and test, a blog post I'd write, social promotion I'd run, and community feedback I'd gather and respond to.
 
@@ -47,7 +47,7 @@ This monthly rhythm was part of what users loved. They looked forward to the new
 
 What follows is 18 months of iteration. I'm going to be honest about what worked, what didn't, and what I learned.
 
-**Attempt 1: Base Rate Plus Wheel.** Finance made it clear we needed more predictable costs. My first major change introduced a base rewards rate (1% for Spin+, 0.25% for free users) with the wheel providing bonus rewards on top. This let us lower the wheel's average payout while still giving users guaranteed value. The reaction was mixed. Users understood the logic when we explained it, but the magic of "spin and see what you get" was diluted. The wheel felt like an add-on rather than the main event.
+**Attempt 1: Base Rate Plus Wheel.** Finance needed more predictable costs. My first major change introduced a base rewards rate (1% for Spin+, 0.25% for free users) with the wheel providing bonus rewards on top. This let us lower the wheel's average payout while still giving users guaranteed value. The reaction was mixed. Users understood the logic when we explained it, but the magic of "spin and see what you get" was diluted. The wheel felt like an add-on rather than the main event.
 
 **Attempt 2: Give Back Control.** Based on feedback that users felt like something had been taken away, I introduced the Spin Bomb: land on this prize and get 21 extra spins to try for something better. The idea was to give users a sense of control and second chances. This was popular, but it was also the start of a pattern: adding complexity to address complaints about previous complexity.
 
@@ -55,7 +55,7 @@ What follows is 18 months of iteration. I'm going to be honest about what worked
 
 **Attempt 4: Rebalancing the Odds.** Data showed that a small percentage of users were winning most of the rewards, skewing our averages. I adjusted: removed individual caps on big prizes, increased odds on some wedges, increased daily Extra Spins, reduced spin expiration to 24 hours so we could give out more of them more often. Each of these changes made sense in isolation. Together, they made the system increasingly hard to understand.
 
-**Attempt 5: Driving Gift Cards.** Finance identified gift card interchange as our best revenue source. I used the wheel to drive gift card volume: added gift card bonus prizes, highlighted deals in launch posts, framed the wheel as helping users "stack majorly on gift cards." This worked. Gift card volume increased significantly. But it also meant the wheel was now serving multiple masters: engagement, rewards sustainability, and revenue optimization.
+**Attempt 5: Driving Gift Cards.** Finance identified gift card interchange as our best revenue source. I used the wheel to drive gift card volume: added gift card bonus prizes, highlighted deals in launch posts, framed the wheel as helping users "stack majorly on gift cards." This worked. Gift card volume increased. But it also meant the wheel was now serving multiple masters: engagement, rewards sustainability, and revenue optimization.
 
 **Attempt 6: Two Wheels.** To drive Spin+ conversions, I created separate wheels for each tier. Spin+ got better prizes at better odds. The theory was clear differentiation would drive upgrades. The problem: users only saw their own wheel. Spin+ users didn't see what Spin users were missing, so they didn't feel the premium. Spin users didn't see what they could unlock, so they didn't feel the pull to upgrade. I had to introduce locked wedges with upgrade CTAs on the Spin wheel to make the differentiation visible. That helped conversions, but added more visual complexity.
 
@@ -67,25 +67,25 @@ What follows is 18 months of iteration. I'm going to be honest about what worked
 
 Throughout this period, I was in constant tension with finance.
 
-When Fold brought in a finance team, their job was to right the ship. That meant they became the loudest voice in the room. They controlled the budget, which meant they effectively controlled product decisions. This is a common startup pattern: finance knows the numbers, so finance leads, even when the decisions are product decisions that require product thinking.
+When Fold brought in a finance team, their job was to right the ship. That meant they became the loudest voice in the room. They controlled the budget, which effectively meant they controlled product decisions — even when those decisions needed product thinking.
 
-The challenge was that I wasn't officially a product person. I had taken over the wheel because I was closest to the community, and I figured it out as I went. It wasn't until I was neck-deep in the work for about two years that I realized I was functioning as a full PM: taking business requirements, translating them into feature updates, owning the entire lifecycle from strategy to launch. But without the title, my voice didn't carry the same weight in rooms where finance was setting direction.
+I wasn't officially a product person at the time. I had taken over the wheel because I was closest to the community, and I figured it out as I went. It wasn't until I was neck-deep in the work for about two years that I realized I was functioning as a full PM: taking business requirements, translating them into feature updates, owning the entire lifecycle from strategy to launch. But without the title, my voice didn't carry the same weight in rooms where finance was setting direction.
 
-Their perspective made sense on paper: if users followed the optimal strategy, they could earn great rewards. The math worked out. The incentives were aligned. From a spreadsheet view, the product was generous.
+Their perspective made sense on paper: if users followed the optimal strategy, they could earn great rewards. The math worked out. The incentives were aligned.
 
-My perspective was different: users don't build spreadsheets to maximize rewards on a debit card. They want to use their card and feel like they're getting something good. Every layer of complexity, every new mechanic, every "if you do X you get Y" condition made the product feel less like a reward and more like homework.
+My perspective was different: users don't build spreadsheets to maximize rewards on a debit card. They want to use their card and feel like they're getting something good. Every layer of complexity made the product feel less like a reward and more like homework.
 
 I advocated for simplicity repeatedly. Sometimes I won, sometimes I didn't. But I kept the feedback channels open: Discord discussions, Twitter polls, in-app surveys, blog post comments. And I kept reflecting community sentiment back to leadership, showing them the gap between how we thought about the product and how users experienced it.
 
-The data eventually supported my position. Engagement metrics would spike after simplification and gradually decline as complexity accumulated. But it took a long time and a lot of iteration to get to a place where simplicity won.
+The data eventually supported my position. Engagement metrics would spike after simplification and decline as complexity accumulated. But it took a long time and a lot of iteration to get there.
 
-## The Final Simplification: One Wheel to Rule Them All
+## The Final Simplification: One Wheel
 
 The biggest structural change was also the simplest: we went from two wheels to one.
 
-We retired the Purchase Wheel entirely. No more spinning for percentage-based rewards on every transaction. No more separate mechanics for purchases versus daily engagement. We took the Daily Wheel, retrofitted it to be the single rewards experience, and stopped calling it the "Daily Wheel." It became just "the wheel" or "the rewards wheel."
+We retired the Purchase Wheel entirely. No more spinning for percentage-based rewards on every transaction. No more separate mechanics for purchases versus daily engagement. We took the Daily Wheel, retrofitted it to be the single rewards experience, and stopped calling it the "Daily Wheel." It became just "the wheel."
 
-This was a significant psychological shift. For years, the Purchase Wheel had been the exciting one: the big wins, the variability, the chance at 100% back. The Daily Wheel was the steady one: free sats every day, lower stakes, simpler prizes. Collapsing them meant accepting that the era of percentage-based purchase rewards was over. But it also meant users only had to understand one thing.
+This was a psychological shift. For years, the Purchase Wheel had been the exciting one: the big wins, the variability, the chance at 100% back. The Daily Wheel was the steady one. Collapsing them meant accepting that the era of percentage-based purchase rewards was over. But it also meant users only had to understand one thing.
 
 Here's how it works now: every user gets one free spin per day. Spins expire in 24 hours. Daily push notifications remind users to spin. The wheel gives flat sat prizes. Spin+ users have access to all wedges including a chance at 1 BTC. Spin users see locked wedges with an upgrade CTA.
 
@@ -95,49 +95,43 @@ No more earning spins per $10. No more choose-your-reward. No more 3x3. No more 
 
 I built a new pricing model in Google Sheets, replacing the legacy VM-based system. It pulls live Bitcoin price via API, uses predefined prize tiers for different price ranges, and calculates average cost per spin. The model works at any Bitcoin price up to $1M. Target cost per spin: about $0.01.
 
-With winner notifications (push alerts when someone wins 100k+ sats, which happens roughly every 1.5 days), we maintain engagement through FOMO rather than complexity. Spins are still running at around 50k per day. And because spins are cheap, we can use them as promotional currency: "First 500 users get 50 spins" for feature launches.
+With winner notifications (push alerts when someone wins 100k+ sats, which happens roughly every 1.5 days), we maintain engagement through FOMO rather than complexity. The [Spin Wheel](/features/spin-wheel) is still running at around 50k spins per day. And because spins are cheap, we can use them as promotional currency: "First 500 users get 50 spins" for feature launches.
 
 ![Winner notification driving engagement through FOMO](/case-studies/spin-wheel/spin-wheel-winner-notification.png)
 
 The wheel is simpler than it's ever been. It's also more sustainable than it's ever been.
 
-## Self-Service Tooling: Building for Autonomy
+## Self-Service Tooling
 
-One of my most important contributions wasn't a feature users ever saw. It was the infrastructure that let me move fast without dependencies.
+Early on, I worked with our designer to create a component system for the wheel. We turned the visual elements into modular pieces: wheel colors, prize icons, center spinner logo, page copy, promotional banners. Once the templates existed, I could update most wheel elements myself. If we needed a custom illustration or a new icon, I'd request it from design. But swapping colors, updating copy, changing prize displays — that was all self-serve. Themed wheel launches didn't require design tickets for every change.
 
-**Design Side: Templatized Components.** Early on, I worked with our designer to create a component system for the wheel. We turned the visual elements into modular pieces: wheel colors, prize icons, center spinner logo, page copy, promotional banners. Once the templates existed, I could update most wheel elements myself. If we needed a custom illustration or a new icon, I'd request it from design. But swapping colors, updating copy, changing prize displays - that was all self-serve. This meant themed wheel launches didn't require design tickets for every change. I could experiment with seasonal looks, test different promotional messaging, and respond to feedback without waiting for anyone's calendar to open up.
+More significantly, I spec'd and shipped an internal admin tool that gave me complete control over the wheel's mechanics. Through this tool, I could manage odds for every prize wedge, set prize amounts, upload design components, and configure the wheel end-to-end.
 
-**Engineering Side: The Wheel Admin Tool.** More significantly, I spec'd and shipped an internal admin tool that gave me complete control over the wheel's mechanics. Through this tool, I could manage odds for every prize wedge, set prize amounts, upload all the design components, and configure the wheel end-to-end. But the feature that changed my workflow most was scheduling. I could set an exact start date and time for a new wheel to go live, and an end date and time for it to expire. This meant I could build wheels in advance and queue them up.
+The feature that changed my workflow most was scheduling. I could set an exact start date and time for a new wheel to go live, and an end date for it to expire. Before scheduling, launch days were chaotic — I'd have to manually flip the switch on the wheel, publish the blog post, push out social media, monitor Discord and Twitter for feedback, and be ready to flag any bugs to engineering, all at the same time. With scheduling, I could prepare everything in advance. The wheel would go live automatically, and I could focus on community engagement instead of juggling manual tasks.
 
-Before the scheduling feature, launch days were chaotic. I'd have to manually flip the switch on the wheel, publish the blog post, push out social media, monitor Discord and Twitter for feedback, and be ready to flag any bugs to engineering - all at the same time. With scheduling, I could prepare everything in advance. The wheel would go live automatically at the scheduled time, and I could focus on community engagement and monitoring instead of juggling a dozen manual tasks simultaneously.
-
-The combination of design templates and the engineering admin tool meant I could ship a new wheel every month - sometimes more often - while engineering focused on roadmap work. A few tickets up front gave me autonomy for every future update. That's the leverage that let me iterate as fast as the business needed.
+The combination of design templates and the admin tool meant I could ship a new wheel every month — sometimes more often — while engineering focused on roadmap work. A few tickets up front gave me autonomy for every future update.
 
 ## The Sponsorship Program
 
-Early in my tenure, I saw an opportunity to turn the wheel from pure cost center into a revenue source.
+I saw an opportunity to turn the wheel from pure cost center into a revenue source.
 
-The Daily Wheel (the free daily spin) was high-visibility, low-cost real estate. A previous team member had done one sponsorship with Atoms, a shoe company with a Bitcoin-themed edition. It worked well.
+The Daily Wheel was high-visibility, low-cost real estate. A previous team member had done one sponsorship with Atoms, a shoe company with a Bitcoin-themed edition. It worked well. I built that into a repeatable program.
 
-I built that into a repeatable program. First, I used the templatized design components and admin tool to make sponsor integrations self-serve on my end. I could swap in sponsor branding, add their prizes to the wheel, and schedule the sponsored wheel to run for a specific period - all without engineering involvement.
+I used the design templates and admin tool to make sponsor integrations self-serve on my end — swap in branding, add their prizes, schedule the sponsored wheel, all without engineering. Then I created tiered sponsorship packages. The entry tier (around $10k) got two weeks of logo placement plus a prize on the wheel. The premium tier (around $20k) got a full month, plus blog posts, email blasts, Twitter promotion, and more prizes. I built a PDF with our engagement metrics so sponsors could see the exposure.
 
-Then I created tiered sponsorship packages. The entry tier (around $10k) got two weeks of logo placement plus a prize on the wheel, usually something like a membership or product from the sponsor. The premium tier (around $20k) got a full month, plus blog posts, email blasts, Twitter promotion, and more prizes. I built a PDF with our engagement metrics - spins, page views, social reach - so sponsors could see the exposure they'd get.
+I managed the full sponsor relationship: outreach, contract terms, collecting their marketing collateral, working with design on wheel components, scheduling the launch, and running the promotional campaign.
 
-I managed the full sponsor relationship: initial outreach, contract terms, collecting their marketing collateral, working with design to turn their assets into wheel components, scheduling the launch, and running the promotional campaign.
+The sponsorship infrastructure still works with the current single-wheel model.
 
-At least one sponsor used the program after Atoms, generating direct revenue plus measurable lifts in engagement and spend volume during the sponsorship period. Users were more active when there was something new and branded to engage with, and that activity translated to increased purchases.
+## What I Owned
 
-The sponsorship infrastructure still works with the current single-wheel model. It's a revenue lever that's always available if the business wants to use it.
+To be explicit about scope: I owned this end-to-end for 18 months.
 
-## What I Built vs. What I Managed
-
-To be explicit about scope: I owned this end-to-end.
-
-Product strategy: deciding what to change, when, and why. Pricing models: both working within the legacy system and building its replacement. Community management: gathering feedback through Discord, Twitter, surveys, and direct conversation. GTM: writing every blog post, running every launch, coordinating social promotion. Internal tooling: spec'ing the admin tool, working with design on templatized components, building the Google Sheets pricing model. Stakeholder management: navigating between finance requirements, user feedback, and engineering constraints.
+Product strategy: deciding what to change, when, and why. Pricing models: both working within the legacy system and building its replacement. Community management: gathering feedback through Discord, Twitter, surveys, and direct conversation. GTM: writing every blog post, running every launch, coordinating social promotion. Internal tooling: spec'ing the admin tool, working with design on templates, building the Google Sheets pricing model. Stakeholder management: navigating between finance requirements, user feedback, and engineering constraints.
 
 Engineering built to my specs in short bursts. Design created assets to my briefs. But the thinking, the iteration, the communication, and the execution were mine.
 
-For most of this period, I didn't have a PM title. I was doing community and growth work, and the wheel fell under my ownership because I was closest to the users. It wasn't until years into the work that I recognized what I was actually doing: taking business requirements and translating them into product updates, managing a feature lifecycle, balancing competing stakeholder needs, and shipping continuously. That's product management, whether or not it says so on your LinkedIn.
+For most of this period, I didn't have a PM title. I was doing community and growth work, and the wheel fell under my ownership because I was closest to the users. It wasn't until years into the work that I recognized what I was actually doing: taking business requirements, translating them into product updates, managing a feature lifecycle, balancing competing stakeholder needs, and shipping continuously.
 
 ## The Tradeoffs
 
@@ -149,24 +143,18 @@ Every iteration carried two risks pulling in opposite directions:
 
 I tried to manage both through transparency. Every change came with honest communication: here's why we're doing this, here's what's changing, here's what we got wrong last time, here's what we're trying next. I gave credit to the community when we got things right and owned it when we got things wrong.
 
-And because we'd built genuine community trust over years, something remarkable happened: when users complained, other users defended us. "They had to do this. Remember when every other company in this space died? Fold stayed."
+And because we'd built genuine community trust over years, something happened: when users complained, other users defended us. "They had to do this. Remember when every other company in this space died? Fold stayed."
 
-That wasn't luck. That was years of transparent communication paying off when we needed it most.
+That trust wasn't built overnight. It was years of transparent communication, and it paid off when we needed it most.
 
 ## What I Learned
 
-**Complexity compounds.** Every new mechanic makes the next one harder to add and harder to explain. Each individual feature might make sense, but the system becomes incomprehensible.
+Complexity compounds. Every new mechanic makes the next one harder to add and harder to explain. Each individual feature might make sense, but the system becomes incomprehensible. And users don't optimize — if your rewards program requires a spreadsheet to maximize, most people will just feel like they're getting a bad deal. The moment I started building "how to use spins" educational content, I should have known we'd gone too far.
 
-**Users don't optimize.** If your rewards program requires a spreadsheet to maximize, most users will just feel like they're getting a bad deal. Design for people who won't read the instructions.
+The self-service admin system and design templates gave me more long-term value than any single wheel iteration. A few engineering tickets up front removed my dependency on engineering for every future update. That leverage is what let me iterate as fast as the business needed.
 
-**If you have to explain it, it's too complicated.** The moment I started building "how to use spins" educational content, I should have known we'd gone too far.
+The original wheel failed because Bitcoin succeeded. Any reward system tied to an appreciating asset needs a model that works at 3x the current price. We learned that the hard way.
 
-**Build tools, not just features.** The self-service admin system and design templates gave me more long-term value than any single wheel iteration. Infrastructure that removes dependencies compounds over time.
+The years spent building Discord, being transparent, giving users direct lines to leadership — all of that converted into users defending us during our hardest product changes. You can't build community trust in a crisis. You build it before the crisis, and then it's there when you need it.
 
-**Cost structures need to survive success.** The original wheel failed because Bitcoin succeeded. Any reward system tied to an appreciating asset needs a model that works at 3x the current price.
-
-**Community trust is a strategic asset.** The years spent building Discord, being transparent, giving users direct lines to leadership: all of that converted into users defending us during our hardest product changes. You can't manufacture that in a crisis.
-
-**Simplicity usually wins.** Not as a platitude. As a survival strategy. When you don't have bandwidth to build something complex well, build the simple thing you can actually execute and explain.
-
-**Your title doesn't define your work.** I was doing PM work for years before anyone called me a PM. If you're taking business requirements, translating them into features, owning the outcome, and shipping - you're doing the job, regardless of what it says on your title.
+And simplicity usually wins. Not as a platitude — as a survival strategy. When you don't have bandwidth to build something complex well, build the simple thing you can actually execute and explain.
