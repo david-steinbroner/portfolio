@@ -77,7 +77,7 @@ export default function PortfolioClient() {
               </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents by mid-February 2025. By December, they were seeing tax emails from Coinbase and other crypto platforms and wondering where Fold&apos;s was. I got bandwidth in November, built a prototype, became the crypto tax expert, coordinated 8+ stakeholder groups, and shipped in 10 weeks with 2 engineers and a junior designer. Mid-January; a month ahead of deadline.
+              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents by mid-February 2025. By December, they were already getting tax emails from Coinbase and wondering where Fold&apos;s was. I picked it up in November with no crypto tax experience, figured it out, coordinated across legal, compliance, finance, engineering, two custodians, and TaxBit, and shipped in 10 weeks with 2 engineers and a junior designer. A month ahead of deadline.
             </p>
           </article>
 
@@ -95,7 +95,7 @@ export default function PortfolioClient() {
               </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-Fold users could already earn and buy bitcoin. Competing with Strike and Coinbase meant completing the loop. I built the prototypes, navigated a complex stakeholder landscape, and embedded in the Bitcoin community to understand the full user spectrum. Then shipped Sell, Receive, and Direct to Bitcoin, completing the Bitcoin Flywheel. Trade volume jumped 50%.            </p>
+Fold users could already earn and buy bitcoin. Once we added Buy, we were competing with Strike and Coinbase — and we were missing table stakes. I built the Figma prototypes, worked across two custodians with completely different APIs, and leaned on the 40k-member Discord I&apos;d helped build to understand what users actually needed. Shipped Sell, Receive, and Direct to Bitcoin over six months. Trade volume jumped 50%.            </p>
           </article>
 
           <article>
@@ -112,7 +112,7 @@ Fold users could already earn and buy bitcoin. Competing with Strike and Coinbas
               </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Fold&apos;s Spin Wheel was the company&apos;s most beloved feature and its biggest financial liability. I inherited it and spent 18 months navigating the tension between what users loved (massive rewards) and what the business needed (sustainability), eventually landing on a model that works at any Bitcoin price up to $1M while still driving 50k daily spins.
+              Fold&apos;s Spin Wheel was the company&apos;s most beloved feature and its biggest financial liability. I inherited it, tried eight different approaches over 18 months — some too complex, some that made finance happy but confused users — and eventually learned the hard way that simplicity wins. The final model: one wheel, flat prizes, works at any Bitcoin price up to $1M, and still drives 50k daily spins.
             </p>
           </article>
 
@@ -148,7 +148,7 @@ Fold users could already earn and buy bitcoin. Competing with Strike and Coinbas
               </Link>
             </h3>
             <p className="text-foreground-secondary leading-relaxed">
-              Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn&apos;t for everyone. I identified that GenAI uniquely solves both, private experience plus dynamic worldbuilding, and built Story Mode to prove it.
+              Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn&apos;t for everyone. AI happens to solve both — you can play alone, and it can build any world you want. I built Story Mode to see if that actually works.
             </p>
           </article>
         </div>
