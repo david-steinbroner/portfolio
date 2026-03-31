@@ -17,7 +17,7 @@ export default function PortfolioClient() {
           <ThemeToggle />
         </div>
         <p className="text-lg text-foreground-secondary leading-relaxed">
-          Full-stack product manager and builder. I build things for people, not users.
+          Product manager who prototypes, codes, and ships. I&apos;ve taken features from an abstract idea to production at a fintech startup, and I spend my free time building apps and learning new tools. I build things for people, not users.
         </p>
         <div className="flex items-center gap-5 mt-5 text-sm text-foreground-muted">
           <a
