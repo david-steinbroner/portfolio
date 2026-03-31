@@ -170,7 +170,7 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
               Story Mode
             </a>
             <span className="text-foreground-muted ml-2">
-              — AI-powered TTRPG. Generative AI runs the game—narrative, NPCs, encounters. Exploring how to make AI useful for interactive storytelling.
+              — AI-powered TTRPG that removes the two things keeping people out of tabletop gaming: playing with strangers and being stuck with fantasy. AI runs the game.
             </span>
           </div>
           <div className="group">
@@ -183,7 +183,7 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
               POGO PAL
             </a>
             <span className="text-foreground-muted ml-2">
-              — A free website for casual Pokemon GO players that provides more accessible assistance than other similar sites; fun UI exploration.
+              — Pokemon GO helper for casual players. Most Pokemon GO sites are built for hardcore players; this one isn&apos;t. Also a fun UI experiment.
             </span>
           </div>
           <div className="group">
@@ -196,7 +196,7 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
               Discovering Magic
             </a>
             <span className="text-foreground-muted ml-2">
-              — A gateway to Magic: The Gathering through things you already love—Fallout, dinosaurs, anime art, Furby cards. Discovery over terminology. Currently under construction.
+              — A gateway to Magic: The Gathering through things you already love: Fallout, dinosaurs, anime art, Furby cards. Discovery over terminology. Currently under construction.
             </span>
           </div>
           <div className="group">
@@ -209,7 +209,7 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
               Local Gov Watch
             </a>
             <span className="text-foreground-muted ml-2">
-              — Track local government meetings and decisions. Making civic engagement accessible. Currently under construction.
+              — Follow what your local government is actually doing. Meeting summaries, decisions, votes, without digging through PDFs. Currently under construction.
             </span>
           </div>
           <div className="group">
