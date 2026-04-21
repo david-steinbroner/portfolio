@@ -1,7 +1,7 @@
 ---
 title: "The Most Effective Product Team Is the Conduit"
 company: "Fold"
-date: "2023-2024"
+date: "2024"
 description: "Rebuilding a 4-week banking partner approval process by recognizing what nobody had named: product was the only function with line of sight to every team and every partner."
 impact:
   - "Reduced approval timeline by 75% (4+ weeks to days)"

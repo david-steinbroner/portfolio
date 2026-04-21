@@ -1,7 +1,7 @@
 ---
 title: "Banking Partner Approval Process"
 company: "Fold"
-date: "2023-2024"
+date: "2024"
 description: "Reduced approval timeline by 75% across an unusually wide partner web: banks, card networks, custodians, and a stack of fraud and KYC vendors."
 impact:
   - "Reduced approval timeline by 75% (4+ weeks to days)"
