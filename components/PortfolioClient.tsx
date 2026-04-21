@@ -122,6 +122,24 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
             </span>
             <h3 className="text-xl font-medium mb-2">
               <Link
+                href="/case-studies/banking-approval-process"
+                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
+              >
+                The Most Effective Product Team Is the Conduit
+                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
+              </Link>
+            </h3>
+            <p className="text-foreground-secondary leading-relaxed">
+              Every payment-related feature at Fold passed through a wall of partners with veto power: sponsor bank, card issuer, card network, two Bitcoin custodians, and a stack of fraud and KYC vendors. Approvals took 4+ weeks, and partners would often discover unapproved changes in the live app and demand same-day fixes. I rebuilt the translation layer, built a Figma map of the entire app that the whole company ended up using, and made compliance a design input instead of an approval gate. Approvals dropped 75%. Surprise scrambles ended.
+            </p>
+          </article>
+
+          <article>
+            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
+              Fold
+            </span>
+            <h3 className="text-xl font-medium mb-2">
+              <Link
                 href="/case-studies/notification-preferences"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
