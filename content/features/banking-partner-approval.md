@@ -15,6 +15,9 @@ category: "feature"
 tag:
   label: "Banking Partner Process"
   color: "orange"
+caseStudy:
+  name: "The most effective product team is the conduit"
+  slug: "banking-partner-approval"
 ---
 
 At Fold, every payment-related feature required sign-off from a long list of partners: our sponsor bank (Sutton), card issuer processor (Marqeta), card network (Visa), two Bitcoin custodians, and a stack of vendors spanning fraud, KYC, payments, and tax compliance (Persona, Unit21, Sardine, TaxBit, and others). The existing approval process took 4+ weeks per cycle: submit materials, wait, get questions, answer them, wait again. This killed roadmap velocity.

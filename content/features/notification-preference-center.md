@@ -9,6 +9,9 @@ category: "feature"
 tag:
   label: "Notification Preference Center"
   color: "blue"
+caseStudy:
+  name: "No bandwidth? Ship it anyway."
+  slug: "notification-preference-center"
 ---
 
 **I'd been fighting for notification preferences for over a year. We never had bandwidth. So I built it myself.**

@@ -10,7 +10,7 @@ tag:
   label: "Taxbit Integration"
   color: "blue"
 caseStudy:
-  name: "Shipping Tax Season at a Startup"
+  name: "Shipping tax season at a startup"
   slug: "taxbit"
 ---
 

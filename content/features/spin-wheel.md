@@ -10,7 +10,7 @@ tag:
   label: "Spin Wheel"
   color: "yellow"
 caseStudy:
-  name: "The Most Public Feature at the Company, and I Had to Make It Worse"
+  name: "The most public feature at the company, and I had to make it worse"
   slug: "spin-wheel"
 ---
 
