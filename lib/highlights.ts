@@ -13,7 +13,7 @@
  *   }
  */
 
-export const HIGHLIGHTS_ENABLED = true;
+export const HIGHLIGHTS_ENABLED = false;
 
 export interface Highlight {
   src?: string;

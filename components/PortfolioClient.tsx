@@ -71,8 +71,9 @@ export default function PortfolioClient({
 
       {/* Selected Work */}
       <section id="selected-work" className="mb-16">
-        <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
-          Selected Work
+        <h2 className="flex items-center gap-4 text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
+          <span>Selected Work</span>
+          <span aria-hidden="true" className="flex-1 h-px bg-border" />
         </h2>
         <div className="space-y-10">
           {entries.map((entry) => (
@@ -92,8 +93,9 @@ export default function PortfolioClient({
 
       {/* Building */}
       <section id="building" className="mb-16">
-        <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
-          Building
+        <h2 className="flex items-center gap-4 text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
+          <span>Building</span>
+          <span aria-hidden="true" className="flex-1 h-px bg-border" />
         </h2>
         <div className="space-y-4">
           <div className="group">
