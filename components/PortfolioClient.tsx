@@ -1,10 +1,34 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Linkedin, Github, ArrowUpRight, FileText } from 'lucide-react';
+import { Mail, Linkedin, Github, FileText } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
+import CaseStudyCard from '@/components/CaseStudyCard';
 
-export default function PortfolioClient() {
+export interface PortfolioClientCaseStudy {
+  slug: string;
+  title: string;
+  company?: string;
+  date: string;
+  description: string;
+  tldr?: string;
+}
+
+export interface PortfolioClientFeature {
+  slug: string;
+  title: string;
+  date: string;
+}
+
+export interface PortfolioClientProps {
+  caseStudies: PortfolioClientCaseStudy[];
+  features: PortfolioClientFeature[];
+}
+
+export default function PortfolioClient({
+  caseStudies,
+  features,
+}: PortfolioClientProps) {
   return (
     <main className="max-w-2xl mx-auto px-6 py-16 md:py-24">
 
@@ -63,130 +87,17 @@ export default function PortfolioClient() {
           Case Studies
         </h2>
         <div className="space-y-10">
-          <article>
-            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-              Fold
-            </span>
-            <h3 className="text-xl font-medium mb-2">
-              <Link
-                href="/case-studies/taxbit"
-                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
-              >
-                Shipping Tax Season at a Startup
-                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </Link>
-            </h3>
-            <p className="text-foreground-secondary leading-relaxed">
-              Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents by mid-February 2025. By December, they were already getting tax emails from Coinbase and wondering where Fold&apos;s was. I picked it up in November with no crypto tax experience, figured it out, coordinated across legal, compliance, finance, engineering, two custodians, and TaxBit, and shipped in 10 weeks with 2 engineers and a junior designer. A month ahead of deadline.
-            </p>
-          </article>
-
-          <article>
-            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-              Fold
-            </span>
-            <h3 className="text-xl font-medium mb-2">
-              <Link
-                href="/case-studies/fiat-bitcoin-ecosystem"
-                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
-              >
-                Completing the Bitcoin Flywheel, and Paving the Way for IPO
-                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </Link>
-            </h3>
-            <p className="text-foreground-secondary leading-relaxed">
-Fold users could already earn and buy bitcoin. Once we added Buy, we were competing with Strike and Coinbase — and we were missing table stakes. I built the Figma prototypes, worked across two custodians with completely different APIs, and leaned on the 40k-member Discord I&apos;d helped build to understand what users actually needed. Shipped Sell, Receive, and Direct to Bitcoin over six months. Trade volume jumped 50%.            </p>
-          </article>
-
-          <article>
-            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-              Fold
-            </span>
-            <h3 className="text-xl font-medium mb-2">
-              <Link
-                href="/case-studies/spin-wheel"
-                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
-              >
-                The Most Public Feature at the Company, and I Had to Make It Worse
-                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </Link>
-            </h3>
-            <p className="text-foreground-secondary leading-relaxed">
-              Fold&apos;s Spin Wheel was the company&apos;s most beloved feature and its biggest financial liability. I inherited it, tried eight different approaches over 18 months — some too complex, some that made finance happy but confused users — and eventually learned the hard way that simplicity wins. The final model: one wheel, flat prizes, works at any Bitcoin price up to $1M, and still drives 50k daily spins.
-            </p>
-          </article>
-
-          <article>
-            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-              Fold
-            </span>
-            <h3 className="text-xl font-medium mb-2">
-              <Link
-                href="/case-studies/banking-partner-approval"
-                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
-              >
-                The Most Effective Product Team Is the Conduit
-                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </Link>
-            </h3>
-            <p className="text-foreground-secondary leading-relaxed">
-              Every payment-related feature at Fold passed through a wall of partners with veto power: sponsor bank, card issuer, card network, two Bitcoin custodians, and a stack of fraud and KYC vendors. Approvals took 4+ weeks, and partners would often discover unapproved changes in the live app and demand same-day fixes. I rebuilt the translation layer, built a Figma map of the entire app that the whole company ended up using, and made compliance a design input instead of an approval gate. Approvals dropped 75%. Surprise scrambles ended.
-            </p>
-          </article>
-
-          <article>
-            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-              Fold
-            </span>
-            <h3 className="text-xl font-medium mb-2">
-              <Link
-                href="/case-studies/notification-preference-center"
-                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
-              >
-                No Bandwidth? Ship It Anyway
-                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </Link>
-            </h3>
-            <p className="text-foreground-secondary leading-relaxed">
-              The community had been asking for notification preferences for three years. At a startup, bandwidth is always the blocker. So I found a way to ship it without engineering.
-            </p>
-          </article>
-
-          <article>
-            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-              Personal Projects
-            </span>
-            <h3 className="text-xl font-medium mb-2">
-              <Link
-                href="/case-studies/story-mode"
-                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
-              >
-                An AI-Powered TTRPG That Removes the Human Barriers
-                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </Link>
-            </h3>
-            <p className="text-foreground-secondary leading-relaxed">
-              Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn&apos;t for everyone. AI happens to solve both — you can play alone, and it can build any world you want. I built Story Mode to see if that actually works.
-            </p>
-          </article>
-
-          <article>
-            <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-              Personal Projects
-            </span>
-            <h3 className="text-xl font-medium mb-2">
-              <Link
-                href="/case-studies/poke-pal"
-                className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
-              >
-                When the Integration Doesn&apos;t Exist, Build It
-                <ArrowUpRight className="w-4 h-4 opacity-0 -translate-y-0.5 translate-x-0.5 group-hover:opacity-100 transition-all" />
-              </Link>
-            </h3>
-            <p className="text-foreground-secondary leading-relaxed">
-              Pokemon GO doesn&apos;t let you export your collection data. No API, no export button. I built an automated pipeline: Python drives screen mirroring, AI vision reads the screenshots, local math crunches the numbers, and a web UI makes it all usable. The kind of integration you build when the integration doesn&apos;t exist.
-            </p>
-          </article>
+          {caseStudies.map((cs) => (
+            <CaseStudyCard
+              key={cs.slug}
+              slug={cs.slug}
+              title={cs.title}
+              company={cs.company}
+              date={cs.date}
+              description={cs.description}
+              tldr={cs.tldr}
+            />
+          ))}
         </div>
       </section>
 
@@ -276,28 +187,16 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
           Built
         </h2>
         <div className="divide-y divide-border">
-          {[
-            { name: 'Fairytale Project', desc: 'Trilingual cultural archive (1,001 entries)', year: '2025', href: '/features/fairytale-project' },
-            { name: 'TaxBit Integration', desc: 'Tax reporting & cost basis tracking', year: '2024', href: '/features/tax-documents' },
-            { name: 'Notification Preferences', desc: 'Self-service communication controls', year: '2024', href: '/features/notification-preference-center' },
-            { name: 'Card Reissuance', desc: 'Proactive card replacement system', year: '2024', href: '/features/card-reissuance' },
-            { name: 'Banking Partner Process', desc: 'Reduced approval time by 75%', year: '2024', href: '/features/banking-partner-approval' },
-            { name: 'Direct to Bitcoin', desc: 'Auto-convert deposits to BTC', year: '2024', href: '/features/direct-to-bitcoin' },
-            { name: 'Bitcoin Receiving', desc: 'In-app BTC deposit flow', year: '2024', href: '/features/receiving-bitcoin' },
-            { name: 'Bitcoin Selling', desc: 'In-app BTC liquidation', year: '2024', href: '/features/selling-bitcoin' },
-            { name: 'Spin Wheel', desc: 'Gamified engagement lever', year: '2023', href: '/features/spin-wheel' },
-          ].map((item) => (
+          {features.map((feature) => (
             <Link
-              key={item.name}
-              href={item.href}
+              key={feature.slug}
+              href={`/features/${feature.slug}`}
               className="flex justify-between items-baseline gap-4 py-3 hover:bg-background-secondary transition-colors -mx-3 px-3 rounded"
             >
               <div className="min-w-0">
-                <span className="font-medium">{item.name}</span>
-                <span className="text-foreground-muted ml-2 text-sm hidden sm:inline">{item.desc}</span>
-                <span className="text-foreground-muted text-sm block sm:hidden mt-0.5">{item.desc}</span>
+                <span className="font-medium">{feature.title}</span>
               </div>
-              <span className="text-foreground-muted text-sm tabular-nums shrink-0">{item.year}</span>
+              <span className="text-foreground-muted text-sm tabular-nums shrink-0">{feature.date}</span>
             </Link>
           ))}
         </div>
