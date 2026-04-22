@@ -3,25 +3,16 @@
 import Link from 'next/link';
 import { Mail, Linkedin, Github, FileText } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
-import CaseStudyCard, { type CaseStudyCardPreviewTag } from '@/components/CaseStudyCard';
+import SelectedWorkCard from '@/components/SelectedWorkCard';
 import HighlightPlaceholder from '@/components/HighlightPlaceholder';
-
-export interface PortfolioClientCaseStudy {
-  slug: string;
-  title: string;
-  company?: string;
-  date: string;
-  description: string;
-  tldr?: string;
-  previewTag?: CaseStudyCardPreviewTag;
-}
+import type { SelectedWorkEntry } from '@/lib/markdown';
 
 export interface PortfolioClientProps {
-  caseStudies: PortfolioClientCaseStudy[];
+  entries: SelectedWorkEntry[];
 }
 
 export default function PortfolioClient({
-  caseStudies,
+  entries,
 }: PortfolioClientProps) {
   return (
     <main className="max-w-2xl mx-auto px-6 py-16 md:py-24">
@@ -84,16 +75,16 @@ export default function PortfolioClient({
           Selected Work
         </h2>
         <div className="space-y-10">
-          {caseStudies.map((cs) => (
-            <CaseStudyCard
-              key={cs.slug}
-              slug={cs.slug}
-              title={cs.title}
-              company={cs.company}
-              date={cs.date}
-              description={cs.description}
-              tldr={cs.tldr}
-              previewTag={cs.previewTag}
+          {entries.map((entry) => (
+            <SelectedWorkCard
+              key={`${entry.type}-${entry.slug}`}
+              slug={entry.slug}
+              type={entry.type}
+              title={entry.title}
+              company={entry.company}
+              date={entry.date}
+              description={entry.description}
+              tags={entry.tags}
             />
           ))}
         </div>

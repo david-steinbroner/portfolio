@@ -53,6 +53,13 @@ body {
   color: var(--geist-foreground);
 }
 
+/* Give in-page anchor scrolls a bit of breathing room from the viewport top
+   so a linked heading isn't flush against the very edge of the window. */
+h2[id],
+h3[id] {
+  scroll-margin-top: 2rem;
+}
+
 /* Prose styles for markdown content */
 .prose {
   color: var(--geist-foreground-secondary);
