@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Mail, Linkedin, Github, FileText } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 import CaseStudyCard, { type CaseStudyCardPreviewTag } from '@/components/CaseStudyCard';
+import HighlightPlaceholder from '@/components/HighlightPlaceholder';
 
 export interface PortfolioClientCaseStudy {
   slug: string;
@@ -73,6 +74,9 @@ export default function PortfolioClient({
           </a>
         </div>
       </header>
+
+      {/* Featured image highlights (3 placeholder boxes until filled in lib/highlights.ts) */}
+      <HighlightPlaceholder />
 
       {/* Selected Work */}
       <section id="selected-work" className="mb-16">
