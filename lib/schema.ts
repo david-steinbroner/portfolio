@@ -15,7 +15,7 @@ import { z } from 'zod';
 //   - Bare year:        "2024"
 //   - Month + year:     "January 2024"
 //   - Full date:        "January 15, 2024"
-const DATE_REGEX = /^(\d{4}|[A-Z][a-z]+ \d{4}|[A-Z][a-z]+ \d{1,2}, \d{4})$/;
+export const DATE_REGEX = /^(\d{4}|[A-Z][a-z]+ \d{4}|[A-Z][a-z]+ \d{1,2}, \d{4})$/;
 
 export const FeatureLinkSchema = z.object({
   name: z.string(),
@@ -60,3 +60,29 @@ export const ProjectMetadataSchema = z.object({
 export type ProjectMetadata = z.infer<typeof ProjectMetadataSchema>;
 export type FeatureLink = z.infer<typeof FeatureLinkSchema>;
 export type CaseStudyLink = z.infer<typeof CaseStudyLinkSchema>;
+
+/**
+ * Frontmatter schema for content/letters/*.md.
+ *
+ * Cover letters have a different shape than case studies: they're tied to a
+ * specific company/role, almost always noindex, and (unlike projects) don't
+ * participate in the homepage grid or cross-reference features.
+ */
+export const LetterMetadataSchema = z.object({
+  company: z.string(),
+  role: z.string(),
+  date: z.string().regex(DATE_REGEX, {
+    message:
+      'date must be a bare year ("2024"), month-year ("January 2024"), or full date ("January 15, 2024")',
+  }),
+  // Optional: overrides the default "Cover Letter for {role} at {company}" title
+  title: z.string().optional(),
+  // Optional: "Dear {recipient}" salutation; defaults to "Dear Hiring Team"
+  recipient: z.string().optional(),
+  // Cover letters should almost always be noindex by default
+  noindex: z.boolean().optional().default(true),
+  // Optional: one-line hook rendered as a subhead under the title
+  headline: z.string().optional(),
+});
+
+export type LetterMetadata = z.infer<typeof LetterMetadataSchema>;

@@ -2,7 +2,7 @@
 title: "Shipping Tax Season at a Startup"
 company: "Fold"
 date: "January 2025"
-description: "Integrating TaxBit to ship crypto tax compliance at Fold"
+description: "Fold launched bitcoin selling in 2024, which meant ~5,000 users needed tax documents by mid-February 2025. By December, they were already getting tax emails from Coinbase and wondering where Fold's was. I picked it up in November with no crypto tax experience, figured it out, coordinated across legal, compliance, finance, engineering, two custodians, and TaxBit, and shipped in 10 weeks with 2 engineers and a junior designer. A month ahead of deadline."
 impact:
   - "Shipped in 10 weeks with a team of 2 engineers and 1 junior designer"
   - "Coordinated 8+ stakeholder groups: Legal, Compliance, Finance, Engineering, Support, Design, Marketing, and Growth internally; plus external counsel, banking partner, card issuing partner, two Bitcoin custodians, and TaxBit"

@@ -122,7 +122,7 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
             </span>
             <h3 className="text-xl font-medium mb-2">
               <Link
-                href="/case-studies/banking-approval-process"
+                href="/case-studies/banking-partner-approval"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
                 The Most Effective Product Team Is the Conduit
@@ -140,7 +140,7 @@ Fold users could already earn and buy bitcoin. Once we added Buy, we were compet
             </span>
             <h3 className="text-xl font-medium mb-2">
               <Link
-                href="/case-studies/notification-preferences"
+                href="/case-studies/notification-preference-center"
                 className="group inline-flex items-center gap-1 hover:text-foreground-secondary transition-colors"
               >
                 No Bandwidth? Ship It Anyway

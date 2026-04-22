@@ -2,7 +2,7 @@
 title: "The Most Public Feature at the Company, and I Had to Make It Worse"
 company: "Fold"
 date: "2024"
-description: "Evolving Fold's flagship engagement feature through 18 months of iteration, complexity, hard lessons, and eventual simplicity"
+description: "Fold's Spin Wheel was the company's most beloved feature and its biggest financial liability. I inherited it, tried eight different approaches over 18 months — some too complex, some that made finance happy but confused users — and eventually learned the hard way that simplicity wins. The final model: one wheel, flat prizes, works at any Bitcoin price up to $1M, and still drives 50k daily spins."
 impact:
   - "Owned end-to-end evolution of Fold's most visible feature: product strategy, pricing models, community communication, and GTM for every update over 18 months"
   - "Built self-service admin tooling that eliminated engineering dependency for wheel updates, enabling monthly themed launches, seasonal campaigns, and sponsorship integrations"

@@ -2,7 +2,7 @@
 title: "When the Integration Doesn't Exist, Build It"
 company: "Personal Projects"
 date: "2026"
-description: "Building an automated data extraction pipeline when the app won't give you an API"
+description: "Pokemon GO doesn't let you export your collection data. No API, no export button. I built an automated pipeline: Python drives screen mirroring, AI vision reads the screenshots, local math crunches the numbers, and a web UI makes it all usable. The kind of integration you build when the integration doesn't exist."
 impact:
   - "Built automated scanner that extracts structured data from a mobile app with no API"
   - "Hybrid AI vision + local computation pipeline processes 900+ items at ~$0.003 each"

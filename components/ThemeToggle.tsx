@@ -1,17 +1,24 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import { Monitor, Sun, Moon } from 'lucide-react';
 
-export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+// useSyncExternalStore-based "is this the client?" check. Returns `false`
+// during SSR and on the first render, then `true` thereafter — which lets us
+// dodge hydration mismatch without calling setState inside a useEffect
+// (the pattern flagged by react-hooks/set-state-in-effect in React 19).
+const emptySubscribe = () => () => {};
+const useHasMounted = () =>
+  useSyncExternalStore(
+    emptySubscribe,
+    () => true,  // client snapshot
+    () => false  // server snapshot
+  );
 
-  // Avoid hydration mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export default function ThemeToggle() {
+  const mounted = useHasMounted();
+  const { theme, setTheme } = useTheme();
 
   if (!mounted) {
     return (

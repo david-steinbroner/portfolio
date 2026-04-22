@@ -3,11 +3,18 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
-import html from 'remark-html';
+import remarkRehype from 'remark-rehype';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeStringify from 'rehype-stringify';
+import { visit } from 'unist-util-visit';
+import type { Root } from 'hast';
 import {
   ProjectMetadataSchema,
+  LetterMetadataSchema,
   type ProjectMetadata,
   type FeatureLink,
+  type LetterMetadata,
 } from './schema';
 
 const contentDirectory = path.join(process.cwd(), 'content');
@@ -28,7 +35,7 @@ export const FEATURE_ORDER = [
 
 // Re-export schema-inferred types so existing imports from `@/lib/markdown`
 // (e.g. `FeatureLink` in app/case-studies/[slug]/page.tsx) keep working.
-export type { ProjectMetadata, FeatureLink };
+export type { ProjectMetadata, FeatureLink, LetterMetadata };
 
 export interface Project {
   slug: string;
@@ -36,10 +43,38 @@ export interface Project {
   content: string;
 }
 
+/**
+ * Rehype plugin: walk the HAST and add `loading="lazy"` + `decoding="async"`
+ * to every `<img>` element so case-study/feature images defer offscreen work.
+ */
+function rehypeLazyLoadImages() {
+  return (tree: Root) => {
+    visit(tree, 'element', (node) => {
+      if (node.tagName === 'img') {
+        node.properties = {
+          ...node.properties,
+          loading: 'lazy',
+          decoding: 'async',
+        };
+      }
+    });
+  };
+}
+
 async function markdownToHtml(markdown: string) {
+  // Pipeline:
+  //   remark (MDAST) -> remark-gfm -> remark-rehype (HAST)
+  //     -> rehype-slug (add id="" to headings)
+  //     -> rehype-autolink-headings (wrap heading text in anchor)
+  //     -> rehypeLazyLoadImages (lazy-load all <img>)
+  //     -> rehype-stringify (serialize HAST to HTML string)
   const result = await remark()
     .use(remarkGfm)
-    .use(html)
+    .use(remarkRehype)
+    .use(rehypeSlug)
+    .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
+    .use(rehypeLazyLoadImages)
+    .use(rehypeStringify)
     .process(markdown);
   return result.toString();
 }
@@ -164,4 +199,69 @@ export async function getAdjacentFeatures(currentSlug: string): Promise<Adjacent
       : null;
 
   return { prev, next };
+}
+
+// ---------------------------------------------------------------------------
+// Letters
+//
+// Cover letters live under content/letters/*.md with their own frontmatter
+// schema (LetterMetadataSchema). These mirror getProjectBySlug/getAllProjects
+// but for a different content type — intentionally kept separate so letters
+// don't accidentally leak into the projects pipeline (sitemap, homepage, etc.).
+// ---------------------------------------------------------------------------
+
+export interface Letter {
+  slug: string;
+  metadata: LetterMetadata;
+  content: string;
+}
+
+export async function getLetterBySlug(slug: string): Promise<Letter> {
+  const fullPath = path.join(contentDirectory, 'letters', `${slug}.md`);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const { data, content } = matter(fileContents);
+  const htmlContent = await markdownToHtml(content);
+
+  // Wave 1: permissive validation, matching getProjectBySlug.
+  const result = LetterMetadataSchema.safeParse(data);
+  let metadata: LetterMetadata;
+  if (result.success) {
+    metadata = result.data;
+  } else {
+    console.warn(
+      `[schema] Invalid frontmatter in content/letters/${slug}.md:\n${formatSchemaIssues(
+        result.error.issues
+      )}`
+    );
+    metadata = data as LetterMetadata;
+  }
+
+  return {
+    slug,
+    metadata,
+    content: htmlContent,
+  };
+}
+
+export async function getAllLetters(): Promise<Letter[]> {
+  const fullPath = path.join(contentDirectory, 'letters');
+
+  if (!fs.existsSync(fullPath)) {
+    return [];
+  }
+
+  const files = fs.readdirSync(fullPath);
+  const letters = await Promise.all(
+    files
+      .filter((file) => file.endsWith('.md'))
+      .map(async (file) => {
+        const slug = file.replace(/\.md$/, '');
+        return getLetterBySlug(slug);
+      })
+  );
+
+  // Sort by date, newest first (same as projects).
+  return letters.sort((a, b) => {
+    return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+  });
 }

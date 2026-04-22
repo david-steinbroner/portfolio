@@ -1,6 +1,6 @@
 ---
 title: "No Bandwidth? Ship It Anyway."
-description: "How I shipped notification preferences at Fold with near-zero engineering bandwidth, reaching 50% user adoption within months."
+description: "The community had been asking for notification preferences for three years. At a startup, bandwidth is always the blocker. So I found a way to ship it without engineering."
 company: "Fold"
 date: "2024"
 impact:

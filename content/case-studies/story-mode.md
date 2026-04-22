@@ -2,7 +2,7 @@
 title: "Building an AI-Native Product Solo: Story Mode"
 company: "Personal Projects"
 date: "2025"
-description: "An AI-powered interactive storytelling platform that solves TTRPG accessibility problems"
+description: "Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn't for everyone. AI happens to solve both — you can play alone, and it can build any world you want. I built Story Mode to see if that actually works."
 impact:
   - "Identified two accessibility barriers in TTRPGs and designed AI-native solution for both"
   - "Shipped full-stack React/Express/PostgreSQL app to production as solo PM"

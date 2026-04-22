@@ -2,7 +2,7 @@
 title: "Bridging Fiat and Bitcoin: The Three Features That Completed Fold's Financial Ecosystem"
 company: "Fold"
 date: "January 2024"
-description: "Three features. One ecosystem. 50% more trade volume."
+description: "Fold users could already earn and buy bitcoin. Once we added Buy, we were competing with Strike and Coinbase — and we were missing table stakes. I built the Figma prototypes, worked across two custodians with completely different APIs, and leaned on the 40k-member Discord I'd helped build to understand what users actually needed. Shipped Sell, Receive, and Direct to Bitcoin over six months. Trade volume jumped 50%."
 impact:
   - "50% MoM increase in trade volume"
   - "40% adoption of Direct to Bitcoin"
