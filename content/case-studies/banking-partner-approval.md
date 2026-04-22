@@ -1,8 +1,8 @@
 ---
-title: "The Most Effective Product Team Is the Conduit"
+title: "The most effective product team is the conduit"
 company: "Fold"
 date: "2024"
-description: "Every payment-related feature at Fold passed through a wall of partners with veto power: sponsor bank, card issuer, card network, two Bitcoin custodians, and a stack of fraud and KYC vendors. Approvals took 4+ weeks, and partners would often discover unapproved changes in the live app and demand same-day fixes. I rebuilt the translation layer, built a Figma map of the entire app that the whole company ended up using, and made compliance a design input instead of an approval gate. Approvals dropped 75%. Surprise scrambles ended."
+description: "Rebuilt the approval system across a dozen external partners and vendors. Cut timeline by 75%; helped Fold become the first Bitcoin-only company on Nasdaq."
 impact:
   - "Reduced approval timeline by 75% (4+ weeks to days)"
   - "Eliminated surprise scrambles from partners discovering unapproved changes in the live app"

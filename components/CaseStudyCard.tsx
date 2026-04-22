@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
+export interface CaseStudyCardPreviewTag {
+  label: string;
+  /** Tailwind bg class for the dot — kept static so the JIT compiler preserves it */
+  dotClass: string;
+}
+
 export interface CaseStudyCardProps {
   slug: string;
   title: string;
@@ -8,6 +14,8 @@ export interface CaseStudyCardProps {
   date: string;
   description: string;
   tldr?: string;
+  /** Optional visual preview of Rachel's tag-chip design. Non-clickable. */
+  previewTag?: CaseStudyCardPreviewTag;
 }
 
 /**
@@ -21,15 +29,30 @@ export default function CaseStudyCard({
   slug,
   title,
   company,
+  date,
   description,
+  previewTag,
 }: CaseStudyCardProps) {
   return (
     <article>
-      {company && (
-        <span className="text-xs text-foreground-muted uppercase tracking-wide block mb-1">
-          {company}
-        </span>
-      )}
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mb-1">
+        {previewTag && (
+          <span className="inline-flex items-center gap-1.5 rounded-md bg-background-secondary px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-foreground-secondary">
+            <span
+              aria-hidden="true"
+              className={`h-1.5 w-1.5 rounded-full ${previewTag.dotClass}`}
+            />
+            {previewTag.label}
+          </span>
+        )}
+        {company && (
+          <span className="text-xs text-foreground-muted uppercase tracking-wide">
+            {company}
+            {date && <span className="mx-1.5">·</span>}
+            {date && <span>{date}</span>}
+          </span>
+        )}
+      </div>
       <h3 className="text-xl font-medium mb-2">
         <Link
           href={`/case-studies/${slug}`}

@@ -1,6 +1,6 @@
 ---
-title: "No Bandwidth? Ship It Anyway."
-description: "The community had been asking for notification preferences for three years. At a startup, bandwidth is always the blocker. So I found a way to ship it without engineering."
+title: "No bandwidth? Ship it anyway."
+description: "Three-year community ask, zero engineering bandwidth. Shipped as a third-party integration with a Figma-designed custom page; 50% of users adjusted their preferences."
 company: "Fold"
 date: "2024"
 impact:

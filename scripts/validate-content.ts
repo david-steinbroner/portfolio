@@ -2,7 +2,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
-import { ProjectMetadataSchema, LetterMetadataSchema } from '../lib/schema.ts';
+import { ProjectMetadataSchema, LetterMetadataSchema } from '../lib/schema';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', 'content');
 const checks = [

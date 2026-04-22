@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Mail, Linkedin, Github, FileText } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
-import CaseStudyCard from '@/components/CaseStudyCard';
+import CaseStudyCard, { type CaseStudyCardPreviewTag } from '@/components/CaseStudyCard';
 
 export interface PortfolioClientCaseStudy {
   slug: string;
@@ -12,22 +12,15 @@ export interface PortfolioClientCaseStudy {
   date: string;
   description: string;
   tldr?: string;
-}
-
-export interface PortfolioClientFeature {
-  slug: string;
-  title: string;
-  date: string;
+  previewTag?: CaseStudyCardPreviewTag;
 }
 
 export interface PortfolioClientProps {
   caseStudies: PortfolioClientCaseStudy[];
-  features: PortfolioClientFeature[];
 }
 
 export default function PortfolioClient({
   caseStudies,
-  features,
 }: PortfolioClientProps) {
   return (
     <main className="max-w-2xl mx-auto px-6 py-16 md:py-24">
@@ -81,10 +74,10 @@ export default function PortfolioClient({
         </div>
       </header>
 
-      {/* Case Studies */}
-      <section id="case-studies" className="mb-16">
+      {/* Selected Work */}
+      <section id="selected-work" className="mb-16">
         <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
-          Case Studies
+          Selected Work
         </h2>
         <div className="space-y-10">
           {caseStudies.map((cs) => (
@@ -96,6 +89,7 @@ export default function PortfolioClient({
               date={cs.date}
               description={cs.description}
               tldr={cs.tldr}
+              previewTag={cs.previewTag}
             />
           ))}
         </div>
@@ -178,27 +172,6 @@ export default function PortfolioClient({
               </a>
             </span>
           </div>
-        </div>
-      </section>
-
-      {/* Built */}
-      <section id="built" className="mb-16">
-        <h2 className="text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
-          Built
-        </h2>
-        <div className="divide-y divide-border">
-          {features.map((feature) => (
-            <Link
-              key={feature.slug}
-              href={`/features/${feature.slug}`}
-              className="flex justify-between items-baseline gap-4 py-3 hover:bg-background-secondary transition-colors -mx-3 px-3 rounded"
-            >
-              <div className="min-w-0">
-                <span className="font-medium">{feature.title}</span>
-              </div>
-              <span className="text-foreground-muted text-sm tabular-nums shrink-0">{feature.date}</span>
-            </Link>
-          ))}
         </div>
       </section>
 
