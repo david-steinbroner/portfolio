@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.davidsteinbroner.com'),
   title: "David Steinbroner — Product Manager & Builder",
   description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
   openGraph: {
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "https://www.davidsteinbroner.com/images/headshot.png",
+        url: "/images/headshot.png",
         width: 400,
         height: 400,
         alt: "David Steinbroner",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     title: "David Steinbroner — Product Manager & Builder",
     description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
     card: "summary",
-    images: ["https://www.davidsteinbroner.com/images/headshot.png"],
+    images: ["/images/headshot.png"],
   },
   icons: {
     icon: [

@@ -6,7 +6,7 @@ Live at [davidsteinbroner.com](https://davidsteinbroner.com)
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v4
 - **Typography**: Geist Sans + Geist Mono

@@ -4,6 +4,11 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
+import {
+  ProjectMetadataSchema,
+  type ProjectMetadata,
+  type FeatureLink,
+} from './schema';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
@@ -21,28 +26,9 @@ export const FEATURE_ORDER = [
   'spin-wheel',
 ] as const;
 
-export interface FeatureLink {
-  name: string;
-  slug: string;
-}
-
-export interface ProjectMetadata {
-  title: string;
-  status: 'Live' | 'In Progress' | 'Shipped' | 'Coming Soon';
-  tags: string[];
-  date: string;
-  link?: string;
-  github?: string;
-  image?: string;
-  category: 'project' | 'feature';
-  company?: string;
-  impact?: string[];
-  description: string;
-  tldr?: string;
-  features?: FeatureLink[];
-  caseStudy?: { title?: string; name?: string; slug: string };
-  role?: string;
-}
+// Re-export schema-inferred types so existing imports from `@/lib/markdown`
+// (e.g. `FeatureLink` in app/case-studies/[slug]/page.tsx) keep working.
+export type { ProjectMetadata, FeatureLink };
 
 export interface Project {
   slug: string;
@@ -58,6 +44,20 @@ async function markdownToHtml(markdown: string) {
   return result.toString();
 }
 
+/**
+ * Format zod validation issues into a human-readable multi-line string.
+ * Each issue becomes: `  - <dot.path>: <message>`.
+ */
+function formatSchemaIssues(issues: import('zod').ZodIssue[]): string {
+  if (issues.length === 0) return '(no issues)';
+  return issues
+    .map((issue) => {
+      const pathStr = issue.path.length > 0 ? issue.path.join('.') : '(root)';
+      return `  - ${pathStr}: ${issue.message}`;
+    })
+    .join('\n');
+}
+
 export async function getProjectBySlug(
   category: 'case-studies' | 'features',
   slug: string
@@ -67,9 +67,25 @@ export async function getProjectBySlug(
   const { data, content } = matter(fileContents);
   const htmlContent = await markdownToHtml(content);
 
+  // Wave 1: permissive validation. Warn on failure but don't break the build.
+  // Wave 4 will flip this to strict enforcement.
+  const result = ProjectMetadataSchema.safeParse(data);
+  let metadata: ProjectMetadata;
+  if (result.success) {
+    metadata = result.data;
+  } else {
+    console.warn(
+      `[schema] Invalid frontmatter in content/${category}/${slug}.md:\n${formatSchemaIssues(
+        result.error.issues
+      )}`
+    );
+    // Non-strict cast: keep the raw parsed frontmatter so the page still renders.
+    metadata = data as ProjectMetadata;
+  }
+
   return {
     slug,
-    metadata: data as ProjectMetadata,
+    metadata,
     content: htmlContent,
   };
 }
@@ -112,6 +128,21 @@ export async function getAdjacentFeatures(currentSlug: string): Promise<Adjacent
   const orderedFeatures = FEATURE_ORDER
     .map(slug => allFeatures.find(f => f.slug === slug))
     .filter((f): f is Project => f !== undefined);
+
+  // Sanity checks: warn loudly when FEATURE_ORDER drifts from the filesystem.
+  // These fire during `next build` so drift can't hide.
+  const allFeatureSlugs = new Set(allFeatures.map((f) => f.slug));
+  const featureOrderSet = new Set<string>(FEATURE_ORDER);
+  for (const slug of FEATURE_ORDER) {
+    if (!allFeatureSlugs.has(slug)) {
+      console.warn('[FEATURE_ORDER] Slug listed but no file found: ' + slug);
+    }
+  }
+  for (const slug of allFeatureSlugs) {
+    if (!featureOrderSet.has(slug)) {
+      console.warn('[FEATURE_ORDER] File exists but not listed: ' + slug);
+    }
+  }
 
   const currentIndex = orderedFeatures.findIndex((f) => f.slug === currentSlug);
 

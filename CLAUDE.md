@@ -1,39 +1,54 @@
-# Project Context
+# Portfolio Site — Project Context
 
-## Workflow
+Personal portfolio at [davidsteinbroner.com](https://davidsteinbroner.com). Next.js 16 (App Router) static export, deployed to Cloudflare Pages.
 
-This project uses Linear for ticket tracking and auto-deploys via GitHub.
+## Content model
 
-### Commit Convention
+Two paired content types, both live as markdown under `content/`:
 
-**Always include the Linear ticket ID in commit messages.**
+- **Case studies** (`content/case-studies/*.md`) — narrative, first-person stories about the work.
+- **Features** (`content/features/*.md`) — shorter, tactical specs of what was built.
 
-Format: `<description> - <action> SKU-XXX`
+Case studies and features cross-reference each other via frontmatter:
 
-Actions:
-- `fixes SKU-XXX` → Closes the ticket automatically
-- `closes SKU-XXX` → Closes the ticket automatically
-- `part of SKU-XXX` → Links without closing (for partial work)
+```yaml
+# In a case study
+features:
+  - name: "Spin Wheel"
+    slug: "spin-wheel"
 
-Examples:
+# In a feature
+caseStudy:
+  name: "The Most Public Feature at the Company"
+  slug: "spin-wheel"
 ```
-Add dark mode toggle - fixes SKU-42
-Update API error handling - part of SKU-15
-Refactor auth flow - closes SKU-78
+
+Slugs on the two sides of a pair don't have to match, but they should (e.g. `banking-approval-process` ↔ `banking-partner-approval` works but is confusing).
+
+## Homepage feature order
+
+`FEATURE_ORDER` in `lib/markdown.ts` is the **single source of truth** for the order features appear on the homepage and in prev/next navigation on feature detail pages. When adding a feature, add its slug to that array.
+
+## Routing
+
+- `/` — homepage (`app/page.tsx` → `components/PortfolioClient.tsx`)
+- `/case-studies/[slug]` — case study detail (dynamic)
+- `/features/[slug]` — feature detail (dynamic)
+- `/letters/<name>` — individual cover letters (static folders under `app/letters/`)
+- `/case-studies/bitcoin-flywheel` — redirect stub → `/case-studies/fiat-bitcoin-ecosystem` (kept for backwards compat)
+
+## Deploy
+
+Push to `main` → Cloudflare Pages builds and deploys in ~2–3 min. Build command: `npm run build`, output directory: `out`. No env vars needed.
+
+## Commit style
+
+Short, imperative, describe the *why*. No ticket IDs, no AI-authorship trailers.
+
+## Build & test
+
+```bash
+npm run dev     # local dev at localhost:3000
+npm run build   # static export into ./out
+npm run lint
 ```
-
-### Before Committing
-
-1. Confirm the ticket ID with the user if not provided
-2. Use `fixes` or `closes` only when the work fully completes the ticket
-3. Use `part of` for incremental progress
-
-### Deployment
-
-- Push to `main` triggers auto-deployment
-- Cloudflare Pages: Static sites, SPAs
-- Render: Full-stack apps with backends
-
-### Branch Naming (Optional)
-
-If creating branches: `david-steinbroner/sku-XXX-description`
