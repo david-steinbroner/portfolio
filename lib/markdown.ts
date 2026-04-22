@@ -15,9 +15,21 @@ import {
   type ProjectMetadata,
   type FeatureLink,
   type LetterMetadata,
+  type TagColor,
 } from './schema';
 
 const contentDirectory = path.join(process.cwd(), 'content');
+
+// ---------------------------------------------------------------------------
+// Ordering sources of truth
+//
+// `FEATURE_ORDER` drives prev/next navigation on feature detail pages. It must
+// contain every slug under content/features/ (drift is warned about in
+// `getAdjacentFeatures`). It does NOT decide what renders on the homepage.
+//
+// `SELECTED_WORK_ORDER` (below) drives what appears on the homepage and in
+// what order — a mix of case studies and features, hand-curated.
+// ---------------------------------------------------------------------------
 
 // Canonical feature order - matches homepage display order (top to bottom)
 // This is the single source of truth for feature navigation
@@ -31,6 +43,24 @@ export const FEATURE_ORDER = [
   'receiving-bitcoin',
   'selling-bitcoin',
   'spin-wheel',
+] as const;
+
+export interface SelectedWorkRef {
+  type: 'case-study' | 'feature';
+  slug: string;
+}
+
+// Homepage "Selected Work" order. Drives what appears on the homepage and in
+// what order — distinct from FEATURE_ORDER (which only governs feature
+// prev/next navigation).
+export const SELECTED_WORK_ORDER: readonly SelectedWorkRef[] = [
+  { type: 'case-study', slug: 'taxbit' },
+  { type: 'case-study', slug: 'banking-partner-approval' },
+  { type: 'case-study', slug: 'fiat-bitcoin-ecosystem' },
+  { type: 'case-study', slug: 'spin-wheel' },
+  { type: 'feature',    slug: 'fairytale-project' },
+  { type: 'feature',    slug: 'card-reissuance' },
+  { type: 'case-study', slug: 'notification-preference-center' },
 ] as const;
 
 // Re-export schema-inferred types so existing imports from `@/lib/markdown`
@@ -264,4 +294,110 @@ export async function getAllLetters(): Promise<Letter[]> {
   return letters.sort((a, b) => {
     return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
   });
+}
+
+// ---------------------------------------------------------------------------
+// Selected Work (homepage)
+//
+// Resolves SELECTED_WORK_ORDER into a list of fully-populated entries ready
+// for rendering. Permissive throughout: if a referenced file is missing or a
+// referenced feature has no `tag` frontmatter yet, we warn and skip rather
+// than crashing — this keeps the build green while Wave B backfills tags.
+// ---------------------------------------------------------------------------
+
+export interface ResolvedHomepageTag {
+  slug: string;
+  anchor?: string;
+  label: string;
+  color: TagColor;
+  href: string; // computed: /features/{slug}[#anchor]
+}
+
+export interface SelectedWorkEntry {
+  type: 'case-study' | 'feature';
+  slug: string;
+  title: string;
+  company?: string;
+  date: string;
+  description: string;
+  tldr?: string;
+  href: string; // /case-studies/{slug} or /features/{slug}
+  tags: ResolvedHomepageTag[];
+}
+
+export async function getSelectedWork(): Promise<SelectedWorkEntry[]> {
+  // Fetch both content types concurrently.
+  const [caseStudies, features] = await Promise.all([
+    getAllProjects('case-studies'),
+    getAllProjects('features'),
+  ]);
+
+  // Index features by slug for O(1) tag lookups.
+  const featuresBySlug = new Map<string, Project>();
+  for (const f of features) featuresBySlug.set(f.slug, f);
+
+  const entries: SelectedWorkEntry[] = [];
+
+  for (const ref of SELECTED_WORK_ORDER) {
+    const pool = ref.type === 'case-study' ? caseStudies : features;
+    const project = pool.find((p) => p.slug === ref.slug);
+
+    if (!project) {
+      console.warn(
+        `[SELECTED_WORK_ORDER] ${ref.type}/${ref.slug}: file not found — skipping`
+      );
+      continue;
+    }
+
+    const meta = project.metadata;
+
+    // Resolve homepageTags -> ResolvedHomepageTag[].
+    const resolvedTags: ResolvedHomepageTag[] = [];
+    const homepageTags = meta.homepageTags ?? [];
+    for (const tagRef of homepageTags) {
+      const featureProject = featuresBySlug.get(tagRef.slug);
+      if (!featureProject) {
+        console.warn(
+          `[SELECTED_WORK_ORDER] ${ref.type}/${ref.slug}: homepageTag references unknown feature "${tagRef.slug}" — skipping tag`
+        );
+        continue;
+      }
+      const featureTag = featureProject.metadata.tag;
+      if (!featureTag) {
+        console.warn(
+          `[SELECTED_WORK_ORDER] ${ref.type}/${ref.slug}: feature "${tagRef.slug}" has no tag frontmatter — skipping tag`
+        );
+        continue;
+      }
+      const href = tagRef.anchor
+        ? `/features/${tagRef.slug}#${tagRef.anchor}`
+        : `/features/${tagRef.slug}`;
+      resolvedTags.push({
+        slug: tagRef.slug,
+        anchor: tagRef.anchor,
+        label: featureTag.label,
+        color: featureTag.color,
+        href,
+      });
+    }
+
+    const href =
+      ref.type === 'case-study'
+        ? `/case-studies/${ref.slug}`
+        : `/features/${ref.slug}`;
+
+    entries.push({
+      type: ref.type,
+      slug: ref.slug,
+      title: meta.title,
+      company: meta.company,
+      date: meta.date,
+      description: meta.description,
+      tldr: meta.tldr,
+      href,
+      tags: resolvedTags,
+    });
+  }
+
+  return entries;
 }

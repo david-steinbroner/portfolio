@@ -28,6 +28,25 @@ export const CaseStudyLinkSchema = z.object({
   slug: z.string(),
 });
 
+// Seven named colors matching Rachel's mockup palette
+export const TagColorSchema = z.enum(['blue', 'orange', 'purple', 'pink', 'yellow', 'red', 'green']);
+export type TagColor = z.infer<typeof TagColorSchema>;
+
+// Per-feature display tag — drives the colored chip on the homepage
+export const TagSchema = z.object({
+  label: z.string(),
+  color: TagColorSchema,
+});
+export type Tag = z.infer<typeof TagSchema>;
+
+// Reference from a homepage entry to a feature tag (optionally with an
+// in-page anchor for sub-sections like bitcoin-transactions#direct-to-bitcoin)
+export const HomepageTagRefSchema = z.object({
+  slug: z.string(),
+  anchor: z.string().optional(),
+});
+export type HomepageTagRef = z.infer<typeof HomepageTagRefSchema>;
+
 export const ProjectMetadataSchema = z.object({
   title: z.string(),
   date: z.string().regex(DATE_REGEX, {
@@ -55,6 +74,13 @@ export const ProjectMetadataSchema = z.object({
   // Cross-references between case studies and features
   features: z.array(FeatureLinkSchema).optional(),
   caseStudy: CaseStudyLinkSchema.optional(),
+
+  // Homepage tag system (Wave A schema; Wave B backfills frontmatter).
+  // `tag` lives on feature files and declares how this feature appears as a chip.
+  // `homepageTags` lives on homepage entries (case studies or features) and
+  // lists which feature tags to render as chips on the homepage card.
+  tag: TagSchema.optional(),
+  homepageTags: z.array(HomepageTagRefSchema).optional(),
 });
 
 export type ProjectMetadata = z.infer<typeof ProjectMetadataSchema>;
