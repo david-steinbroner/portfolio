@@ -16,9 +16,11 @@ category: "case-study"
 features:
   - name: "Tax Documents"
     slug: "tax-documents"
+homepageTags:
+  - slug: tax-documents
 ---
 
-**Fold started as an app that let users earn bitcoin on everyday purchases.** Over time, we expanded the ecosystem — [Sell, Receive, and Direct to Bitcoin](/case-studies/fiat-bitcoin-ecosystem) — so users could bring bitcoin in, auto-convert on deposits, and [sell to fund their Fold Visa card](/features/selling-bitcoin). Essentially spend their bitcoin like cash.
+**Fold started as an app that let users earn bitcoin on everyday purchases.** Over time, we expanded the ecosystem — [Sell, Receive, and Direct to Bitcoin](/features/bitcoin-transactions) — so users could bring bitcoin in, auto-convert on deposits, and [sell to fund their Fold Visa card](/features/bitcoin-transactions#selling-bitcoin). Essentially spend their bitcoin like cash.
 
 Once users could sell bitcoin (a feature [I helped launch](/case-studies/fiat-bitcoin-ecosystem)), they were creating taxable events. That meant we needed to provide [tax documentation](/features/tax-documents). I led the integration of TaxBit, a third-party tax document provider, to deliver IRS forms to the ~5,000 users who sold bitcoin in 2024. Hard compliance requirement, mid-February deadline.
 
@@ -28,7 +30,7 @@ No one at Fold had done crypto tax reporting before. I became the person who fig
 
 ## The Gap
 
-When Fold launched [bitcoin selling](/features/selling-bitcoin), we created a tax obligation for our users. Anyone who sold bitcoin through Fold in 2024 would need documentation to report it. The problem: we had no infrastructure, no internal expertise, and a hard mid-February compliance deadline.
+When Fold launched [bitcoin selling](/features/bitcoin-transactions#selling-bitcoin), we created a tax obligation for our users. Anyone who sold bitcoin through Fold in 2024 would need documentation to report it. The problem: we had no infrastructure, no internal expertise, and a hard mid-February compliance deadline.
 
 By late December, users were already getting tax emails from Coinbase, Robinhood, and Cash App. If they didn't hear from Fold, they'd assume we weren't on top of it. Tax documents can only be generated in January since they reflect the prior year, but the communication starts in December. Silence looks like incompetence.
 

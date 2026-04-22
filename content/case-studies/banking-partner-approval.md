@@ -16,6 +16,8 @@ category: "case-study"
 features:
   - name: "Banking Partner Approval Process"
     slug: "banking-partner-approval"
+homepageTags:
+  - slug: banking-partner-approval
 ---
 
 ## The Gap

@@ -6,6 +6,9 @@ description: "Self-service notification controls built with zero engineering ban
 status: "Shipped"
 tags: ["User Experience", "Operations", "Community", "Self-Service"]
 category: "feature"
+tag:
+  label: "Notification Preference Center"
+  color: "blue"
 ---
 
 **I'd been fighting for notification preferences for over a year. We never had bandwidth. So I built it myself.**

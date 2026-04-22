@@ -6,6 +6,9 @@ description: "Fold's flagship engagement feature - evolved from unsustainable be
 status: "Shipped"
 tags: ["Product Strategy", "Pricing Models", "Community", "Engagement", "Rewards"]
 category: "feature"
+tag:
+  label: "Spin Wheel"
+  color: "yellow"
 caseStudy:
   name: "The Most Public Feature at the Company, and I Had to Make It Worse"
   slug: "spin-wheel"

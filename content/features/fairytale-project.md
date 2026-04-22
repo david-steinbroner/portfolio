@@ -1,8 +1,8 @@
 ---
-title: "Fairytale Project"
+title: "Rebuilding Ai Weiwei's trilingual cultural archive before it disappeared"
 company: "Slought Foundation"
 date: "2025"
-description: "Rebuilding Ai Weiwei's trilingual cultural archive before it disappeared"
+description: "Preserved and future-proofed a cultural archive of that would have been lost to deprecated infrastructure."
 impact:
   - "Preserved 1,001 participant profiles and 4,898 images"
   - "Rebuilt from deprecated PHP to future-proof static HTML"
@@ -10,6 +10,11 @@ impact:
 status: "Shipped"
 tags: ["Web Development", "Preservation", "Freelance"]
 category: "feature"
+tag:
+  label: "Fairytale Project"
+  color: "red"
+homepageTags:
+  - slug: fairytale-project
 ---
 
 **The original site was about to disappear.** Ai Weiwei's Fairytale Project—a 2007 art piece where 1,001 Chinese citizens traveled to Kassel, Germany for Documenta 12—had been archived on a PHP site that was being deprecated by its host. The Slought Foundation needed someone to rebuild it before the hosting shut down.

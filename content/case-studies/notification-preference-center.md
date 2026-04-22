@@ -17,6 +17,8 @@ category: "case-study"
 features:
   - name: "Notification Preference Center"
     slug: "notification-preference-center"
+homepageTags:
+  - slug: notification-preference-center
 ---
 
 ## The Gap

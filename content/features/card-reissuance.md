@@ -1,11 +1,16 @@
 ---
-title: "Card Reissuance"
+title: "Shipped quietly. Saved thousands of support tickets."
 company: "Fold"
 date: "2024"
-description: "Proactive card replacement system preventing mass expiration disruption"
+description: "Built the replacement system before thousands of cards started expiring — and required user confirmation instead of auto-shipping. Zero disruption at launch, 1–2% ticket rate."
 status: "Shipped"
 tags: ["Operations", "User Experience", "Fintech", "Communication"]
 category: "feature"
+tag:
+  label: "Card Reissuance"
+  color: "green"
+homepageTags:
+  - slug: card-reissuance
 ---
 
 **The Fold Card was our only physical product, and we'd never built a process for when cards expire.**

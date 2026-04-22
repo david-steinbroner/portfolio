@@ -39,9 +39,7 @@ export const FEATURE_ORDER = [
   'notification-preference-center',
   'card-reissuance',
   'banking-partner-approval',
-  'direct-to-bitcoin',
-  'receiving-bitcoin',
-  'selling-bitcoin',
+  'bitcoin-transactions',
   'spin-wheel',
 ] as const;
 

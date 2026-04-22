@@ -6,6 +6,9 @@ description: "In-app 1099-B and Gain/Loss delivery for Bitcoin sellers"
 status: "Shipped"
 tags: ["Fintech", "Compliance", "Communication", "User Experience"]
 category: "feature"
+tag:
+  label: "Taxbit Integration"
+  color: "blue"
 caseStudy:
   name: "Shipping Tax Season at a Startup"
   slug: "taxbit"

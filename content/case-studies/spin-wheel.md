@@ -17,6 +17,8 @@ category: "case-study"
 features:
   - name: "Spin Wheel"
     slug: "spin-wheel"
+homepageTags:
+  - slug: spin-wheel
 ---
 
 ## The Gap

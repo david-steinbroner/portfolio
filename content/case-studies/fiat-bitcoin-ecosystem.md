@@ -14,17 +14,17 @@ status: "Shipped"
 tags: ["Product Strategy", "Bitcoin", "Fintech", "Feature Development"]
 category: "case-study"
 features:
-  - name: "Selling Bitcoin"
-    slug: "selling-bitcoin"
-  - name: "Receiving Bitcoin"
-    slug: "receiving-bitcoin"
-  - name: "Direct to Bitcoin"
-    slug: "direct-to-bitcoin"
+  - name: "Bitcoin Transactions"
+    slug: "bitcoin-transactions"
+homepageTags:
+  - slug: bitcoin-transactions
+  - slug: bitcoin-transactions
+    anchor: direct-to-bitcoin
 ---
 
 **Fold started as the first debit card that earns bitcoin back.** Spend with your Fold Card, earn sats. Then we added Buy Bitcoin, and everything changed. The moment users could buy bitcoin through Fold, we were competing with Strike, Robinhood, Cash App, and Coinbase. And we were missing table stakes.
 
-Over six months, I helped ship three features that closed the gaps: [Sell Bitcoin](/features/selling-bitcoin), [Receive Bitcoin](/features/receiving-bitcoin), and [Direct to Bitcoin](/features/direct-to-bitcoin). I built the Figma prototypes, coordinated across two custodians with completely different APIs, and worked with finance on a zero-fee model for premium members that made the product sticky enough to justify it. Trade volume jumped 50%.
+Over six months, I helped ship three features that closed the gaps: [Sell Bitcoin](/features/bitcoin-transactions#selling-bitcoin), [Receive Bitcoin](/features/bitcoin-transactions#receiving-bitcoin), and [Direct to Bitcoin](/features/bitcoin-transactions#direct-to-bitcoin). I built the Figma prototypes, coordinated across two custodians with completely different APIs, and worked with finance on a zero-fee model for premium members that made the product sticky enough to justify it. Trade volume jumped 50%.
 
 ---
 
@@ -62,13 +62,13 @@ One group was particularly vocal: the "Get on Zero" crowd. Hardcore bitcoiners w
 
 I partnered with Sahil, a community researcher documenting this movement. He was writing about the philosophy and practicality of living on zero dollars. The vision: set your Fold account as your direct deposit. Auto-convert 100% to bitcoin. Sell only when you need to spend. Hold zero dollars.
 
-Sahil helped shape [Direct to Bitcoin](/features/direct-to-bitcoin) during development — early access, honest feedback, and he wrote about his experience in his Zero Dollar Manifesto:
+Sahil helped shape [Direct to Bitcoin](/features/bitcoin-transactions#direct-to-bitcoin) during development — early access, honest feedback, and he wrote about his experience in his Zero Dollar Manifesto:
 
 - [Part One](https://sahildesign.substack.com/p/the-zero-dollar-manifesto-part-one)
 - [Part Two](https://sahildesign.substack.com/p/the-zero-dollar-manifesto-part-two)
 - [Part Three](https://sahildesign.substack.com/p/the-zero-dollar-manifesto-part-three)
 
-Direct to Bitcoin plus [Sell Bitcoin](/features/selling-bitcoin) made Get on Zero possible. For Fold+ members, with no fees.
+Direct to Bitcoin plus [Sell Bitcoin](/features/bitcoin-transactions#selling-bitcoin) made Get on Zero possible. For Fold+ members, with no fees.
 
 But Get on Zero was a loud, influential minority. They shaped discourse and advocated for features, but they weren't the majority. Most users weren't ready for 100%. They wanted 10%, or 25%, or maybe just to try it once. The same features needed to work for someone putting in 1% and someone going all-in. That's why Direct to Bitcoin offered 25%, 50%, 100%, or custom percentage options.
 
@@ -80,7 +80,7 @@ For each of the three features, I built prototypes in Figma using our existing d
 
 These features touched nearly every stakeholder: two external custodians, external legal counsel, internal compliance, finance, our banking partner, and our card issuing platform. Each had different priorities. Finance cared about risk exposure and revenue impact. Compliance cared about regulatory implications. Banking partners cared about flow of funds. Custodians cared about their own API constraints.
 
-The same story had to be told differently to each audience. When I proposed zero fees for [Direct to Bitcoin](/features/direct-to-bitcoin), the pitch to finance wasn't "let's be generous." It was: auto-buy on every deposit creates recurring behavior. Users depositing into Fold and auto-converting to bitcoin will use the platform repeatedly. The reduced spread is justified by lifetime value and trade volume. That framing worked — and the numbers backed it up.
+The same story had to be told differently to each audience. When I proposed zero fees for [Direct to Bitcoin](/features/bitcoin-transactions#direct-to-bitcoin), the pitch to finance wasn't "let's be generous." It was: auto-buy on every deposit creates recurring behavior. Users depositing into Fold and auto-converting to bitcoin will use the platform repeatedly. The reduced spread is justified by lifetime value and trade volume. That framing worked — and the numbers backed it up.
 
 ---
 
@@ -90,9 +90,9 @@ The same story had to be told differently to each audience. When I proposed zero
 
 None of that could be visible to users. The experience had to feel identical. We set everyone at the $10 minimum for consistency and designed status displays around the common denominator.
 
-**Notifications.** When you're moving money, you need to know it worked. With bitcoin, transactions hit the blockchain immediately even before they're fully confirmed. We leveraged that — when a user [received bitcoin](/features/receiving-bitcoin) into Fold, we sent push notifications right away: "Your bitcoin is on its way." We linked out to block explorers so users could verify the transaction themselves. The challenge was designing a notification system that worked across both custodians without promising more than we could deliver.
+**Notifications.** When you're moving money, you need to know it worked. With bitcoin, transactions hit the blockchain immediately even before they're fully confirmed. We leveraged that — when a user [received bitcoin](/features/bitcoin-transactions#receiving-bitcoin) into Fold, we sent push notifications right away: "Your bitcoin is on its way." We linked out to block explorers so users could verify the transaction themselves. The challenge was designing a notification system that worked across both custodians without promising more than we could deliver.
 
-**Faster settlement for [Sell Bitcoin](/features/selling-bitcoin).** The whole point was to fund your Fold Card immediately. If users had to wait until end-of-day, the feature fails its purpose. I worked with finance and compliance to accept more risk and give users faster settlement. That meant Fold taking on exposure and working with our banking partners to change the flow of funds.
+**Faster settlement for [Sell Bitcoin](/features/bitcoin-transactions#selling-bitcoin).** The whole point was to fund your Fold Card immediately. If users had to wait until end-of-day, the feature fails its purpose. I worked with finance and compliance to accept more risk and give users faster settlement. That meant Fold taking on exposure and working with our banking partners to change the flow of funds.
 
 ---
 
@@ -100,15 +100,15 @@ None of that could be visible to users. The experience had to feel identical. We
 
 ![Bitcoin home screen showing Buy/Sell/Transfer buttons and Automations section](/case-studies/bitcoin-flywheel/bitcoin-home.png)
 
-**[Sell Bitcoin](/features/selling-bitcoin)** — Convert bitcoin to USD and automatically fund the Fold Card. No intermediate account, no manual transfer. The money goes where users need it to spend.
+**[Sell Bitcoin](/features/bitcoin-transactions#selling-bitcoin)** — Convert bitcoin to USD and automatically fund the Fold Card. No intermediate account, no manual transfer. The money goes where users need it to spend.
 
 ![Full breakdown modal before confirmation](/case-studies/bitcoin-flywheel/sell-bitcoin-confirm.png)
 
-**[Receive Bitcoin](/features/receiving-bitcoin)** — Bring bitcoin from any external wallet into Fold. QR code, truncated address, one-tap copy.
+**[Receive Bitcoin](/features/bitcoin-transactions#receiving-bitcoin)** — Bring bitcoin from any external wallet into Fold. QR code, truncated address, one-tap copy.
 
 ![QR code with truncated address and View details](/case-studies/bitcoin-flywheel/receive-bitcoin.png)
 
-**[Direct to Bitcoin](/features/direct-to-bitcoin)** — Auto-convert 1-100% of every deposit into bitcoin. 25%, 50%, 100%, or custom. No fees for premium members.
+**[Direct to Bitcoin](/features/bitcoin-transactions#direct-to-bitcoin)** — Auto-convert 1-100% of every deposit into bitcoin. 25%, 50%, 100%, or custom. No fees for premium members.
 
 ---
 
