@@ -1,11 +1,15 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { Mail, Linkedin, Github, FileText } from 'lucide-react';
+import { Mail, Linkedin, Github, Calendar, Check } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 import SelectedWorkCard from '@/components/SelectedWorkCard';
 import HighlightPlaceholder from '@/components/HighlightPlaceholder';
 import type { SelectedWorkEntry } from '@/lib/markdown';
+
+const EMAIL = 'davidsteinbroner@gmail.com';
+const CALENDLY_URL = 'https://calendly.com/davidsteinbroner/30min';
 
 export interface PortfolioClientProps {
   entries: SelectedWorkEntry[];
@@ -14,54 +18,76 @@ export interface PortfolioClientProps {
 export default function PortfolioClient({
   entries,
 }: PortfolioClientProps) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard API unavailable — silently no-op
+    }
+  };
+
   return (
-    <main className="max-w-2xl mx-auto px-6 py-16 md:py-24">
+    <main className="max-w-3xl mx-auto px-6 py-16 md:py-24">
 
       {/* Header */}
       <header className="mb-16">
-        <div className="flex justify-between items-start mb-3">
-          <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-            David Steinbroner
-          </h1>
+        <div className="flex justify-between items-start mb-5 gap-4">
+          <div className="flex items-center gap-4">
+            <img
+              src="/headshot.png"
+              alt="David Steinbroner"
+              width={96}
+              height={96}
+              className="rounded-full object-cover w-20 h-20 md:w-24 md:h-24 shrink-0"
+            />
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+              David Steinbroner
+            </h1>
+          </div>
           <ThemeToggle />
         </div>
         <p className="text-lg text-foreground-secondary leading-relaxed">
-          Product manager who prototypes, codes, and ships. I&apos;ve taken features from an abstract idea to production at a fintech startup, and I spend my free time building apps and learning new tools. I build things for people, not users.
+          Product manager who prototypes, codes, and ships. I&apos;ve taken features from an abstract idea to production at a fintech startup, and I spend my free time building apps and learning new tools. <strong className="font-semibold text-foreground">I build things for people, not users.</strong>
         </p>
-        <div className="flex items-center gap-5 mt-5 text-sm text-foreground-muted">
-          <a
-            href="mailto:davidsteinbroner@gmail.com"
-            className="flex items-center gap-1.5 hover:text-foreground transition-colors"
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 text-base text-foreground-muted">
+          <button
+            onClick={handleCopyEmail}
+            aria-label={copied ? 'Email address copied' : `Copy email address ${EMAIL}`}
+            className="flex items-center gap-2 hover:text-foreground transition-colors"
           >
-            <Mail className="w-4 h-4" />
-            Email
+            {copied ? <Check className="w-[18px] h-[18px]" /> : <Mail className="w-[18px] h-[18px]" />}
+            {copied ? 'Copied' : 'Email'}
+          </button>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:text-foreground transition-colors"
+          >
+            <Calendar className="w-[18px] h-[18px]" />
+            Schedule
           </a>
           <a
             href="https://linkedin.com/in/davidsteinbroner"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 hover:text-foreground transition-colors"
+            className="flex items-center gap-2 hover:text-foreground transition-colors"
           >
-            <Linkedin className="w-4 h-4" />
+            <Linkedin className="w-[18px] h-[18px]" />
             LinkedIn
           </a>
           <a
             href="https://github.com/david-steinbroner"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 hover:text-foreground transition-colors"
+            className="flex items-center gap-2 hover:text-foreground transition-colors"
           >
-            <Github className="w-4 h-4" />
+            <Github className="w-[18px] h-[18px]" />
             GitHub
-          </a>
-          <a
-            href="/david_steinbroner_resume_feb26.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1.5 hover:text-foreground transition-colors"
-          >
-            <FileText className="w-4 h-4" />
-            Resume
           </a>
         </div>
       </header>
@@ -88,6 +114,34 @@ export default function PortfolioClient({
               tags={entry.tags}
             />
           ))}
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="mb-16">
+        <h2 className="flex items-center gap-4 text-sm font-medium text-foreground-muted uppercase tracking-wider mb-6">
+          <span>Testimonials</span>
+          <span aria-hidden="true" className="flex-1 h-px bg-border" />
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <figure className="rounded-lg border border-border p-5">
+            <blockquote className="text-foreground-secondary leading-relaxed">
+              &ldquo;An incredible addition to my team — a great thought partner, extremely proactive, and could be relied upon to take ownership and see things through end-to-end. He has deep empathy for users, always thinking about UI/UX from their perspective.&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-sm">
+              <div className="font-medium text-foreground">Mitch Port</div>
+              <div className="text-foreground-muted">VP of Financial Strategy &amp; GM of Credit &amp; Loans · Fold</div>
+            </figcaption>
+          </figure>
+          <figure className="rounded-lg border border-border p-5">
+            <blockquote className="text-foreground-secondary leading-relaxed">
+              &ldquo;Day one, I knew we had a keeper. David is engaged in every aspect of his day-to-day — always going above and beyond, asking thoughtful questions, and driven by passion for the greater purpose.&rdquo;
+            </blockquote>
+            <figcaption className="mt-4 text-sm">
+              <div className="font-medium text-foreground">Tom Kunhardt</div>
+              <div className="text-foreground-muted">Former colleague · Solar industry</div>
+            </figcaption>
+          </figure>
         </div>
       </section>
 

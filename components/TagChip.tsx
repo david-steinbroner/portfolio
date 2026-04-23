@@ -33,11 +33,11 @@ export default function TagChip({ tag }: TagChipProps) {
   return (
     <Link
       href={tag.href}
-      className="inline-flex items-center gap-1.5 rounded-md bg-background-secondary px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-foreground-secondary transition-colors hover:bg-background-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground"
+      className="inline-flex items-center gap-2 rounded-md bg-background-secondary px-2.5 py-1 text-xs font-medium uppercase tracking-wider text-foreground-secondary transition-colors hover:bg-background-secondary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-foreground"
     >
       <span
         aria-hidden="true"
-        className={`h-1.5 w-1.5 rounded-full ${DOT_CLASSES[tag.color]}`}
+        className={`h-2 w-2 rounded-full ${DOT_CLASSES[tag.color]}`}
       />
       <span>{tag.label}</span>
     </Link>
