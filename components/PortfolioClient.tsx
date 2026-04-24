@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Mail, Linkedin, Github, Calendar, Check } from 'lucide-react';
+import { Mail, Linkedin, Github, Calendar, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
 import SelectedWorkCard from '@/components/SelectedWorkCard';
 import HighlightPlaceholder from '@/components/HighlightPlaceholder';
@@ -10,6 +10,27 @@ import type { SelectedWorkEntry } from '@/lib/markdown';
 
 const EMAIL = 'davidsteinbroner@gmail.com';
 const CALENDLY_URL = 'https://calendly.com/davidsteinbroner/30min';
+
+const TESTIMONIALS = [
+  {
+    quote:
+      'An incredible addition to my team — a great thought partner, extremely proactive, and could be relied upon to take ownership and see things through end-to-end. He has deep empathy for users, always thinking about UI/UX from their perspective.',
+    name: 'Mitch Port',
+    role: 'VP of Financial Strategy & GM of Credit & Loans · Fold',
+  },
+  {
+    quote:
+      'Day one, I knew we had a keeper. David is engaged in every aspect of his day-to-day — always going above and beyond, asking thoughtful questions, and driven by passion for the greater purpose.',
+    name: 'Tom Kunhardt',
+    role: 'Corporate Trainer, Learning & Development · NRG Home Solar',
+  },
+  {
+    quote:
+      'David is a thoughtful and steady presence on any team. During our time at Fold, I appreciated his calm approach to challenges, his ability to communicate with clarity and empathy, and his deep care for the user experience. He leads with integrity and brings grounded, strategic thinking to everything he does. Any team would be lucky to have him.',
+    name: 'Charlene Uli',
+    role: 'Customer Support Representative · Fold',
+  },
+];
 
 export interface PortfolioClientProps {
   entries: SelectedWorkEntry[];
@@ -19,6 +40,21 @@ export default function PortfolioClient({
   entries,
 }: PortfolioClientProps) {
   const [copied, setCopied] = useState(false);
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const [testimonialsPerView, setTestimonialsPerView] = useState(2);
+
+  useEffect(() => {
+    const mql = window.matchMedia('(min-width: 768px)');
+    const update = () => setTestimonialsPerView(mql.matches ? 2 : 1);
+    update();
+    mql.addEventListener('change', update);
+    return () => mql.removeEventListener('change', update);
+  }, []);
+
+  const maxTestimonialIndex = Math.max(0, TESTIMONIALS.length - testimonialsPerView);
+  const clampedTestimonialIndex = Math.min(testimonialIndex, maxTestimonialIndex);
+  const showTestimonialControls = TESTIMONIALS.length > testimonialsPerView;
+  const pageCount = maxTestimonialIndex + 1;
 
   const handleCopyEmail = async () => {
     try {
@@ -123,26 +159,84 @@ export default function PortfolioClient({
           <span>Testimonials</span>
           <span aria-hidden="true" className="flex-1 h-px bg-border" />
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <figure className="rounded-lg border border-border p-5">
-            <blockquote className="text-foreground-secondary leading-relaxed">
-              &ldquo;An incredible addition to my team — a great thought partner, extremely proactive, and could be relied upon to take ownership and see things through end-to-end. He has deep empathy for users, always thinking about UI/UX from their perspective.&rdquo;
-            </blockquote>
-            <figcaption className="mt-4 text-sm">
-              <div className="font-medium text-foreground">Mitch Port</div>
-              <div className="text-foreground-muted">VP of Financial Strategy &amp; GM of Credit &amp; Loans · Fold</div>
-            </figcaption>
-          </figure>
-          <figure className="rounded-lg border border-border p-5">
-            <blockquote className="text-foreground-secondary leading-relaxed">
-              &ldquo;Day one, I knew we had a keeper. David is engaged in every aspect of his day-to-day — always going above and beyond, asking thoughtful questions, and driven by passion for the greater purpose.&rdquo;
-            </blockquote>
-            <figcaption className="mt-4 text-sm">
-              <div className="font-medium text-foreground">Tom Kunhardt</div>
-              <div className="text-foreground-muted">Former colleague · Solar industry</div>
-            </figcaption>
-          </figure>
+        <div
+          className="overflow-hidden -mx-3"
+          aria-roledescription="carousel"
+          aria-label="Testimonials"
+        >
+          <div
+            className="flex transition-transform duration-300 ease-out"
+            style={{
+              transform: `translateX(-${clampedTestimonialIndex * (100 / testimonialsPerView)}%)`,
+            }}
+          >
+            {TESTIMONIALS.map((t, i) => {
+              const isVisible =
+                i >= clampedTestimonialIndex &&
+                i < clampedTestimonialIndex + testimonialsPerView;
+              return (
+                <figure
+                  key={t.name}
+                  className="shrink-0 basis-full md:basis-1/2 px-3 flex"
+                  aria-hidden={!isVisible}
+                >
+                  <div className="flex flex-col w-full rounded-lg border border-border p-5">
+                    <blockquote className="text-foreground-secondary leading-relaxed">
+                      &ldquo;{t.quote}&rdquo;
+                    </blockquote>
+                    <figcaption className="mt-auto pt-4 text-sm">
+                      <div className="font-medium text-foreground">{t.name}</div>
+                      <div className="text-foreground-muted min-h-[2.5rem]">{t.role}</div>
+                    </figcaption>
+                  </div>
+                </figure>
+              );
+            })}
+          </div>
         </div>
+        {showTestimonialControls && (
+          <div className="flex items-center justify-between mt-5">
+            <div className="flex items-center gap-2" role="tablist" aria-label="Testimonial pages">
+              {Array.from({ length: pageCount }).map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  role="tab"
+                  aria-selected={i === clampedTestimonialIndex}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                  onClick={() => setTestimonialIndex(i)}
+                  className={`h-2 rounded-full transition-all ${
+                    i === clampedTestimonialIndex
+                      ? 'w-6 bg-foreground'
+                      : 'w-2 bg-border hover:bg-foreground-muted'
+                  }`}
+                />
+              ))}
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setTestimonialIndex((v) => Math.max(0, v - 1))}
+                disabled={clampedTestimonialIndex === 0}
+                aria-label="Previous testimonial"
+                className="flex items-center justify-center w-9 h-9 rounded-full border border-border text-foreground-muted hover:text-foreground hover:border-foreground-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:text-foreground-muted disabled:hover:border-border"
+              >
+                <ChevronLeft className="w-[18px] h-[18px]" />
+              </button>
+              <button
+                type="button"
+                onClick={() =>
+                  setTestimonialIndex((v) => Math.min(maxTestimonialIndex, v + 1))
+                }
+                disabled={clampedTestimonialIndex === maxTestimonialIndex}
+                aria-label="Next testimonial"
+                className="flex items-center justify-center w-9 h-9 rounded-full border border-border text-foreground-muted hover:text-foreground hover:border-foreground-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:text-foreground-muted disabled:hover:border-border"
+              >
+                <ChevronRight className="w-[18px] h-[18px]" />
+              </button>
+            </div>
+          </div>
+        )}
       </section>
 
       {/* Building */}
