@@ -15,27 +15,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.davidsteinbroner.com'),
-  title: "David Steinbroner — Product Manager & Builder",
+  title: "David Steinbroner | Product Manager & Builder",
   description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
   openGraph: {
-    title: "David Steinbroner — Product Manager & Builder",
+    title: "David Steinbroner | Product Manager & Builder",
     description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
     url: "https://www.davidsteinbroner.com",
     type: "profile",
     images: [
       {
-        url: "/images/headshot.png",
-        width: 400,
-        height: 400,
+        url: "/images/og-card.png",
+        width: 1200,
+        height: 630,
         alt: "David Steinbroner",
       },
     ],
   },
   twitter: {
-    title: "David Steinbroner — Product Manager & Builder",
+    title: "David Steinbroner | Product Manager & Builder",
     description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
-    card: "summary",
-    images: ["/images/headshot.png"],
+    card: "summary_large_image",
+    images: ["/images/og-card.png"],
   },
   icons: {
     icon: [
