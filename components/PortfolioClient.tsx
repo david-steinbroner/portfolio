@@ -248,7 +248,7 @@ export default function PortfolioClient({
         <div className="space-y-4">
           <div className="group">
             <a
-              href="https://aitavern.onrender.com"
+              href="https://mystorymode.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:text-foreground-secondary transition-colors"
@@ -261,7 +261,7 @@ export default function PortfolioClient({
           </div>
           <div className="group">
             <a
-              href="https://pogo-pal.pages.dev"
+              href="https://pogopal.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:text-foreground-secondary transition-colors"
