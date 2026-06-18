@@ -52,13 +52,15 @@ export interface SelectedWorkRef {
 // what order — distinct from FEATURE_ORDER (which only governs feature
 // prev/next navigation).
 export const SELECTED_WORK_ORDER: readonly SelectedWorkRef[] = [
+  { type: 'case-study', slug: 'banking-partner-approval' },
   { type: 'case-study', slug: 'referral-affiliate-channel' },
+  { type: 'case-study', slug: 'story-mode' },
   { type: 'case-study', slug: 'spin-wheel' },
+  { type: 'case-study', slug: 'fiat-bitcoin-ecosystem' },
   { type: 'feature',    slug: 'card-reissuance' },
   { type: 'case-study', slug: 'notification-preference-center' },
-  { type: 'case-study', slug: 'banking-partner-approval' },
-  { type: 'case-study', slug: 'fiat-bitcoin-ecosystem' },
   { type: 'case-study', slug: 'taxbit' },
+  { type: 'case-study', slug: 'poke-pal' },
 ] as const;
 
 // Re-export schema-inferred types so existing imports from `@/lib/markdown`

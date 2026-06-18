@@ -2,15 +2,18 @@
 title: "Building an AI-Native Product Solo: Story Mode"
 company: "Personal Projects"
 date: "2025"
-description: "Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn't for everyone. AI happens to solve both — you can play alone, and it can build any world you want. I built Story Mode to see if that actually works."
+description: "Tabletop RPGs have two accessibility problems: trying new things with strangers is intimidating, and traditional fantasy isn't for everyone. AI happens to solve both - you can play alone, and it can build any world you want. I built Story Mode to see if that actually works."
 impact:
   - "Identified two accessibility barriers in TTRPGs and designed AI-native solution for both"
   - "Shipped full-stack React/Express/PostgreSQL app to production as solo PM"
   - "Built prompt architecture with graceful degradation for AI reliability"
-tldr: "I identified two accessibility barriers keeping people out of tabletop gaming—social intimidation and genre mismatch—and built an AI-powered platform that solves both: a private experience with dynamic worldbuilding."
+tldr: "I identified two accessibility barriers keeping people out of tabletop gaming - social intimidation and genre mismatch - and built an AI-powered platform that solves both: a private experience with dynamic worldbuilding."
 status: "Building"
 tags: ["AI Product", "GenAI", "Full-Stack", "Solo Build", "Accessibility"]
 category: "case-study"
+homepageTags:
+  - label: "AI Product"
+    color: purple
 liveUrl: "https://aitavern.onrender.com"
 repoUrl: "https://github.com/david-steinbroner/AITavern"
 ---

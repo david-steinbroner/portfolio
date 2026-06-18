@@ -8,10 +8,13 @@ impact:
   - "Hybrid AI vision + local computation pipeline processes 900+ items at ~$0.003 each"
   - "Checkpoint/resume system handles interruptions gracefully across multi-hour scans"
   - "Full-stack pipeline: Python automation, AI vision, local IV calculator, Cloudflare D1, web UI"
-tldr: "Pokemon GO doesn't export your data. No API, no export button. I built an automated pipeline — screen mirroring, Python automation, AI vision, local math, cloud database — to extract it. The solve isn't specific to one app."
+tldr: "Pokemon GO doesn't export your data. No API, no export button. I built an automated pipeline - screen mirroring, Python automation, AI vision, local math, cloud database - to extract it. The solve isn't specific to one app."
 status: "Building"
 tags: ["Creative Problem Solving", "Automation", "AI Vision", "Data Pipeline", "Full-Stack"]
 category: "case-study"
+homepageTags:
+  - label: "AI Build"
+    color: blue
 liveUrl: "https://pogo-pal.pages.dev"
 ---
 

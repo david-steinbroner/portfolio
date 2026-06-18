@@ -81,7 +81,7 @@ export default function PortfolioClient({
           <ThemeToggle />
         </div>
         <p className="text-lg text-foreground-secondary leading-relaxed">
-          Product manager in regulated consumer fintech. At Fold I built the referral and affiliate acquisition channel, shipped the rewards economics and the credit-card foundation, and helped the company become the first bitcoin-only company on Nasdaq. I build and ship my own apps too. <strong className="font-semibold text-foreground">I build things for people, not users.</strong>
+          Senior PM and employee 11 at a startup I helped take public - the first bitcoin-native fintech on Nasdaq. I&apos;ve owned product across community, growth, a credit card built from the ground up, and regulated compliance. Now I ship live products solo with AI, spec to deployed. <strong className="font-semibold text-foreground">I build things for people.</strong>
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 text-base text-foreground-muted">
           <button
@@ -343,6 +343,7 @@ export default function PortfolioClient({
             View source on GitHub
           </a>
         </p>
+        <p className="text-xs text-foreground-muted mt-4">v0.3.0</p>
       </footer>
 
     </main>

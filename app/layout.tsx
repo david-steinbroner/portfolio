@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.davidsteinbroner.com'),
   title: "David Steinbroner | Product Manager & Builder",
-  description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
+  description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've owned product across community, growth, a credit card built from the ground up, and compliance. Now I ship live products solo with AI.",
   openGraph: {
     title: "David Steinbroner | Product Manager & Builder",
-    description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
+    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've owned product across community, growth, a credit card built from the ground up, and compliance. Now I ship live products solo with AI.",
     url: "https://www.davidsteinbroner.com",
     type: "profile",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "David Steinbroner | Product Manager & Builder",
-    description: "PM who ships. Took Fold from startup to Nasdaq listing. Building products for people, not users.",
+    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've owned product across community, growth, a credit card built from the ground up, and compliance. Now I ship live products solo with AI.",
     card: "summary_large_image",
     images: ["/images/og-card.png"],
   },
@@ -52,7 +52,7 @@ const personSchema = {
   "name": "David Steinbroner",
   "url": "https://www.davidsteinbroner.com",
   "jobTitle": "Product Manager",
-  "description": "PM who ships. Took Fold from startup to Nasdaq listing by owning the messy middle.",
+  "description": "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. Ships live products solo with AI, spec to deployed.",
   "sameAs": [
     "https://linkedin.com/in/davidsteinbroner",
     "https://github.com/david-steinbroner"
