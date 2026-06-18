@@ -39,12 +39,24 @@ export const TagSchema = z.object({
 });
 export type Tag = z.infer<typeof TagSchema>;
 
-// Reference from a homepage entry to a feature tag (optionally with an
-// in-page anchor for sub-sections like bitcoin-transactions#direct-to-bitcoin)
-export const HomepageTagRefSchema = z.object({
-  slug: z.string(),
-  anchor: z.string().optional(),
-});
+// Reference from a homepage entry to a tag chip.
+//
+// Two shapes:
+//   1. Feature-backed: `slug` (+ optional `anchor`) pulls label/color from the
+//      referenced feature's `tag` frontmatter and links to that feature page.
+//   2. Inline: `label` + `color` define the chip directly, for entries (e.g. a
+//      case study with no paired feature) that still want a homepage chip. The
+//      chip links to the entry's own page.
+export const HomepageTagRefSchema = z
+  .object({
+    slug: z.string().optional(),
+    anchor: z.string().optional(),
+    label: z.string().optional(),
+    color: TagColorSchema.optional(),
+  })
+  .refine((t) => (t.label && t.color) || t.slug, {
+    message: 'homepageTag must reference a feature `slug` or define inline `label` + `color`',
+  });
 export type HomepageTagRef = z.infer<typeof HomepageTagRefSchema>;
 
 export const ProjectMetadataSchema = z.object({

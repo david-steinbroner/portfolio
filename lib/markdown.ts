@@ -52,6 +52,7 @@ export interface SelectedWorkRef {
 // what order — distinct from FEATURE_ORDER (which only governs feature
 // prev/next navigation).
 export const SELECTED_WORK_ORDER: readonly SelectedWorkRef[] = [
+  { type: 'case-study', slug: 'referral-affiliate-channel' },
   { type: 'case-study', slug: 'taxbit' },
   { type: 'case-study', slug: 'banking-partner-approval' },
   { type: 'case-study', slug: 'fiat-bitcoin-ecosystem' },
@@ -349,12 +350,29 @@ export async function getSelectedWork(): Promise<SelectedWorkEntry[]> {
 
     const meta = project.metadata;
 
+    const href =
+      ref.type === 'case-study'
+        ? `/case-studies/${ref.slug}`
+        : `/features/${ref.slug}`;
+
     // Resolve homepageTags -> ResolvedHomepageTag[].
     const resolvedTags: ResolvedHomepageTag[] = [];
     const homepageTags = meta.homepageTags ?? [];
     for (const tagRef of homepageTags) {
-      const featureProject = featuresBySlug.get(tagRef.slug);
-      if (!featureProject) {
+      // Inline tag: label + color defined directly on the entry, no feature
+      // backing. Chip links to the entry's own page.
+      if (tagRef.label && tagRef.color) {
+        resolvedTags.push({
+          slug: ref.slug,
+          label: tagRef.label,
+          color: tagRef.color,
+          href,
+        });
+        continue;
+      }
+      const featureSlug = tagRef.slug;
+      const featureProject = featureSlug ? featuresBySlug.get(featureSlug) : undefined;
+      if (!featureSlug || !featureProject) {
         console.warn(
           `[SELECTED_WORK_ORDER] ${ref.type}/${ref.slug}: homepageTag references unknown feature "${tagRef.slug}" — skipping tag`
         );
@@ -367,22 +385,17 @@ export async function getSelectedWork(): Promise<SelectedWorkEntry[]> {
         );
         continue;
       }
-      const href = tagRef.anchor
-        ? `/features/${tagRef.slug}#${tagRef.anchor}`
-        : `/features/${tagRef.slug}`;
+      const featureHref = tagRef.anchor
+        ? `/features/${featureSlug}#${tagRef.anchor}`
+        : `/features/${featureSlug}`;
       resolvedTags.push({
-        slug: tagRef.slug,
+        slug: featureSlug,
         anchor: tagRef.anchor,
         label: featureTag.label,
         color: featureTag.color,
-        href,
+        href: featureHref,
       });
     }
-
-    const href =
-      ref.type === 'case-study'
-        ? `/case-studies/${ref.slug}`
-        : `/features/${ref.slug}`;
 
     entries.push({
       type: ref.type,
