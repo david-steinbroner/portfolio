@@ -2,7 +2,7 @@
 title: "Shipping tax season at a startup"
 company: "Fold"
 date: "January 2025"
-description: "Shipped the integration in 10 weeks — a month ahead of the IRS deadline. 80% of eligible users pulled their 1099; 1% ticket rate"
+description: "Shipped the integration in 10 weeks - a month ahead of the IRS deadline. 80% of eligible users pulled their 1099; 1% ticket rate"
 impact:
   - "Shipped in 10 weeks with a team of 2 engineers and 1 junior designer"
   - "Coordinated 8+ stakeholder groups: Legal, Compliance, Finance, Engineering, Support, Design, Marketing, and Growth internally; plus external counsel, banking partner, card issuing partner, two Bitcoin custodians, and TaxBit"

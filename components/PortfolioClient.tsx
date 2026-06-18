@@ -20,12 +20,6 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      'Day one, I knew we had a keeper. David is engaged in every aspect of his day-to-day — always going above and beyond, asking thoughtful questions, and driven by passion for the greater purpose.',
-    name: 'Tom Kunhardt',
-    role: 'Corporate Trainer, Learning & Development · NRG Home Solar',
-  },
-  {
-    quote:
       'David is a thoughtful and steady presence on any team. During our time at Fold, I appreciated his calm approach to challenges, his ability to communicate with clarity and empathy, and his deep care for the user experience. He leads with integrity and brings grounded, strategic thinking to everything he does. Any team would be lucky to have him.',
     name: 'Charlene Uli',
     role: 'Customer Support Representative · Fold',
@@ -87,7 +81,7 @@ export default function PortfolioClient({
           <ThemeToggle />
         </div>
         <p className="text-lg text-foreground-secondary leading-relaxed">
-          Product manager who prototypes, codes, and ships. I&apos;ve taken features from an abstract idea to production at a fintech startup, and I spend my free time building apps and learning new tools. <strong className="font-semibold text-foreground">I build things for people, not users.</strong>
+          Product manager in regulated consumer fintech. At Fold I built the referral and affiliate acquisition channel, shipped the rewards economics and the credit-card foundation, and helped the company become the first bitcoin-only company on Nasdaq. I build and ship my own apps too. <strong className="font-semibold text-foreground">I build things for people, not users.</strong>
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 text-base text-foreground-muted">
           <button

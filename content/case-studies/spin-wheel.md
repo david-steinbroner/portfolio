@@ -1,5 +1,5 @@
 ---
-title: "The most public feature at the company, and I had to make it worse"
+title: "Keeping our most popular feature alive without breaking the economics."
 company: "Fold"
 date: "2024"
 description: "Eighteen months and eight iterations to turn Fold's most beloved (and most expensive) feature into something sustainable. Still drives 50k DAU."

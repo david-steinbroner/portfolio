@@ -18,8 +18,6 @@ features:
     slug: "bitcoin-transactions"
 homepageTags:
   - slug: bitcoin-transactions
-  - slug: bitcoin-transactions
-    anchor: direct-to-bitcoin
 ---
 
 **Fold started as the first debit card that earns bitcoin back.** Spend with your Fold Card, earn sats. Then we added Buy Bitcoin, and everything changed. The moment users could buy bitcoin through Fold, we were competing with Strike, Robinhood, Cash App, and Coinbase. And we were missing table stakes.

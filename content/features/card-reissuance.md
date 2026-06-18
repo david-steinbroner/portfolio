@@ -1,8 +1,8 @@
 ---
-title: "Shipped quietly. Saved thousands of support tickets."
+title: "Turned a forced card reissue into a dormant-user reactivation play."
 company: "Fold"
 date: "2024"
-description: "Built the replacement system before thousands of cards started expiring — and required user confirmation instead of auto-shipping. Zero disruption at launch, 1–2% ticket rate."
+description: "Thousands of cards were about to expire. I built the replacement system and used the forced reissue to reach dormant users and pull them back in - user confirmation instead of auto-shipping, 1-2% ticket rate."
 status: "Shipped"
 tags: ["Operations", "User Experience", "Fintech", "Communication"]
 category: "feature"
