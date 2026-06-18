@@ -15,7 +15,7 @@ Personal portfolio site for a senior product manager. Case studies, feature writ
 ## Architecture notes
 
 - **Markdown-driven content with zod validation.** Every case study, feature, and letter has its frontmatter parsed and validated against a zod schema in `lib/schema.ts`. Invalid frontmatter fails the build with a line-by-line diff of what's wrong, so bad content can't ship.
-- **`FEATURE_ORDER` as the single source of truth.** Homepage ordering, prev/next navigation on feature detail pages, and everything in between read from one canonical array in `lib/markdown.ts`. Drift between the array and the filesystem logs a warning at build time.
+- **Two ordering arrays, distinct jobs.** `SELECTED_WORK_ORDER` in `lib/markdown.ts` is the single source of truth for the homepage "Selected Work" grid - a hand-curated mix of case studies and features. `FEATURE_ORDER` (same file) governs only the prev/next navigation on feature detail pages and must list every slug under `content/features/`; drift between it and the filesystem logs a warning at build time. Only `SELECTED_WORK_ORDER` decides what renders on `/`.
 - **Stable heading anchors out of the box.** The markdown pipeline chains `rehype-slug` and `rehype-autolink-headings` so every `##` gets a predictable, linkable ID without any per-file boilerplate.
 - **Lazy-loaded images baked into the pipeline.** A small custom rehype plugin walks the HAST tree and adds `loading="lazy"` + `decoding="async"` to every `<img>` before render. No per-post manual tagging.
 - **Paired content types.** Case studies (narrative) and features (tactical specs) cross-reference each other via frontmatter. A feature page can link back to its parent case study, and vice versa, from data alone.
@@ -49,7 +49,7 @@ caseStudy:
 
 Slugs on the two sides of a pair don't have to match, but they should. A feature's detail page pulls its parent case study by slug and renders a link back.
 
-Homepage feature order is controlled by the `FEATURE_ORDER` array in `lib/markdown.ts`. Changing the order there changes the order on the homepage and the prev/next links on every feature detail page. If you add a feature file without updating `FEATURE_ORDER`, the build will warn.
+The homepage "Selected Work" grid is controlled by `SELECTED_WORK_ORDER` in `lib/markdown.ts` - a hand-curated, ordered mix of case studies and features. `FEATURE_ORDER` (same file) controls only the prev/next links on feature detail pages and must list every feature slug; the build warns on drift. Adding a content file doesn't put it on the homepage - add a `{ type, slug }` entry to `SELECTED_WORK_ORDER` for that.
 
 ## Local development
 
@@ -92,13 +92,14 @@ Push to `main`. Cloudflare Pages picks up the change, runs `npm run build`, and 
    ---
    ```
 
-2. Write the body in markdown. `##` headings auto-get anchor IDs.
+2. Write the body in markdown. `##` headings auto-get anchor IDs. Don't repeat the title as a heading - `title` already renders as the `<h1>`.
 3. If this case study has a paired feature, make sure the feature's frontmatter points back via `caseStudy.slug`.
+4. To feature it on the homepage, add `{ type: 'case-study', slug: '<slug>' }` to `SELECTED_WORK_ORDER` in `lib/markdown.ts` at the desired position, and give the frontmatter a `homepageTags` chip (inline `label` + `color`, or the `slug` of a paired feature).
 
 ### A new feature
 
 1. Create `content/features/<slug>.md` with feature frontmatter (mirror of a case study, minus `features`, plus `caseStudy`).
-2. Add the slug to `FEATURE_ORDER` in `lib/markdown.ts` at the position where it should appear on the homepage.
+2. Add the slug to `FEATURE_ORDER` in `lib/markdown.ts` (required - it governs feature prev/next nav, and the build warns if a feature is missing). To also show the feature on the homepage, add a `{ type: 'feature', slug }` entry to `SELECTED_WORK_ORDER`.
 
 ### A new letter
 
