@@ -1,7 +1,7 @@
 ---
 title: "Tuning referral to pay for active users"
 company: "Fold"
-date: "2025"
+date: "2023"
 description: "Reworked Fold's referral program so bonuses paid out on real usage rather than a claimed card, and took an affiliate channel from zero to one with major names in bitcoin media. In peak months it drove ~20% of new growth."
 impact:
   - "Reworked Fold's referral program end-to-end: placement, fraud gating, economics, and a usage-based reward mechanic - drove ~20% of new growth in peak months"
