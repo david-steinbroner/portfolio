@@ -55,7 +55,6 @@ export const SELECTED_WORK_ORDER: readonly SelectedWorkRef[] = [
   { type: 'case-study', slug: 'banking-partner-approval' },
   { type: 'case-study', slug: 'referral-affiliate-channel' },
   { type: 'case-study', slug: 'onboarding' },
-  { type: 'case-study', slug: 'story-mode' },
   { type: 'case-study', slug: 'spin-wheel' },
   { type: 'case-study', slug: 'fiat-bitcoin-ecosystem' },
   { type: 'feature',    slug: 'card-reissuance' },
