@@ -1,15 +1,14 @@
 ---
-title: "Completing the flywheel and paving the way for IPO"
+title: "Letting users move bitcoin in, out, and automatically"
 company: "Fold"
 date: "January 2024"
-description: "Shipped three features over six months across two custodians with incompatible APIs. Trade volume up 50%; Direct to Bitcoin hit 20% adoption month one"
+description: "Shipped three features over six months - selling bitcoin, receiving it, and auto-converting deposits - across two custodians with incompatible APIs. Trade volume rose 50%."
 impact:
   - "50% MoM increase in trade volume"
-  - "40% adoption of Direct to Bitcoin"
   - "25% adoption of Sell Bitcoin"
   - "20% decrease in premium subscription churn"
   - "~10% revenue increase from interchange"
-tldr: "Users could earn bitcoin on Fold but couldn't bring it in, sell it, or auto-accumulate on deposits. I shipped the three features that closed those gaps and completed the ecosystem."
+tldr: "Users could earn and buy bitcoin on Fold, but they couldn't bring it in, sell it, or stack it automatically. I shipped the three features that filled those gaps."
 status: "Shipped"
 tags: ["Product Strategy", "Bitcoin", "Fintech", "Feature Development"]
 category: "case-study"

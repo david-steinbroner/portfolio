@@ -1,15 +1,15 @@
 ---
-title: "The most effective product team is the conduit"
+title: "Cutting partner approvals from weeks to days"
 company: "Fold"
 date: "2024"
-description: "Rebuilt the approval system across a dozen external partners and vendors. Cut timeline by 75%; helped Fold become the first Bitcoin-only company on Nasdaq."
+description: "Rebuilt how Fold got product approved across a dozen outside partners and vendors - direct contacts, documentation they didn't have to ask for, and a shared map of the app. Approvals went from weeks to days, with no more surprise scrambles."
 impact:
   - "Reduced approval timeline by 75% (4+ weeks to days)"
   - "Eliminated surprise scrambles from partners discovering unapproved changes in the live app"
   - "Built a living Figma app map that became a critical asset across product, design, support, compliance, and finance"
   - "Every partner relationship benefited: banking, card processing, network, custodians, and the vendor stack all moved faster"
   - "Reframed compliance from a bottleneck into a checkpoint built into design"
-tldr: "The fastest fix for a regulated company isn't faster approvals. It's making product the translation layer between everyone who can say no."
+tldr: "Every Fold payment feature had to clear about a dozen outside partners who could each say no, and it took weeks. I rebuilt how we worked with them, so approvals took days and nothing got caught by surprise."
 status: "Shipped"
 tags: ["Product Strategy", "Process Design", "Cross-Functional Coordination", "Compliance", "Partner Management", "Fintech"]
 category: "case-study"
@@ -24,7 +24,7 @@ homepageTags:
 
 Every payment-related feature at Fold passed through a wall of partners with veto power. The wall was tall, the wall was slow, and I was supposed to ship through it weekly.
 
-The wall was: our sponsor bank (Sutton), card issuer processor (Marqeta), card network (Visa), two Bitcoin custodians, and a stack of vendors spanning fraud, KYC, payments, and tax compliance (Persona, Unit21, Sardine, TaxBit, and others). The approval cycle took 4+ weeks per pass: submit materials, wait, get questions, answer them, wait again. The roadmap stalled.
+The wall was: our sponsor bank (Sutton), card issuer processor (Marqeta), card network (Visa), two bitcoin custodians, and a stack of vendors spanning fraud, KYC, payments, and tax compliance (Persona, Unit21, Sardine, TaxBit, and others). The approval cycle took 4+ weeks per pass: submit materials, wait, get questions, answer them, wait again. The roadmap stalled.
 
 But the slow cycle wasn't even the worst part.
 

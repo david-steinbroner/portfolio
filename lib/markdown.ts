@@ -60,7 +60,6 @@ export const SELECTED_WORK_ORDER: readonly SelectedWorkRef[] = [
   { type: 'feature',    slug: 'card-reissuance' },
   { type: 'case-study', slug: 'notification-preference-center' },
   { type: 'case-study', slug: 'taxbit' },
-  { type: 'case-study', slug: 'poke-pal' },
 ] as const;
 
 // Re-export schema-inferred types so existing imports from `@/lib/markdown`

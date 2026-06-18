@@ -1,5 +1,5 @@
 ---
-title: "Turned a forced card reissue into a dormant-user reactivation play."
+title: "Turning expiring cards into a reason to come back"
 company: "Fold"
 date: "2024"
 description: "Thousands of cards were about to expire. I built the replacement system and used the forced reissue to reach dormant users and pull them back in - user confirmation instead of auto-shipping, 1-2% ticket rate."

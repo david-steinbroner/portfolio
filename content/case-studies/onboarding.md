@@ -1,8 +1,8 @@
 ---
-title: "Rebuilding onboarding around the value prop"
+title: "Rebuilding onboarding to get people in the door"
 company: "Fold"
 date: "2023-2024"
-description: "Fold's onboarding had accreted into a feature-by-feature tour for people who didn't know the product yet. I rebuilt it around the value prop and cut the front-door friction, widening the top of the funnel and lifting free-to-paid conversion."
+description: "Fold's onboarding had turned into a feature-by-feature tour for people who didn't know the product yet. I rebuilt it around what the company was actually for and cut the friction at the front door - more people got in, and more of them upgraded to paid."
 impact:
   - "Rebuilt Fold's onboarding in two passes, anchoring it to the company value prop so it stopped breaking every time a feature shipped"
   - "Reframed the PII and card gate as a product decision and worked with Compliance to move verification out of the front door - simple signup first, the upgrade earned inside the app"

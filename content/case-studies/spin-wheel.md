@@ -7,10 +7,10 @@ impact:
   - "Owned end-to-end evolution of Fold's most visible feature: product strategy, pricing models, community communication, and GTM for every update over 18 months"
   - "Built self-service admin tooling that eliminated engineering dependency for wheel updates, enabling monthly themed launches, seasonal campaigns, and sponsorship integrations"
   - "Created sponsorship program that turned a cost center into a revenue stream, generating tens of thousands in direct sponsor payments plus measurable lifts in engagement"
-  - "Designed and built a new pricing model (replacing a legacy VM-based system) that scales sustainably to any Bitcoin price up to $1M"
+  - "Designed and built a new pricing model (replacing a legacy VM-based system) that scales sustainably to any bitcoin price up to $1M"
   - "Shipped winner notifications that drove increases in DAU and spin volume by leveraging FOMO"
   - "Navigated the transition from unsustainable 3.5% average rewards to a sustainable ~$0.01/spin model while maintaining ~50k daily spins"
-tldr: "Fold's flagship feature gave massive rewards users loved, but it was unsustainable. My job was to make it worse for users while keeping them engaged, and cheaper for the business while keeping it fun. Turns out simplicity solved both."
+tldr: "Fold's daily reward gave out so much bitcoin that it got more expensive every time the price rose. I had to make it sustainable for the business without losing the people who opened the app just to use it. Simplifying it solved both."
 status: "Shipped"
 tags: ["Product Strategy", "Pricing Models", "Community", "GTM", "Internal Tooling", "Rewards"]
 category: "case-study"
@@ -25,13 +25,13 @@ homepageTags:
 
 When I joined Fold, the Spin Wheel wasn't just a feature. It was the feature.
 
-The Fold Card was the first bitcoin rewards debit card on the market, and the wheel was what made it exciting. Every purchase earned a spin. Every spin could win up to 100% back, or 5% back, or sometimes a whole bitcoin. The average rewards rate hovered around 3.5%, which was unheard of for a free debit card. And because Bitcoin's price was rising, users who earned rewards early watched their effective rate double or triple as the asset appreciated.
+The Fold Card was the first bitcoin rewards debit card on the market, and the wheel was what made it exciting. Every purchase earned a spin. Every spin could win up to 100% back, or 5% back, or sometimes a whole bitcoin. The average rewards rate hovered around 3.5%, which was unheard of for a free debit card. And because bitcoin's price was rising, users who earned rewards early watched their effective rate double or triple as the asset appreciated.
 
 This was why Fold was growing. This was why we had a loyal community. This was why people talked about us.
 
 The problem: it was completely unsustainable.
 
-A reward structure that worked at $25k Bitcoin became dangerous at $50k Bitcoin. Percentage-based rewards tied to an appreciating asset meant our costs scaled faster than our revenue. We were on track to reward ourselves out of existence.
+A reward structure that worked at $25k bitcoin became dangerous at $50k bitcoin. Percentage-based rewards tied to an appreciating asset meant our costs scaled faster than our revenue. We were on track to reward ourselves out of existence.
 
 I inherited the wheel knowing my job was to make it less rewarding while keeping it fun, keep users from leaving, and do all of this with almost no engineering bandwidth. All eyes on the most visible feature at the company.
 
@@ -39,7 +39,7 @@ I inherited the wheel knowing my job was to make it less rewarding while keeping
 
 The wheel system had two components: a Daily Wheel (one free spin per day for flat sats) and a Purchase Wheel (spin after every card purchase for percentage-based rewards). Both ran on a pricing model so complex it lived on a virtual machine. Running a single simulation took 15 minutes. If I wanted to test different prize configurations, I'd adjust the inputs, run the simulation, wait, check if I hit the target rewards rate, and repeat. The model also kept breaking — simulated averages of 2.5% would result in actual averages closer to 3%.
 
-Beyond the model, I inherited a monthly cadence. Every month, we launched a new themed wheel: the Volcanic Wheel for El Salvador adopting Bitcoin, the Uncle Satoshi Wheel for July 4th, the Summer Games Wheel for the Olympics, the I'm Feeling Lucky Wheel for St. Patrick's Day. Each launch required a theme (sourced from community polls or Bitcoin culture), a design brief for our single designer, a prize structure I'd model and test, a blog post I'd write, social promotion I'd run, and community feedback I'd gather and respond to.
+Beyond the model, I inherited a monthly cadence. Every month, we launched a new themed wheel: the Volcanic Wheel for El Salvador adopting bitcoin, the Uncle Satoshi Wheel for July 4th, the Summer Games Wheel for the Olympics, the I'm Feeling Lucky Wheel for St. Patrick's Day. Each launch required a theme (sourced from community polls or bitcoin culture), a design brief for our single designer, a prize structure I'd model and test, a blog post I'd write, social promotion I'd run, and community feedback I'd gather and respond to.
 
 This monthly rhythm was part of what users loved. They looked forward to the new wheel. It showed off Fold's personality. But it also meant I was shipping a new product every month, with all the feedback loops and iteration that implies.
 
@@ -95,7 +95,7 @@ No more earning spins per $10. No more choose-your-reward. No more 3x3. No more 
 
 ![Daily free spins wheel - the final, simplified model](/case-studies/spin-wheel/spin-wheel-daily-spins.png)
 
-I built a new pricing model in Google Sheets, replacing the legacy VM-based system. It pulls live Bitcoin price via API, uses predefined prize tiers for different price ranges, and calculates average cost per spin. The model works at any Bitcoin price up to $1M. Target cost per spin: about $0.01.
+I built a new pricing model in Google Sheets, replacing the legacy VM-based system. It pulls live bitcoin price via API, uses predefined prize tiers for different price ranges, and calculates average cost per spin. The model works at any bitcoin price up to $1M. Target cost per spin: about $0.01.
 
 With winner notifications (push alerts when someone wins 100k+ sats, which happens roughly every 1.5 days), we maintain engagement through FOMO rather than complexity. The [Spin Wheel](/features/spin-wheel) is still running at around 50k spins per day. And because spins are cheap, we can use them as promotional currency: "First 500 users get 50 spins" for feature launches.
 
@@ -117,7 +117,7 @@ The combination of design templates and the admin tool meant I could ship a new 
 
 I saw an opportunity to turn the wheel from pure cost center into a revenue source.
 
-The Daily Wheel was high-visibility, low-cost real estate. A previous team member had done one sponsorship with Atoms, a shoe company with a Bitcoin-themed edition. It worked well. I built that into a repeatable program.
+The Daily Wheel was high-visibility, low-cost real estate. A previous team member had done one sponsorship with Atoms, a shoe company with a bitcoin-themed edition. It worked well. I built that into a repeatable program.
 
 I used the design templates and admin tool to make sponsor integrations self-serve on my end — swap in branding, add their prizes, schedule the sponsored wheel, all without engineering. Then I created tiered sponsorship packages. The entry tier (around $10k) got two weeks of logo placement plus a prize on the wheel. The premium tier (around $20k) got a full month, plus blog posts, email blasts, Twitter promotion, and more prizes. I built a PDF with our engagement metrics so sponsors could see the exposure.
 
@@ -155,7 +155,7 @@ Complexity compounds. Every new mechanic makes the next one harder to add and ha
 
 The self-service admin system and design templates gave me more long-term value than any single wheel iteration. A few engineering tickets up front removed my dependency on engineering for every future update. That leverage is what let me iterate as fast as the business needed.
 
-The original wheel failed because Bitcoin succeeded. Any reward system tied to an appreciating asset needs a model that works at 3x the current price. We learned that the hard way.
+The original wheel failed because bitcoin succeeded. Any reward system tied to an appreciating asset needs a model that works at 3x the current price. We learned that the hard way.
 
 The years spent building Discord, being transparent, giving users direct lines to leadership — all of that converted into users defending us during our hardest product changes. You can't build community trust in a crisis. You build it before the crisis, and then it's there when you need it.
 
