@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.davidsteinbroner.com'),
   title: "David Steinbroner | Product Manager & Builder",
-  description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've owned product across community, growth, a credit card built from the ground up, and compliance. Now I ship live products solo with AI.",
+  description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI.",
   openGraph: {
     title: "David Steinbroner | Product Manager & Builder",
-    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've owned product across community, growth, a credit card built from the ground up, and compliance. Now I ship live products solo with AI.",
+    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI.",
     url: "https://www.davidsteinbroner.com",
     type: "profile",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "David Steinbroner | Product Manager & Builder",
-    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've owned product across community, growth, a credit card built from the ground up, and compliance. Now I ship live products solo with AI.",
+    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI.",
     card: "summary_large_image",
     images: ["/images/og-card.png"],
   },

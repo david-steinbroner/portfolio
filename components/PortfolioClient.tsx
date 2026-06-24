@@ -81,7 +81,7 @@ export default function PortfolioClient({
           <ThemeToggle />
         </div>
         <p className="text-lg text-foreground-secondary leading-relaxed">
-          Senior PM and employee 11 at a startup I helped take public - the first bitcoin-native fintech on Nasdaq. I&apos;ve owned product across community, growth, a credit card built from the ground up, and regulated compliance. Now I ship live products solo with AI, spec to deployed. <strong className="font-semibold text-foreground">I build things for people.</strong>
+          Senior PM and employee 11 at a startup I helped take public - the first bitcoin-native fintech on Nasdaq. I&apos;ve shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and regulated compliance. Now I ship live products solo with AI, spec to deployed. <strong className="font-semibold text-foreground">I build things for people.</strong>
         </p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6 text-base text-foreground-muted">
           <button
@@ -343,7 +343,7 @@ export default function PortfolioClient({
             View source on GitHub
           </a>
         </p>
-        <p className="text-xs text-foreground-muted mt-4">v0.5.2</p>
+        <p className="text-xs text-foreground-muted mt-4">v0.5.5</p>
       </footer>
 
     </main>

@@ -69,7 +69,7 @@ For any homepage or case-study copy: direct, plain language, contractions. Use "
 
 Keep "bitcoin" lowercase when it's the currency (bitcoin price, bitcoin custodians). Leave proper product/feature names (Buy Bitcoin, Sell Bitcoin, Direct to Bitcoin) and sentence-starts capitalized.
 
-Positioning: frame the work as a general senior full-stack PM with range across lanes - community, growth, regulated compliance, a card built from the ground up, and AI-assisted building - so a connector sees David fits several kinds of PM roles. The homepage grid leads with a different lane in each of the top entries. Match the tone of the existing case-study writing. Testimonials are verbatim quotes - don't edit their wording.
+Positioning: frame the work as a general senior full-stack PM with range across lanes - community, growth, regulated compliance, a fully integrated bitcoin-and-fiat platform, and AI-assisted building - so a connector sees David fits several kinds of PM roles. The homepage grid leads with a different lane in each of the top entries. Match the tone of the existing case-study writing. Testimonials are verbatim quotes - don't edit their wording.
 
 ## Versioning
 
