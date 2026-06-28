@@ -1,5 +1,7 @@
 # Portfolio Site — Project Context
 
+Standards: inherits ../engineering-standards.md. Overrides & project-specifics below.
+
 Personal portfolio at [davidsteinbroner.com](https://davidsteinbroner.com). Next.js 16 (App Router) static export, deployed to Cloudflare Pages.
 
 ## Content model
