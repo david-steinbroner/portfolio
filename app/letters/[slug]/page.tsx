@@ -22,7 +22,7 @@ export async function generateMetadata({
     // Default title pattern if the letter didn't specify one explicitly.
     const title =
       metadata.title ??
-      `For ${metadata.company} — David Steinbroner`;
+      `For ${metadata.company} - David Steinbroner`;
 
     const meta: Metadata = { title };
 
