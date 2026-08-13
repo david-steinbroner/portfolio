@@ -56,6 +56,7 @@ export interface SelectedWorkRef {
 export const SELECTED_WORK_ORDER: readonly SelectedWorkRef[] = [
   { type: 'case-study', slug: 'banking-partner-approval' },
   { type: 'case-study', slug: 'marketlark' },
+  { type: 'feature',    slug: 'fairytale-project' },
   { type: 'case-study', slug: 'referral-affiliate-channel' },
   { type: 'case-study', slug: 'onboarding' },
   { type: 'case-study', slug: 'spin-wheel' },

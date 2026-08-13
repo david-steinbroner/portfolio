@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.davidsteinbroner.com'),
   title: "David Steinbroner | Product Manager & Builder",
-  description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI.",
+  description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI - my own projects and paid client work.",
   openGraph: {
     title: "David Steinbroner | Product Manager & Builder",
-    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI.",
+    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI - my own projects and paid client work.",
     url: "https://www.davidsteinbroner.com",
     type: "profile",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "David Steinbroner | Product Manager & Builder",
-    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI.",
+    description: "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. I've shipped product across community, growth, a fully integrated bitcoin-and-fiat platform, and compliance. Now I ship live products solo with AI - my own projects and paid client work.",
     card: "summary_large_image",
     images: ["/images/og-card.png"],
   },
@@ -52,7 +52,7 @@ const personSchema = {
   "name": "David Steinbroner",
   "url": "https://www.davidsteinbroner.com",
   "jobTitle": "Product Manager",
-  "description": "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. Ships live products solo with AI, spec to deployed.",
+  "description": "Senior PM and employee 11 at the first bitcoin-native fintech to list on Nasdaq. Ships live products solo with AI, spec to deployed - his own projects and paid client work.",
   "sameAs": [
     "https://linkedin.com/in/davidsteinbroner",
     "https://github.com/david-steinbroner"

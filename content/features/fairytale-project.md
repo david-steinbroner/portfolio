@@ -2,7 +2,7 @@
 title: "Rebuilding Ai Weiwei's trilingual cultural archive before it disappeared"
 company: "Slought Foundation"
 date: "2025"
-description: "Preserved and future-proofed a cultural archive of that would have been lost to deprecated infrastructure."
+description: "Preserved and future-proofed a cultural archive that would have been lost to deprecated infrastructure."
 impact:
   - "Preserved 1,001 participant profiles and 4,898 images"
   - "Rebuilt from deprecated PHP to future-proof static HTML"
