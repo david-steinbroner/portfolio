@@ -343,7 +343,7 @@ export default function PortfolioClient({
             View source on GitHub
           </a>
         </p>
-        <p className="text-xs text-foreground-muted mt-4">v0.7.1</p>
+        <p className="text-xs text-foreground-muted mt-4">v0.8.0</p>
       </footer>
 
     </main>

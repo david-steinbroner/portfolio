@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Missed-Call Rescue for Austin Service Businesses - David Steinbroner</title>
+<meta name="description" content="When your shop can't answer, the caller gets a text in 3 seconds from your number. Built by David Steinbroner in Austin, TX. First 5 shops $249/mo.">
+<meta property="og:title" content="Missed-Call Rescue for Austin Service Businesses">
+<meta property="og:description" content="73% of calls to Austin service businesses go unanswered. This fixes that.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--accent:#E8500A;--ink:#131313;--paper:#ffffff}
+  *{box-sizing:border-box}
+  html{color-scheme:light}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Work Sans',sans-serif;-webkit-font-smoothing:antialiased}
+  .gothic{font-family:'League Gothic',sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-direction:column;gap:28px}
+  a{color:inherit}
+
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:3px solid var(--ink);padding-bottom:8px}
+  .brand{font-family:'League Gothic',sans-serif;font-size:24px;letter-spacing:0.06em;text-transform:uppercase}
+  .tagline{font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-align:right}
+
+  .intro{font-size:clamp(16px,2.5vw,19px);font-weight:600;max-width:640px}
+  .stat{display:flex;align-items:center;gap:clamp(12px,3vw,26px);margin-top:4px;flex-wrap:wrap}
+  .stat .pct{font-family:'League Gothic',sans-serif;font-size:clamp(110px,22vw,200px);line-height:0.82;letter-spacing:-0.01em}
+  .stat .what{font-family:'League Gothic',sans-serif;font-size:clamp(34px,6.5vw,60px);line-height:0.92;text-transform:uppercase;max-width:7.2em}
+  .subline{font-size:clamp(14px,2.2vw,16.5px);font-weight:500;margin-top:14px;max-width:620px}
+
+  .label-row{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .label{font-size:13px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;white-space:nowrap}
+  .rule{flex:1;height:3px;background:var(--ink)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step .n{font-family:'League Gothic',sans-serif;font-size:42px;line-height:1;color:var(--accent)}
+  .step p{font-size:15px;line-height:1.5;margin:8px 0 0}
+
+  .demo{background:var(--ink);color:#fff;padding:clamp(24px,5vw,40px) clamp(18px,4vw,32px);display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+  .demo .kicker{font-size:13px;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--accent)}
+  .demo .number{font-family:'League Gothic',sans-serif;font-size:clamp(44px,9.5vw,92px);line-height:0.9;color:#fff}
+  .demo .number a{color:var(--accent);text-decoration:none}
+  .demo .dont{font-family:'League Gothic',sans-serif;font-size:clamp(22px,4.5vw,36px);line-height:1;text-transform:uppercase}
+  .demo .how{font-size:clamp(14px,2.2vw,16px);font-weight:500}
+
+  .answers{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+  .answers div{font-size:14.5px;line-height:1.45;border-top:1px solid var(--ink);padding-top:8px}
+
+  .offer{border:4px solid var(--accent);padding:clamp(16px,3vw,22px) clamp(16px,3.5vw,26px);display:flex;align-items:center;gap:26px}
+  .offer .price-side{flex-shrink:0}
+  .offer .first5{font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.04em}
+  .offer .price{font-family:'League Gothic',sans-serif;font-size:clamp(44px,7vw,62px);line-height:0.9;color:var(--accent)}
+  .offer .terms{font-size:15px;line-height:1.5;font-weight:500}
+
+  .cta{font-size:clamp(15px,2.4vw,17px);font-weight:600;text-align:center;padding:4px 0}
+  .cta a{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+
+  footer{border-top:3px solid var(--ink);padding-top:10px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;font-weight:600}
+  footer .ver{color:#8a8a8a;font-weight:500}
+
+  @media (max-width:640px){
+    header{flex-direction:column;gap:2px}
+    .tagline{text-align:left}
+    .steps{grid-template-columns:1fr}
+    .answers{grid-template-columns:1fr}
+    .offer{flex-direction:column;align-items:flex-start;gap:12px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">David Steinbroner</div>
+    <div class="tagline">Missed-call rescue &middot; Austin, TX</div>
+  </header>
+
+  <section>
+    <div class="intro">Last week I called 42 Austin service businesses at normal busy times.</div>
+    <div class="stat">
+      <div class="pct">73%</div>
+      <div class="what">of calls went unanswered.</div>
+    </div>
+    <div class="subline">Most callers who hit voicemail don't leave one. <strong>They call the next result on Google.</strong></div>
+  </section>
+
+  <section>
+    <div class="label-row"><div class="label">How it fixes that</div><div class="rule"></div></div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><p>You miss a call &rarr; the caller gets <strong>a text in 3 seconds, from your number</strong></p></div>
+      <div class="step"><div class="n">2</div><p>It asks <strong>what they need and when</strong></p></div>
+      <div class="step"><div class="n">3</div><p>You get <strong>a one-line summary</strong> and call back when you're free</p></div>
+    </div>
+  </section>
+
+  <section class="demo">
+    <div class="kicker">The demo</div>
+    <div class="number gothic">Call <a href="tel:{DEMO_NUMBER_E164}">{DEMO_NUMBER}</a></div>
+    <div class="dont">and don't answer anything.</div>
+    <div class="how">You'll see exactly what your customers would &mdash; in 30 seconds.</div>
+  </section>
+
+  <section>
+    <div class="label-row"><div class="label">The straight answers</div><div class="rule"></div></div>
+    <div class="answers">
+      <div><strong>Your phone number doesn't change.</strong> Ever.</div>
+      <div>It never quotes prices &mdash; it takes <strong>the job, the urgency, and the number.</strong></div>
+      <div><strong>Inbound only.</strong> It never calls anyone.</div>
+      <div>Want it off? <strong>Dial *73.</strong> Gone.</div>
+    </div>
+  </section>
+
+  <section class="offer">
+    <div class="price-side">
+      <div class="first5">First 5 Austin shops:</div>
+      <div class="price">$249/month.</div>
+    </div>
+    <div class="terms"><strong>No setup fee. Cancel anytime.</strong> I come to you and set it up in 20 minutes. All I ask is one honest review after a month.</div>
+  </section>
+
+  <div class="cta">Want one of the 5 spots? Email <a href="mailto:davidsteinbroner@gmail.com?subject=demo">davidsteinbroner@gmail.com</a> with the word "demo" and I'll set a time.</div>
+
+  <footer>
+    <div>David Steinbroner &middot; Austin, TX</div>
+    <div><a href="mailto:davidsteinbroner@gmail.com" style="text-decoration:none">davidsteinbroner@gmail.com</a> &middot; <span class="ver">v0.8.0</span></div>
+  </footer>
+</div>
+</body>
+</html>
