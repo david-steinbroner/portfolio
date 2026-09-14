@@ -2,9 +2,9 @@
 
 > Snapshot for picking up across sessions. Update on **"wrap up"**. For *where code lives*, see `CLAUDE.md`.
 
-**State:** v0.7.1 shipped and pushed to `main` (auto-deployed to Cloudflare Pages). Three pieces of previously-hidden work are now surfaced: the Slought Foundation client contract on the homepage grid, paid client work in the bio + all four meta descriptions, and the 2023 Fold internal chatbot in the bio.
-**Next step:** Optional - em dash / voice sweep of three content bodies (see Notes). Nothing is blocking.
-**Last touched (last commit):** 2026-08-13 — `568f744`
+**State:** v0.8.1 - `/missedcalls` landing page for the AI receptionist side business, plus `/missedcalls/privacy/` and `/missedcalls/sms-terms/` (required by the A2P 10DLC texting registration; the brand name "David Steinbroner" and these URLs are what the registration cites - don't move or rename them). Static HTML in `public/missedcalls/`, off the homepage grid. Demo number (737) 344-5601 filled in. Merged to `main` and pushed 2026-09-14 (auto-deploys). Earlier v0.7.1 surfacing work (Slought client contract, paid client work in bio, 2023 Fold chatbot) unchanged.
+**Next step:** Optional - em dash / voice sweep of three content bodies (see Notes). Nothing is blocking. Offer/pricing copy on `/missedcalls` must stay in sync with `ai-receptionist/docs/LAUNCH-PLAN.md`.
+**Last touched (last commit):** 2026-09-14 - missedcalls v0.8.1
 
 ## Resume from
 - Read `README.md` and `CLAUDE.md`

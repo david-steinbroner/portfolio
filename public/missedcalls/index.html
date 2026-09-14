@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Missed-Call Rescue for Austin Service Businesses - David Steinbroner</title>
-<meta name="description" content="When your shop can't answer, the caller gets a text in 3 seconds from your number. Built by David Steinbroner in Austin, TX. First 5 shops $249/mo.">
+<meta name="description" content="When your shop can't answer, the caller gets a text within seconds in your business's name. Built by David Steinbroner in Austin, TX. First 5 shops $249/mo.">
 <meta property="og:title" content="Missed-Call Rescue for Austin Service Businesses">
 <meta property="og:description" content="73% of calls to Austin service businesses go unanswered. This fixes that.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,7 @@
   .demo .number a{color:var(--accent);text-decoration:none}
   .demo .dont{font-family:'League Gothic',sans-serif;font-size:clamp(22px,4.5vw,36px);line-height:1;text-transform:uppercase}
   .demo .how{font-size:clamp(14px,2.2vw,16px);font-weight:500}
+  .demo .soon{font-size:13px;color:#b8b8b8;max-width:440px;line-height:1.45}
 
   .answers{display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
   .answers div{font-size:14.5px;line-height:1.45;border-top:1px solid var(--ink);padding-top:8px}
@@ -58,6 +59,7 @@
 
   footer{border-top:3px solid var(--ink);padding-top:10px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;font-weight:600}
   footer .ver{color:#8a8a8a;font-weight:500}
+  footer .legal a{text-decoration:underline;text-underline-offset:2px}
 
   @media (max-width:640px){
     header{flex-direction:column;gap:2px}
@@ -76,7 +78,7 @@
   </header>
 
   <section>
-    <div class="intro">Last week I called 42 Austin service businesses at normal busy times.</div>
+    <div class="intro">In August I called 42 Austin service businesses at normal busy times.</div>
     <div class="stat">
       <div class="pct">73%</div>
       <div class="what">of calls went unanswered.</div>
@@ -87,7 +89,7 @@
   <section>
     <div class="label-row"><div class="label">How it fixes that</div><div class="rule"></div></div>
     <div class="steps">
-      <div class="step"><div class="n">1</div><p>You miss a call &rarr; the caller gets <strong>a text in 3 seconds, from your number</strong></p></div>
+      <div class="step"><div class="n">1</div><p>You miss a call &rarr; the caller gets <strong>a text within seconds, in your business's name</strong></p></div>
       <div class="step"><div class="n">2</div><p>It asks <strong>what they need and when</strong></p></div>
       <div class="step"><div class="n">3</div><p>You get <strong>a one-line summary</strong> and call back when you're free</p></div>
     </div>
@@ -95,18 +97,19 @@
 
   <section class="demo">
     <div class="kicker">The demo</div>
-    <div class="number gothic">Call <a href="tel:{DEMO_NUMBER_E164}">{DEMO_NUMBER}</a></div>
+    <div class="number gothic">Call <a href="tel:+17373445601">(737) 344-5601</a></div>
     <div class="dont">and don't answer anything.</div>
-    <div class="how">You'll see exactly what your customers would &mdash; in 30 seconds.</div>
+    <div class="how">You'll see exactly what your customers would, in 30 seconds.</div>
+    <div class="soon">Automatic texts on the demo line are switching on soon. Until then, I'll call you back myself.</div>
   </section>
 
   <section>
     <div class="label-row"><div class="label">The straight answers</div><div class="rule"></div></div>
     <div class="answers">
       <div><strong>Your phone number doesn't change.</strong> Ever.</div>
-      <div>It never quotes prices &mdash; it takes <strong>the job, the urgency, and the number.</strong></div>
+      <div>It never quotes prices. It takes <strong>the job, the urgency, and the number.</strong></div>
       <div><strong>Inbound only.</strong> It never calls anyone.</div>
-      <div>Want it off? <strong>Dial *73.</strong> Gone.</div>
+      <div>Want it off? <strong>One code on your phone</strong> turns it off. I'll show you which one.</div>
     </div>
   </section>
 
@@ -115,14 +118,15 @@
       <div class="first5">First 5 Austin shops:</div>
       <div class="price">$249/month.</div>
     </div>
-    <div class="terms"><strong>No setup fee. Cancel anytime.</strong> I come to you and set it up in 20 minutes. All I ask is one honest review after a month.</div>
+    <div class="terms"><strong>Pay the first month when you sign up.</strong> If it isn't working within 21 days, you get it all back. I come to you and set it up in 20 minutes. 3-month minimum at this price, and one honest review after a month.</div>
   </section>
 
   <div class="cta">Want one of the 5 spots? Email <a href="mailto:davidsteinbroner@gmail.com?subject=demo">davidsteinbroner@gmail.com</a> with the word "demo" and I'll set a time.</div>
 
   <footer>
     <div>David Steinbroner &middot; Austin, TX</div>
-    <div><a href="mailto:davidsteinbroner@gmail.com" style="text-decoration:none">davidsteinbroner@gmail.com</a> &middot; <span class="ver">v0.8.0</span></div>
+    <div class="legal"><a href="/missedcalls/privacy/">Privacy</a> &middot; <a href="/missedcalls/sms-terms/">SMS Terms</a></div>
+    <div><a href="mailto:davidsteinbroner@gmail.com" style="text-decoration:none">davidsteinbroner@gmail.com</a> &middot; <span class="ver">v0.8.1</span></div>
   </footer>
 </div>
 </body>
