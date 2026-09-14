@@ -268,7 +268,7 @@ export default function PortfolioClient({
           </div>
           <div className="group">
             <a
-              href="https://discoveringmagic.com"
+              href="https://discoveringmtg.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:text-foreground-secondary transition-colors"
@@ -343,7 +343,7 @@ export default function PortfolioClient({
             View source on GitHub
           </a>
         </p>
-        <p className="text-xs text-foreground-muted mt-4">v0.8.1</p>
+        <p className="text-xs text-foreground-muted mt-4">v0.8.2</p>
       </footer>
 
     </main>
