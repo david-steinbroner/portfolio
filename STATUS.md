@@ -1,5 +1,7 @@
 # portfolio-site — status (resume here)
 
+**README copy checkpoint (2026-09-23):** Prepared a plain-language project introduction on `docs/public-profile-copy`, based on the public default branch. Markdown, local links, and copy checks passed. No application or hardware changes; no runtime tests claimed. README publication approved on 2026-09-23. Earlier product and testing notes below are unchanged historical context.
+
 > Snapshot for picking up across sessions. Update on **"wrap up"**. For *where code lives*, see `CLAUDE.md`.
 
 **State:** v0.8.2 - the homepage "Discovering Magic" link now points at `https://discoveringmtg.com` (live on Cloudflare since 2026-09-14), because David is selling discoveringmagic.com. Merged to `main` and pushed 2026-09-14 (auto-deploys). Carried over from v0.8.1: `/missedcalls` landing page for the AI receptionist side business, plus `/missedcalls/privacy/` and `/missedcalls/sms-terms/` (required by the A2P 10DLC texting registration; the brand name "David Steinbroner" and these URLs are what the registration cites - don't move or rename them). Static HTML in `public/missedcalls/`, off the homepage grid. Demo number (737) 344-5601 filled in. Merged to `main` and pushed 2026-09-14 (auto-deploys). Earlier v0.7.1 surfacing work (Slought client contract, paid client work in bio, 2023 Fold chatbot) unchanged.
